@@ -74,3 +74,11 @@ HEAD 相同仍须检查工作树和嵌套依赖。上述异常全部保留，不
 
 管理提交可用 `git log --format=fuller --grep='^chore: initialize research git workflow$'`
 查询；运行实验时应另记录当时的完整 HEAD，不把管理初始化当作复现成功。
+
+## 2026-11-17 后续依赖恢复
+
+原始状态表保留为历史证据。本轮已备份空工作树/缺失索引现场，恢复 riscv-tests 和 env；
+从官方 Zenodo 的已校验归档精确恢复 rocc-software。上述五个目标与当前实际 SHA 均一致，
+子模块工作树全部干净。原始 main、paper-original、各级 gitlink 和 `.gitmodules` 未修改。
+来源、原始对象 bundle 与重建步骤见 [02_dependency_audit.md](02_dependency_audit.md)。
+源码恢复验证通过；构建和实验结论须以各阶段实际运行报告为准。
