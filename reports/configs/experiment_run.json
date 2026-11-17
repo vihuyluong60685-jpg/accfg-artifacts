@@ -1,0 +1,70 @@
+{
+  "official_run": {
+    "run_id": "20261117T055112Z_official-run-all_4fc66e",
+    "command": [
+      "python3",
+      "reports/scripts/docker_user.py",
+      "exec",
+      "accfg-repro-20261117",
+      "/repo/run-all.sh"
+    ],
+    "cwd": "/home/yanmo/research/projects/accfg-artifacts",
+    "started_at": "2026-11-17T05:51:12.944875+00:00",
+    "code_commit": "3958aeb14e48a917a1e43ebbb87290becd3cf110",
+    "worktree_status": {
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "submodule_status": {
+      "exit_code": 0,
+      "stdout": " 4fec505cadacec4c371305b90973fa18758e9ac0 gemmini-rocc-tests (heads/dev)\n c84daca8824635b7d896003c78f9c6245997cf7a gemmini-rocc-tests/riscv-tests (remotes/origin/hw_watchpoint-206-gc84daca)\n 0666378f353599d01fc48562b431b1dd049faab5 gemmini-rocc-tests/riscv-tests/env (remotes/origin/priv-1.10-32-g0666378)\n fddb795a0b52e82f8f4ce9ead9b1428440a62ab0 gemmini-rocc-tests/rocc-software (remotes/origin/paper-restored)\n 0df8b515768232036bceb6af7a6d5935b5e1a3db snax-mlir (remotes/origin/accfg-paper-experiments)\n",
+      "stderr": ""
+    },
+    "status": "PASS",
+    "output": "/home/yanmo/research/projects/accfg-artifacts/reports/logs/20261117T055112Z_official-run-all_4fc66e/output.log",
+    "exit_code": 0,
+    "finished_at": "2026-11-17T06:21:09.726417+00:00",
+    "output_sha256": "fee27ad41127763565c9eadc10e2d4c2aeb50fe65fadb44534987c5ca6ff151c"
+  },
+  "image": "ghcr.io/kuleuven-micas/accfg-artifacts@sha256:a3dd42b69696b63e3c83a1a1719c0b2ae1965673d60251c468b337b3bf9ad813",
+  "configuration_sha256": "aff60de5ff3610f73950d06508284395e6c32b160981076304c27f8f4465915a",
+  "artifact_inventory_before": "reports/configs/preexperiment_inventory.json",
+  "artifacts": [
+    {
+      "path": "artifacts/fig10_bar_plot.png",
+      "bytes": 28615,
+      "sha256": "003f8d4f10030e45a0a0fcd627f5413ed45e1e4a3a3154014c316eb1478446e4",
+      "mtime_ns": 1794896468748680451,
+      "birth_time": "2026-11-17 14:21:08.736757190 +0800"
+    },
+    {
+      "path": "artifacts/fig_11_bar_plot.png",
+      "bytes": 139642,
+      "sha256": "685543af88730330ef9577e1c4da0fc61176138f741184c9c328d1f164763761",
+      "mtime_ns": 1794895082574471830,
+      "birth_time": "2026-11-17 13:58:02.536286667 +0800"
+    },
+    {
+      "path": "artifacts/fig_12_roofline.png",
+      "bytes": 128625,
+      "sha256": "5786878a35744d8baa3bfb6a113b83f100fc580ed1b7e5d2e69167e06061a6f6",
+      "mtime_ns": 1794895083539490159,
+      "birth_time": "2026-11-17 13:58:03.508503178 +0800"
+    },
+    {
+      "path": "artifacts/gemmini_results.pkl",
+      "bytes": 2094,
+      "sha256": "bd314aad6e4854d003a0cc69283c0ec6e2267d0376c0187ed882b538a03902a1",
+      "mtime_ns": 1794896467840729349,
+      "birth_time": "2026-11-17 14:21:07.836757474 +0800"
+    },
+    {
+      "path": "artifacts/opengemm_results.pkl",
+      "bytes": 4447,
+      "sha256": "b98df083c2d786f924c2a667a4f5812d64ca46b61c129026bc11e481c8bcb0bf",
+      "mtime_ns": 1794895081399845355,
+      "birth_time": "2026-11-17 13:58:01.397515134 +0800"
+    }
+  ]
+}
