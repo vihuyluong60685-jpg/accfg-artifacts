@@ -1,0 +1,68 @@
+{
+  "code_commit": "8019be52e412734c8b533ebf602f810ea46e339f",
+  "paper_original": "ce1567e40962037cda59a236bea6e3458caeb63a",
+  "source_hashes": {
+    "hello-world.sh": {
+      "sha256": "0fec44c0df1644f40ad537dced7238768f5a6b1a5ea18473ae890b45927957de",
+      "mode": "0o755"
+    },
+    "run-all.sh": {
+      "sha256": "3f6fe0ee37f04dddd6d29d59b94ffc8ad8d4456d8b532c48afcd2093638d529d",
+      "mode": "0o755"
+    },
+    "Containerfile": {
+      "sha256": "32a5b724b7ecb8ba091cf2ba156a98bd583f08d11f7f2e7cb84c13e0da298f95",
+      "mode": "0o644"
+    },
+    "accfg_artifacts/gemmini_get_all_numbers.py": {
+      "sha256": "bdc92476efae02f2080255b0720cfef66a2193a5f7b6a0779c428d2490da75fa",
+      "mode": "0o644"
+    },
+    "accfg_artifacts/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "0o644"
+    },
+    "accfg_artifacts/plot_snax.py": {
+      "sha256": "4fd98572fc0c56c7fc6df624ccec69bb340a0bca70b7b1af695c347d2cd1a97a",
+      "mode": "0o644"
+    },
+    "accfg_artifacts/plot_gemmini.py": {
+      "sha256": "01bd04999f2d06086fcf8f926a1800f4b7bae1941711279d7a712c2523ea6fd6",
+      "mode": "0o644"
+    },
+    "accfg_artifacts/get_all_numbers.py": {
+      "sha256": "43b66201cde468751614757ccda21776932d2e2c270f424f1997516aa4216a92",
+      "mode": "0o644"
+    },
+    "accfg_artifacts/show_results.py": {
+      "sha256": "b4fb4b6ed8d8c64a0b528261151e715d28f74d0feb477a255bcfbf09446ed5f7",
+      "mode": "0o644"
+    },
+    "reports/configs/reproduction_config.json": {
+      "sha256": "aff60de5ff3610f73950d06508284395e6c32b160981076304c27f8f4465915a",
+      "mode": "0o644"
+    }
+  },
+  "submodules": {
+    "gemmini-rocc-tests": {
+      "head": "4fec505cadacec4c371305b90973fa18758e9ac0",
+      "status": ""
+    },
+    "snax-mlir": {
+      "head": "0df8b515768232036bceb6af7a6d5935b5e1a3db",
+      "status": ""
+    },
+    "gemmini-rocc-tests/riscv-tests": {
+      "head": "c84daca8824635b7d896003c78f9c6245997cf7a",
+      "status": ""
+    },
+    "gemmini-rocc-tests/riscv-tests/env": {
+      "head": "0666378f353599d01fc48562b431b1dd049faab5",
+      "status": ""
+    },
+    "gemmini-rocc-tests/rocc-software": {
+      "head": "fddb795a0b52e82f8f4ce9ead9b1428440a62ab0",
+      "status": ""
+    }
+  }
+}

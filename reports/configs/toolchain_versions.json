@@ -1,0 +1,12 @@
+{
+  "python": "3.10.14 (main, Apr 27 2024, 21:17:55) [GCC 13.2.0]",
+  "xdsl_file": "/usr/local/lib/python3.10/dist-packages/xdsl/__init__.py",
+  "packages": {
+    "xdsl": "0.22.0+12.g791e89d8",
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "matplotlib": "3.10.3",
+    "seaborn": "0.13.2",
+    "scipy": "1.15.3"
+  }
+}

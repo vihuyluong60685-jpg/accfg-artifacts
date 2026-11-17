@@ -77,6 +77,13 @@ def main():
             summary[experiment] = {"status": "PASS", "rows": len(frame), "geomean_speedup": geomean(ratios),
                                    "maximum_speedup": max(ratios), "independent_results": independent,
                                    "measurement": "Verilator simulated tiling-loop cycles; not hardware measurement"}
+            for metric, expected, actual in [("geomean_speedup_x", 1.99, geomean(ratios)),
+                                              ("maximum_speedup_x", 2.71, max(ratios))]:
+                error = abs(actual - expected)
+                rows.append(dict(Experiment=experiment, Matrix_Size="ALL", Optimization="ACCFG_BOTH / NO_ACCFG_OPT",
+                                 Metric=metric, Paper_Value=expected, Reproduced_Value=actual,
+                                 Absolute_Error=error, Relative_Error=error / expected,
+                                 Status="PASS" if error <= 0.005 else "FAIL"))
             frame["option"] = frame["option"].astype(str).map(LABELS)
         else:
             assert len(frame) == 10 and set(frame["size"]) == {32, 64, 128, 256, 512}
@@ -92,6 +99,12 @@ def main():
             summary[experiment] = {"status": "PASS", "rows": len(frame), "geomean_speedup": geomean(ratios),
                                    "improvement_percent": (geomean(ratios) - 1) * 100,
                                    "measurement": "Spike instruction count and modeled performance (CPI=3, peak=512); not hardware cycles"}
+            actual = (geomean(ratios) - 1) * 100
+            error = abs(actual - 10.5)
+            rows.append(dict(Experiment=experiment, Matrix_Size="ALL", Optimization="MLIR deduplicated / C baseline",
+                             Metric="geomean_improvement_percent", Paper_Value=10.5, Reproduced_Value=actual,
+                             Absolute_Error=error, Relative_Error=error / 10.5,
+                             Status="PASS" if error <= 0.05 else "FAIL"))
         frame.to_csv(tables / (experiment.lower() + "_measured.csv"), index=False)
         for _, r in frame.iterrows():
             key = (int(r["size"]), str(r["option"]))

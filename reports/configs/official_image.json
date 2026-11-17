@@ -1,0 +1,23 @@
+{
+  "Id": "sha256:a3dd42b69696b63e3c83a1a1719c0b2ae1965673d60251c468b337b3bf9ad813",
+  "RepoDigests": [
+    "ghcr.io/kuleuven-micas/accfg-artifacts@sha256:a3dd42b69696b63e3c83a1a1719c0b2ae1965673d60251c468b337b3bf9ad813"
+  ],
+  "Size": 11854097849,
+  "Created": "2025-07-10T08:02:30.930658211Z",
+  "Architecture": "amd64",
+  "Os": "linux",
+  "reference": "ghcr.io/kuleuven-micas/accfg-artifacts@sha256:a3dd42b69696b63e3c83a1a1719c0b2ae1965673d60251c468b337b3bf9ad813",
+  "recorded_at": "2026-11-17T05:49:11.911986+00:00",
+  "entrypoint": null,
+  "cmd": [
+    "zsh"
+  ],
+  "environment": [
+    "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/riscv/bin",
+    "VLT_ROOT=/usr/local/share/verilator",
+    "VERIBLE_VERSION=0.0-3644-g6882622d",
+    "DEBIAN_FRONTEND=noninteractive",
+    "RISCV=/riscv"
+  ]
+}

@@ -82,3 +82,10 @@ HEAD 相同仍须检查工作树和嵌套依赖。上述异常全部保留，不
 子模块工作树全部干净。原始 main、paper-original、各级 gitlink 和 `.gitmodules` 未修改。
 来源、原始对象 bundle 与重建步骤见 [02_dependency_audit.md](02_dependency_audit.md)。
 源码恢复验证通过；构建和实验结论须以各阶段实际运行报告为准。
+
+## 本次实际 Docker 环境
+
+官方镜像已于 2026-11-17 拉取并固定：`ghcr.io/kuleuven-micas/accfg-artifacts@sha256:a3dd42b69696b63e3c83a1a1719c0b2ae1965673d60251c468b337b3bf9ad813`。
+实际 image ID 为 `sha256:a3dd42b69696b63e3c83a1a1719c0b2ae1965673d60251c468b337b3bf9ad813`，记录大小 11854097849 字节。
+作者 hello-world.sh 退出 0；版本、依赖安装及日志详见 [03_docker_environment.md](03_docker_environment.md)。
+此前 Docker NOT TESTED 为初始化时状态；完整论文实验仍须独立验收。
