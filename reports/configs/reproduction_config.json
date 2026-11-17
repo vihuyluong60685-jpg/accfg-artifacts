@@ -1,0 +1,35 @@
+{
+  "paper_doi": "10.1145/3760250.3762225",
+  "paper_baseline": "ce1567e40962037cda59a236bea6e3458caeb63a",
+  "opengemm_sizes": [
+    16,
+    32,
+    64,
+    128,
+    256,
+    512
+  ],
+  "opengemm_options": [
+    "NO_ACCFG_OPT",
+    "DEDUP_ONLY",
+    "OVERLAP_ONLY",
+    "ACCFG_BOTH"
+  ],
+  "gemmini_sizes": [
+    32,
+    64,
+    128,
+    256,
+    512
+  ],
+  "gemmini_options": [
+    "C baseline",
+    "MLIR deduplicated"
+  ],
+  "opengemm_peak_ops_per_cycle": 1024,
+  "opengemm_config_bytes_per_cycle": 2,
+  "gemmini_peak_ops_per_cycle": 512,
+  "gemmini_assumed_cpi": 3,
+  "reference_source": "README.md at paper-original; arXiv PDF 2511.10397v1 Figure 10\u201312 and Appendix A.6",
+  "note": "Reference values are never used to populate measured data; official algorithms and lowering passes are unchanged."
+}

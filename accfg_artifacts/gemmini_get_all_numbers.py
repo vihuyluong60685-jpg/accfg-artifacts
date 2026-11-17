@@ -2,6 +2,8 @@ import argparse
 import subprocess
 import re
 import os
+import hashlib
+from pathlib import Path
 import pandas
 import itertools
 from concurrent.futures import ThreadPoolExecutor
@@ -35,22 +37,43 @@ def get_spike_data(input_folder):
             cycles = None
             stdout_pattern = re.compile(r"Cycles taken: (\d+)")
             unknown_count = 0
+            traced_instructions_total = 0
+            custom0_funct7_zero_total = 0
             # check each line in process output for cycles taken statement and if it contains "unknown"
             while True:
                 line = process.stdout.readline()
                 if line == "":
                     break
+                if line.startswith('core') and ': 0x' in line and '(' in line:
+                    traced_instructions_total += 1
                 # Regex the output of the program - looks for the line 'Cycles taken: <number>
                 if cycles is None:
                     stdout_match = re.search(stdout_pattern, line)
                     cycles = int(stdout_match.group(1)) if stdout_match else None
                 if 'unknown' in line:
                     unknown_count += 1
+                    encoding = re.search(r'\(0x([0-9a-fA-F]+)\)', line)
+                    if encoding:
+                        instruction = int(encoding.group(1), 16)
+                        if instruction & 0x7f == 0x0b and instruction >> 25 == 0:
+                            custom0_funct7_zero_total += 1
 
-            assert cycles is not None
+            returncode = process.wait()
+            if returncode != 0:
+                raise RuntimeError(f"Spike exited with {returncode}: {command}")
+            if cycles is None:
+                raise RuntimeError(f"No cycle-counter measurement from Spike: {command}")
+            binary_sha256 = hashlib.sha256(Path(binary).read_bytes()).hexdigest()
+            print(f"Spike PASS size={size} option={option!r} exit={returncode} "
+                  f"measured_instructions={cycles} traced_instructions_total={traced_instructions_total} "
+                  f"rocc_unknown_total={unknown_count} custom0_funct7_zero_total={custom0_funct7_zero_total} "
+                  f"binary_sha256={binary_sha256}", flush=True)
 
             # Append the extracted values to a dataframe for further processing
-            return {"option": option, "size": size, "rocc": unknown_count, "cycles": cycles}
+            return {"option": option, "size": size, "rocc": unknown_count, "cycles": cycles,
+                    "spike_exit_code": returncode, "traced_instructions_total": traced_instructions_total,
+                    "custom0_funct7_zero_total": custom0_funct7_zero_total,
+                    "binary_sha256": binary_sha256}
 
         data = list(pool.map(body, itertools.product([512, 256, 128, 64, 32],["C baseline", "MLIR deduplicated"])))
     return pandas.DataFrame(data).sort_values('size')
