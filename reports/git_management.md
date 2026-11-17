@@ -144,3 +144,16 @@ git branch -vv
 命令审计使用 `reports/scripts/record_command.py LABEL -- COMMAND ...`：保存合并 stdout/stderr、
 开始/结束时间、真实退出码、源码 commit、脏状态和递归依赖状态至被忽略的 `reports/logs/`。
 大型日志保留本地；阶段报告、命令摘要和文件哈希进入 Git。
+
+### 实验输出与指令类型审计
+
+官方实验生成的子模块输出已逐项审查，没有修改任何已跟踪子模块源码。
+`reports/scripts/configure_local_excludes.py` 只将 OpenGeMM results、生成的 transform MLIR
+和 Gemmini 编译二进制写入各子模块本地 `info/exclude`，运行前拒绝与跟踪文件相交的规则。
+不改子模块 `.gitignore`，不删除文件，不隐藏源码补丁；规则不会随 clone 自动传播。
+
+原始采集脚本的 `rocc` 计数包含全部 unknown RoCC 指令。实际 Gemmini opcode 为 custom3 (0x7b)，
+配置子类型采用 funct7=0。已用真实 32x32 流式日志核验，另以原生 C++ 流式计数器进行十组补充审计，
+分别记录整个程序的指令总数、全部 RoCC 与配置子类型；所有结果注明范围，不改写官方 PKL 数值。
+官方完整运行已在 3958aeb 启动，其 Python 模块在进程内保持原始已加载版本；
+后续新增 custom3 计数字段服务于将来的运行，本轮该字段由独立补充审计表提供。

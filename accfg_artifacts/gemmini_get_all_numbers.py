@@ -39,6 +39,7 @@ def get_spike_data(input_folder):
             unknown_count = 0
             traced_instructions_total = 0
             custom0_funct7_zero_total = 0
+            custom3_funct7_zero_total = 0
             # check each line in process output for cycles taken statement and if it contains "unknown"
             while True:
                 line = process.stdout.readline()
@@ -57,6 +58,8 @@ def get_spike_data(input_folder):
                         instruction = int(encoding.group(1), 16)
                         if instruction & 0x7f == 0x0b and instruction >> 25 == 0:
                             custom0_funct7_zero_total += 1
+                        if instruction & 0x7f == 0x7b and (instruction >> 25) & 0x7f == 0:
+                            custom3_funct7_zero_total += 1
 
             returncode = process.wait()
             if returncode != 0:
@@ -73,6 +76,7 @@ def get_spike_data(input_folder):
             return {"option": option, "size": size, "rocc": unknown_count, "cycles": cycles,
                     "spike_exit_code": returncode, "traced_instructions_total": traced_instructions_total,
                     "custom0_funct7_zero_total": custom0_funct7_zero_total,
+                    "custom3_funct7_zero_total": custom3_funct7_zero_total,
                     "binary_sha256": binary_sha256}
 
         data = list(pool.map(body, itertools.product([512, 256, 128, 64, 32],["C baseline", "MLIR deduplicated"])))

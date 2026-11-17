@@ -61,6 +61,7 @@ def main():
             assert set(map(str, frame["option"])) == set(LABELS)
             assert all(frame["cycles"] > 0)
             independent = []
+            trace_audit = []
             for _, r in frame.iterrows():
                 n = int(r["size"])
                 base = frame[(frame["size"] == n) & (frame["option"] == "NO_ACCFG_OPT")].iloc[0]
@@ -73,6 +74,21 @@ def main():
                 for metric, value in calculated.items():
                     assert math.isclose(float(r[metric]), value, rel_tol=1e-12), metric
                 independent.append({"size": n, "option": str(r["option"]), **calculated})
+                folder = ROOT / "snax-mlir/kernels/streamer_matmul/results" / f"tiled_matmul_generated_{n}x{n}x{n}" / f"test_generated_{n}x{n}x{n}_{r['option']}"
+                trace = folder / "trace_hart_00000.trace.txt"
+                lines, instructions = 0, 0
+                with trace.open() as stream:
+                    for line in stream:
+                        lines += 1
+                        if re.match(r"^\s*\d+\s+\d+\s+M\s+0x[0-9a-fA-F]+\s+", line):
+                            instructions += 1
+                binary = folder / "generated.stream.x"
+                trace_audit.append({"size": n, "option": str(r["option"]),
+                                    "hart0_trace_lines": lines, "hart0_instruction_lines": instructions,
+                                    "scope": "whole hart0 trace, including startup; not tiling-loop instruction count",
+                                    "binary": str(binary.relative_to(ROOT)),
+                                    "binary_sha256": hashlib.sha256(binary.read_bytes()).hexdigest()})
+            pd.DataFrame(trace_audit).to_csv(tables / "opengemm_trace_audit.csv", index=False)
             ratios = [x["speedup"] for x in independent if x["option"] == "ACCFG_BOTH"]
             summary[experiment] = {"status": "PASS", "rows": len(frame), "geomean_speedup": geomean(ratios),
                                    "maximum_speedup": max(ratios), "independent_results": independent,
