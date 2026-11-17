@@ -2,3 +2,68 @@
 **/__pycache__/**
 *.pkl
 *.pdf
+
+# Python environments, caches, and packaging output
+*.py[cod]
+.venv/
+venv/
+.tox/
+.nox/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.cache/
+build/
+dist/
+.eggs/
+
+# Compiler output and simulation traces
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+*.o
+*.a
+*.so
+*.so.*
+*.elf
+*.bin
+*.out
+*.vcd
+*.fst
+
+# Local container storage and exported images; never store Docker's data root here
+/.docker/
+/docker-data/
+/container-data/
+/docker-images/
+*.tar
+*.tar.gz
+*.tar.zst
+*.tgz
+
+# Local secrets (sanitized templates may be tracked after review)
+.env
+.env.*
+!.env.example
+!.env.template
+.secrets/
+*.pem
+*.key
+
+# Temporary logs and large generated experiment data
+*.log
+*.logs
+*.tmp
+*.npy
+*.npz
+*.h5
+*.hdf5
+/artifacts/raw/
+/artifacts/intermediate/
+/artifacts/**/*.png
+/reports/raw/
+/reports/logs/
+
+# Keep reports, configuration JSON, CSV summaries, and analysis scripts trackable.
+# Parent ignore rules do not govern files inside independent submodule repositories.
