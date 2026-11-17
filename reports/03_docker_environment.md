@@ -44,3 +44,11 @@
   随后通过 Python 安装位置和 pip 来源信息正确记录。此失败未被计作作者环境脚本失败或实验成功。
 
 本阶段只证明基础环境可执行；不代表 OpenGeMM、Gemmini 或完整入口已通过。
+
+## 镜像内源码补充核验
+
+Spike 帮助页报告 1.1.1-dev；其镜像内源码提交为
+`2a0bb5f543974a039ab1ba50b0ac362c6646b74d`。
+libgemmini 提交为 `5b1254a7dc72f757442280e7f28ef30542c78533`。
+镜像内 snax-mlir 提交为 `0df8b515768232036bceb6af7a6d5935b5e1a3db`，与挂载源码目标一致。
+路径和 SHA 见 `configs/image_source_versions.json`。

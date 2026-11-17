@@ -1,0 +1,14 @@
+[
+  {
+    "path": "/snax-mlir",
+    "commit": "0df8b515768232036bceb6af7a6d5935b5e1a3db"
+  },
+  {
+    "path": "/libgemmini",
+    "commit": "5b1254a7dc72f757442280e7f28ef30542c78533"
+  },
+  {
+    "path": "/riscv-isa-sim",
+    "commit": "2a0bb5f543974a039ab1ba50b0ac362c6646b74d"
+  }
+]

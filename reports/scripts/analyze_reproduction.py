@@ -105,6 +105,22 @@ def main():
             assert len(frame) == 10 and set(frame["size"]) == {32, 64, 128, 256, 512}
             assert set(frame["option"]) == {"C baseline", "MLIR deduplicated"}
             assert all(frame["cycles"] > 0) and all(frame["rocc"] > 0)
+            audit_path = tables / "gemmini_opcode_audit.json"
+            if audit_path.exists():
+                opcode_rows = json.loads(audit_path.read_text())
+                assert len(opcode_rows) == 10
+                config_counts = []
+                for _, r in frame.iterrows():
+                    audit = next(a for a in opcode_rows if a["size"] == int(r["size"]) and a["option"] == r["option"])
+                    assert audit["spike_exit_code"] == int(r["spike_exit_code"]) == 0
+                    assert audit["measured_instructions"] == int(r["cycles"])
+                    assert audit["rocc_unknown_total"] == int(r["rocc"])
+                    assert audit["traced_instructions_total"] == int(r["traced_instructions_total"])
+                    assert audit["binary_sha256"] == r["binary_sha256"]
+                    # k_CONFIG plus WS-loop configuration funct7 values in gemmini.h.
+                    config_counts.append(sum(audit["custom3_funct7_counts"].get(str(k), 0) for k in [0, 9, 10, 11, 12, 13]))
+                frame["configuration_instructions_total"] = config_counts
+                summary["gemmini_opcode_crosscheck"] = "PASS: every simulator exit, binary hash, total instruction count, RoCC count and measured interval agree"
             frame["ops"] = frame["size"] ** 3 * 2
             frame["bw_conf_eff"] = 16 * frame["rocc"] / (3 * frame["cycles"])
             frame["Ioc"] = frame["ops"] / (16 * frame["rocc"])
@@ -112,8 +128,10 @@ def main():
             frame["p_attain_seq"] = frame["p_attain_unrounded"].round().astype(int)
             pivot = frame.pivot(index="size", columns="option", values="p_attain_seq")
             ratios = list(pivot["MLIR deduplicated"] / pivot["C baseline"])
+            unrounded = frame.pivot(index="size", columns="option", values="p_attain_unrounded")
             summary[experiment] = {"status": "PASS", "rows": len(frame), "geomean_speedup": geomean(ratios),
                                    "improvement_percent": (geomean(ratios) - 1) * 100,
+                                   "geomean_speedup_unrounded_model": geomean(list(unrounded["MLIR deduplicated"] / unrounded["C baseline"])),
                                    "measurement": "Spike instruction count and modeled performance (CPI=3, peak=512); not hardware cycles"}
             actual = (geomean(ratios) - 1) * 100
             error = abs(actual - 10.5)
@@ -135,6 +153,7 @@ def main():
     summary["alignment_pass"] = sum(r["Status"] == "PASS" for r in rows)
     summary["alignment_fail"] = sum(r["Status"] == "FAIL" for r in rows)
     summary["alignment_not_tested"] = sum(r["Status"] == "NOT TESTED" for r in rows)
+    summary["analysis_script_sha256"] = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
     figures = ROOT / "reports/figures"
     figures.mkdir(exist_ok=True)
     summary["files"] = []
