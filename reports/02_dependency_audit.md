@@ -1,7 +1,7 @@
 # 02 依赖审计
 
 2026-11-17。**PASS：全部已声明子模块精确恢复至论文目标 SHA，无替代源码。**
-构建验证尚待官方镜像就绪，结果追加于本报告及 03–05 报告，不把源码一致等同于实验通过。
+依赖恢复时构建尚待官方镜像就绪；现已完成后续构建与完整实验，结果见下及 03–05 报告。源码一致与实验通过分别核验。
 
 | 路径 | 目标与当前实际 SHA（相同） | 来源 |
 | --- | --- | --- |
@@ -44,3 +44,9 @@ restore-riscv-paper-commit、zenodo-metadata、zenodo-download-retry、
 inspect-zenodo-rocc-objects、verify-official-archive、recover-original-rocc-bundle、
 verify-restored-dependencies。成功操作均有退出码 0；失败入口保留其真实失败记录。
 元数据及哈希清单位于 `reports/configs/zenodo*.json`。
+
+## 最终构建与依赖验收
+
+官方 run-all.sh 已完整退出 0；Gemmini 的 C 与 MLIR 二进制均成功构建，OpenGeMM 的 24 组编译和仿真均通过。
+所有五个可达 gitlink 再次逐层从原始 Git 树枚举，目标/实际 SHA 全部一致，内部工作树为空。
+正式锁定记录为 `configs/final_dependency_lock.json`。本轮没有对子模块源码建立新提交或更新 gitlink。

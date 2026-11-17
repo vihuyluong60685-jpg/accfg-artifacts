@@ -40,7 +40,7 @@ def main():
         rows = list(pool.map(measure, cases))
     (ROOT / "reports/tables/gemmini_opcode_audit.json").write_text(json.dumps(rows, indent=2) + "\n")
     with (ROOT / "reports/tables/gemmini_opcode_audit.csv").open("w", newline="") as stream:
-        writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
+        writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 

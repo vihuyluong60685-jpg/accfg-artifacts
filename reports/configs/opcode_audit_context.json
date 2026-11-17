@@ -1,0 +1,13 @@
+{
+  "source_commit_containing_counter": "8a306b829af5d9474ba200c4e385343b554cfb81",
+  "cpp_sha256": "648c0d481fab8b458a362752d161c56fae5eb22814d914c77ff77452c49146dd",
+  "driver_sha256": "dcaa0311f96b16e8558e27a181bdd2146de46bff27cb8cbf246e9579cb2157cb",
+  "binary_path": "reports/raw/spike_opcode_audit",
+  "binary_sha256": "cbefbbd18476980f796e7c5f5fe32ffdc10d35129da3ec8050a28926a6329237",
+  "compiler": "g++ (Ubuntu 13.2.0-23ubuntu4) 13.2.0",
+  "compiler_options": [
+    "-O2",
+    "-std=c++17"
+  ],
+  "scope": "Supplementary measurement on the same official Gemmini binaries; does not replace official PKL values."
+}

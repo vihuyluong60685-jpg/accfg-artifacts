@@ -1,0 +1,10 @@
+commit,subject
+d9d1b5642d5f69420717357c9deed8f0283285b6,chore: initialize research git workflow
+e1fe82b8b505bd69938ff004eb2a83520c02c922,fix: restore non-root Docker access
+5733dd6851eecbe9099f1bc3c18391c71d22a0ec,fix: resolve artifact dependency issues
+8019be52e412734c8b533ebf602f810ea46e339f,test: add reproduction verification scripts
+3958aeb14e48a917a1e43ebbb87290becd3cf110,test: verify official artifact environment
+8a306b829af5d9474ba200c4e385343b554cfb81,test: audit dynamic RoCC instruction types
+bcc8b74d8386bb34dd022d675585cf5eb8d1fe76,analysis: reproduce OpenGeMM experiments
+9e142ad709f6477baacb592fc78f16f1d569d6d1,analysis: strengthen reproduction provenance
+2ad06c2442d4e5b12bf330d045b33267ae9b2c07,analysis: reproduce Gemmini experiments

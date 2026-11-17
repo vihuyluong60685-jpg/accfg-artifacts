@@ -89,3 +89,12 @@ HEAD 相同仍须检查工作树和嵌套依赖。上述异常全部保留，不
 实际 image ID 为 `sha256:a3dd42b69696b63e3c83a1a1719c0b2ae1965673d60251c468b337b3bf9ad813`，记录大小 11854097849 字节。
 作者 hello-world.sh 退出 0；版本、依赖安装及日志详见 [03_docker_environment.md](03_docker_environment.md)。
 此前 Docker NOT TESTED 为初始化时状态；完整论文实验仍须独立验收。
+
+## 本轮完整复现结果
+
+官方运行源码提交：`3958aeb14e48a917a1e43ebbb87290becd3cf110`；完整入口真实退出 0。
+OpenGeMM 24 组与 Gemmini 10 组均完成，Figure 10–12 均由实测数据生成。
+OpenGeMM geomean=1.9887479217735233x，maximum=2.7142857142857144x；
+Gemmini 按作者取整口径提升 10.5375797367379%。375 项论文/README 对齐检查全部通过。
+原始五个依赖无替代版本；额外十组 RoCC 分类审计与官方二进制和统计完全一致。
+完整来源、镜像、真实命令、文件时间及哈希见 `configs/experiment_run.json` 与最终 08 报告。

@@ -66,5 +66,21 @@
       "mtime_ns": 1794895081399845355,
       "birth_time": "2026-11-17 13:58:01.397515134 +0800"
     }
-  ]
+  ],
+  "supplementary_audit": {
+    "run_id": "20261117T060320Z_gemmini-native-opcode-audit_16c6d1",
+    "code_commit": "8a306b829af5d9474ba200c4e385343b554cfb81",
+    "started_at": "2026-11-17T06:03:20.451666+00:00",
+    "finished_at": "2026-11-17T06:47:01.590951+00:00",
+    "exit_code": 0,
+    "output_sha256": "b0195696fe06262dc11c27b0b4dd02c545a45a73cbc3097dd7ae6bbff0bf3f10",
+    "source_context": "reports/configs/opcode_audit_context.json",
+    "crosscheck": "PASS: every simulator exit, binary hash, total instruction count, RoCC count and measured interval agree"
+  },
+  "final_analysis": {
+    "script_sha256": "6e576598ee73db9f7a0e8b2c910999023ec93d958b918201c62f99242d9d56b8",
+    "alignment_pass": 375,
+    "alignment_fail": 0,
+    "alignment_not_tested": 0
+  }
 }

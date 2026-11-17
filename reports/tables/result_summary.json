@@ -1,0 +1,297 @@
+{
+  "reference_source": "README.md at paper-original; PDF Figure 10\u201312 and Appendix A.6",
+  "OpenGeMM": {
+    "status": "PASS",
+    "rows": 24,
+    "geomean_speedup": 1.9887479217735233,
+    "maximum_speedup": 2.7142857142857144,
+    "independent_results": [
+      {
+        "size": 32,
+        "option": "NO_ACCFG_OPT",
+        "ops": 65536,
+        "speedup": 1.0,
+        "Ioc": 78.01904761904763,
+        "p_meas": 107.78947368421052,
+        "p_attain_seq": 135.40495867768595,
+        "p_attain_conc": 156.03809523809525
+      },
+      {
+        "size": 32,
+        "option": "DEDUP_ONLY",
+        "ops": 65536,
+        "speedup": 2.4223107569721116,
+        "Ioc": 234.58076062639822,
+        "p_meas": 261.0996015936255,
+        "p_attain_seq": 321.7477753912243,
+        "p_attain_conc": 469.16152125279643
+      },
+      {
+        "size": 32,
+        "option": "OVERLAP_ONLY",
+        "ops": 65536,
+        "speedup": 0.9061102831594635,
+        "Ioc": 63.16722891566265,
+        "p_meas": 97.66915052160954,
+        "p_attain_seq": 112.45988845988846,
+        "p_attain_conc": 126.3344578313253
+      },
+      {
+        "size": 32,
+        "option": "ACCFG_BOTH",
+        "ops": 65536,
+        "speedup": 2.7142857142857144,
+        "Ioc": 200.18633066055747,
+        "p_meas": 292.57142857142856,
+        "p_attain_seq": 287.83310458413393,
+        "p_attain_conc": 400.37266132111495
+      },
+      {
+        "size": 512,
+        "option": "NO_ACCFG_OPT",
+        "ops": 268435456,
+        "speedup": 1.0,
+        "Ioc": 1106.0928270042193,
+        "p_meas": 682.1947708697597,
+        "p_attain_seq": 699.9839786381842,
+        "p_attain_conc": 1024.0
+      },
+      {
+        "size": 512,
+        "option": "DEDUP_ONLY",
+        "ops": 268435456,
+        "speedup": 1.2969366970118459,
+        "Ioc": 4329.8747462038955,
+        "p_meas": 884.7634328505791,
+        "p_attain_seq": 915.7179754781864,
+        "p_attain_conc": 1024.0
+      },
+      {
+        "size": 512,
+        "option": "OVERLAP_ONLY",
+        "ops": 268435456,
+        "speedup": 1.3435264633276085,
+        "Ioc": 1089.9604352769206,
+        "p_meas": 916.5467278072365,
+        "p_attain_seq": 696.7210058035112,
+        "p_attain_conc": 1024.0
+      },
+      {
+        "size": 512,
+        "option": "ACCFG_BOTH",
+        "ops": 268435456,
+        "speedup": 1.3507905884614593,
+        "Ioc": 4276.893145566834,
+        "p_meas": 921.502275988493,
+        "p_attain_seq": 914.5200045055624,
+        "p_attain_conc": 1024.0
+      },
+      {
+        "size": 16,
+        "option": "NO_ACCFG_OPT",
+        "ops": 8192,
+        "speedup": 1.0,
+        "Ioc": 39.00952380952381,
+        "p_meas": 48.47337278106509,
+        "p_attain_seq": 72.49557522123895,
+        "p_attain_conc": 78.01904761904763
+      },
+      {
+        "size": 16,
+        "option": "DEDUP_ONLY",
+        "ops": 8192,
+        "speedup": 2.011904761904762,
+        "Ioc": 83.69859514687101,
+        "p_meas": 97.52380952380952,
+        "p_attain_seq": 143.87705817782657,
+        "p_attain_conc": 167.39719029374203
+      },
+      {
+        "size": 16,
+        "option": "OVERLAP_ONLY",
+        "ops": 8192,
+        "speedup": 0.7511111111111111,
+        "Ioc": 26.532793522267205,
+        "p_meas": 36.40888888888889,
+        "p_attain_seq": 50.451116243264046,
+        "p_attain_conc": 53.06558704453441
+      },
+      {
+        "size": 16,
+        "option": "ACCFG_BOTH",
+        "ops": 8192,
+        "speedup": 1.8571428571428572,
+        "Ioc": 67.21641025641026,
+        "p_meas": 90.02197802197803,
+        "p_attain_seq": 118.83227561196736,
+        "p_attain_conc": 134.4328205128205
+      },
+      {
+        "size": 64,
+        "option": "NO_ACCFG_OPT",
+        "ops": 524288,
+        "speedup": 1.0,
+        "Ioc": 156.03809523809525,
+        "p_meas": 199.8048780487805,
+        "p_attain_seq": 239.1824817518248,
+        "p_attain_conc": 312.0761904761905
+      },
+      {
+        "size": 64,
+        "option": "DEDUP_ONLY",
+        "ops": 524288,
+        "speedup": 2.3098591549295775,
+        "Ioc": 521.4850180280989,
+        "p_meas": 461.5211267605634,
+        "p_attain_seq": 516.6989836772406,
+        "p_attain_conc": 1024.0
+      },
+      {
+        "size": 64,
+        "option": "OVERLAP_ONLY",
+        "ops": 524288,
+        "speedup": 1.1156462585034013,
+        "Ioc": 139.62396804260985,
+        "p_meas": 222.91156462585033,
+        "p_attain_seq": 219.41326637371836,
+        "p_attain_conc": 279.2479360852197
+      },
+      {
+        "size": 64,
+        "option": "ACCFG_BOTH",
+        "ops": 524288,
+        "speedup": 2.7107438016528924,
+        "Ioc": 476.03041652479857,
+        "p_meas": 541.6198347107438,
+        "p_attain_seq": 493.3604658001529,
+        "p_attain_conc": 952.0608330495971
+      },
+      {
+        "size": 256,
+        "option": "NO_ACCFG_OPT",
+        "ops": 33554432,
+        "speedup": 1.0,
+        "Ioc": 553.0464135021097,
+        "p_meas": 510.78414418802896,
+        "p_attain_seq": 531.7322515212982,
+        "p_attain_conc": 1024.0
+      },
+      {
+        "size": 256,
+        "option": "DEDUP_ONLY",
+        "ops": 33554432,
+        "speedup": 1.521246786930042,
+        "Ioc": 2160.324617526578,
+        "p_meas": 777.0287381608504,
+        "p_attain_seq": 827.8082661958692,
+        "p_attain_conc": 1024.0
+      },
+      {
+        "size": 256,
+        "option": "OVERLAP_ONLY",
+        "ops": 33554432,
+        "speedup": 1.6026347889729202,
+        "Ioc": 537.1459307165269,
+        "p_meas": 818.6004391314955,
+        "p_attain_seq": 524.271616511984,
+        "p_attain_conc": 1024.0
+      },
+      {
+        "size": 256,
+        "option": "ACCFG_BOTH",
+        "ops": 33554432,
+        "speedup": 1.634291969350184,
+        "Ioc": 2108.203598551783,
+        "p_meas": 834.7704249179022,
+        "p_attain_seq": 823.9056255438394,
+        "p_attain_conc": 1024.0
+      },
+      {
+        "size": 128,
+        "option": "NO_ACCFG_OPT",
+        "ops": 4194304,
+        "speedup": 1.0,
+        "Ioc": 312.0761904761905,
+        "p_meas": 338.7967689822294,
+        "p_attain_seq": 387.7869822485207,
+        "p_attain_conc": 624.152380952381
+      },
+      {
+        "size": 128,
+        "option": "DEDUP_ONLY",
+        "ops": 4194304,
+        "speedup": 1.8294665287424265,
+        "Ioc": 1072.883517186251,
+        "p_meas": 619.817348899069,
+        "p_attain_seq": 693.1946163142618,
+        "p_attain_conc": 1024.0
+      },
+      {
+        "size": 128,
+        "option": "OVERLAP_ONLY",
+        "ops": 4194304,
+        "speedup": 1.4163139228921175,
+        "Ioc": 294.750808151792,
+        "p_meas": 479.84258094039586,
+        "p_attain_seq": 374.1239853715101,
+        "p_attain_conc": 589.501616303584
+      },
+      {
+        "size": 128,
+        "option": "ACCFG_BOTH",
+        "ops": 4194304,
+        "speedup": 2.0510271703114644,
+        "Ioc": 1022.6580110328853,
+        "p_meas": 694.8813783962889,
+        "p_attain_seq": 682.3681861165059,
+        "p_attain_conc": 1024.0
+      }
+    ],
+    "measurement": "Verilator simulated tiling-loop cycles; not hardware measurement"
+  },
+  "gemmini_opcode_crosscheck": "PASS: every simulator exit, binary hash, total instruction count, RoCC count and measured interval agree",
+  "Gemmini": {
+    "status": "PASS",
+    "rows": 10,
+    "geomean_speedup": 1.105375797367379,
+    "improvement_percent": 10.5375797367379,
+    "geomean_speedup_unrounded_model": 1.1061717778768982,
+    "measurement": "Spike instruction count and modeled performance (CPI=3, peak=512); not hardware cycles"
+  },
+  "alignment_pass": 375,
+  "alignment_fail": 0,
+  "alignment_not_tested": 0,
+  "analysis_script_sha256": "6e576598ee73db9f7a0e8b2c910999023ec93d958b918201c62f99242d9d56b8",
+  "files": [
+    {
+      "path": "artifacts/fig10_bar_plot.png",
+      "bytes": 28615,
+      "mtime_ns": 1794896468748680451,
+      "sha256": "003f8d4f10030e45a0a0fcd627f5413ed45e1e4a3a3154014c316eb1478446e4"
+    },
+    {
+      "path": "artifacts/fig_11_bar_plot.png",
+      "bytes": 139642,
+      "mtime_ns": 1794895082574471830,
+      "sha256": "685543af88730330ef9577e1c4da0fc61176138f741184c9c328d1f164763761"
+    },
+    {
+      "path": "artifacts/fig_12_roofline.png",
+      "bytes": 128625,
+      "mtime_ns": 1794895083539490159,
+      "sha256": "5786878a35744d8baa3bfb6a113b83f100fc580ed1b7e5d2e69167e06061a6f6"
+    },
+    {
+      "path": "artifacts/gemmini_results.pkl",
+      "bytes": 2094,
+      "mtime_ns": 1794896467840729349,
+      "sha256": "bd314aad6e4854d003a0cc69283c0ec6e2267d0376c0187ed882b538a03902a1"
+    },
+    {
+      "path": "artifacts/opengemm_results.pkl",
+      "bytes": 4447,
+      "mtime_ns": 1794895081399845355,
+      "sha256": "b98df083c2d786f924c2a667a4f5812d64ca46b61c129026bc11e481c8bcb0bf"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "paper_original": "ce1567e40962037cda59a236bea6e3458caeb63a",
+  "dependencies": [
+    {
+      "path": "gemmini-rocc-tests",
+      "target_sha": "4fec505cadacec4c371305b90973fa18758e9ac0",
+      "actual_sha": "4fec505cadacec4c371305b90973fa18758e9ac0",
+      "original_url": "https://github.com/KULeuven-MICAS/gemmini-rocc-tests/",
+      "tracked_or_untracked_changes": "",
+      "status": "PASS"
+    },
+    {
+      "path": "gemmini-rocc-tests/riscv-tests",
+      "target_sha": "c84daca8824635b7d896003c78f9c6245997cf7a",
+      "actual_sha": "c84daca8824635b7d896003c78f9c6245997cf7a",
+      "original_url": "https://github.com/riscv/riscv-tests.git",
+      "tracked_or_untracked_changes": "",
+      "status": "PASS"
+    },
+    {
+      "path": "gemmini-rocc-tests/riscv-tests/env",
+      "target_sha": "0666378f353599d01fc48562b431b1dd049faab5",
+      "actual_sha": "0666378f353599d01fc48562b431b1dd049faab5",
+      "original_url": "https://github.com/riscv/riscv-test-env.git",
+      "tracked_or_untracked_changes": "",
+      "status": "PASS"
+    },
+    {
+      "path": "gemmini-rocc-tests/rocc-software",
+      "target_sha": "fddb795a0b52e82f8f4ce9ead9b1428440a62ab0",
+      "actual_sha": "fddb795a0b52e82f8f4ce9ead9b1428440a62ab0",
+      "original_url": "https://github.com/ibm/rocc-software",
+      "tracked_or_untracked_changes": "",
+      "status": "PASS"
+    },
+    {
+      "path": "snax-mlir",
+      "target_sha": "0df8b515768232036bceb6af7a6d5935b5e1a3db",
+      "actual_sha": "0df8b515768232036bceb6af7a6d5935b5e1a3db",
+      "original_url": "https://github.com/kuleuven-micas/snax-mlir",
+      "tracked_or_untracked_changes": "",
+      "status": "PASS"
+    }
+  ],
+  "rocc_recovery": "Versioned official-Zenodo Git bundle; see reports/dependencies/README.md"
+}

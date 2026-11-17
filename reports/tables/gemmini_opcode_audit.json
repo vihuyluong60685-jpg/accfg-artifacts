@@ -1,0 +1,272 @@
+[
+  {
+    "traced_instructions_total": 355825,
+    "rocc_unknown_total": 12,
+    "measured_instructions": 117,
+    "custom3_funct7_zero_total": 5,
+    "custom3_funct7_counts": {
+      "0": 5,
+      "7": 1,
+      "8": 1,
+      "9": 1,
+      "10": 1,
+      "11": 1,
+      "12": 1,
+      "13": 1
+    },
+    "size": 32,
+    "option": "C baseline",
+    "spike_exit_code": 0,
+    "binary_sha256": "ba828c9069bb8b017a5e4c5a710cc8a018d92e3069e9b0308888d27abd58cedb",
+    "command": [
+      "spike",
+      "-l",
+      "--extension=gemmini",
+      "/repo/gemmini-rocc-tests/build/bareMetalC/tiled_matmul_ws_32x32-baremetal"
+    ],
+    "scope": "whole-program trace, including startup; first printed cycle-counter interval recorded separately"
+  },
+  {
+    "traced_instructions_total": 355826,
+    "rocc_unknown_total": 12,
+    "measured_instructions": 85,
+    "custom3_funct7_zero_total": 5,
+    "custom3_funct7_counts": {
+      "0": 5,
+      "7": 1,
+      "8": 1,
+      "9": 1,
+      "10": 1,
+      "11": 1,
+      "12": 1,
+      "13": 1
+    },
+    "size": 32,
+    "option": "MLIR deduplicated",
+    "spike_exit_code": 0,
+    "binary_sha256": "7fb1f5d30adcf8e0b6e73cd6606a72494673f6cb3fe93e4d6a4d1eec664582c9",
+    "command": [
+      "spike",
+      "-l",
+      "--extension=gemmini",
+      "/repo/gemmini-rocc-tests/bareMetalMLIR/tiled_matmul_32x32.opt.acc_dialect.x"
+    ],
+    "scope": "whole-program trace, including startup; first printed cycle-counter interval recorded separately"
+  },
+  {
+    "traced_instructions_total": 2347786,
+    "rocc_unknown_total": 12,
+    "measured_instructions": 120,
+    "custom3_funct7_zero_total": 5,
+    "custom3_funct7_counts": {
+      "0": 5,
+      "7": 1,
+      "8": 1,
+      "9": 1,
+      "10": 1,
+      "11": 1,
+      "12": 1,
+      "13": 1
+    },
+    "size": 64,
+    "option": "C baseline",
+    "spike_exit_code": 0,
+    "binary_sha256": "fbf40b67dc86dd9f2efb053270dff70531cd596cdc4bc8e4ede4e30c4df11b5e",
+    "command": [
+      "spike",
+      "-l",
+      "--extension=gemmini",
+      "/repo/gemmini-rocc-tests/build/bareMetalC/tiled_matmul_ws_64x64-baremetal"
+    ],
+    "scope": "whole-program trace, including startup; first printed cycle-counter interval recorded separately"
+  },
+  {
+    "traced_instructions_total": 2347788,
+    "rocc_unknown_total": 12,
+    "measured_instructions": 89,
+    "custom3_funct7_zero_total": 5,
+    "custom3_funct7_counts": {
+      "0": 5,
+      "7": 1,
+      "8": 1,
+      "9": 1,
+      "10": 1,
+      "11": 1,
+      "12": 1,
+      "13": 1
+    },
+    "size": 64,
+    "option": "MLIR deduplicated",
+    "spike_exit_code": 0,
+    "binary_sha256": "61b2860752367820afcf90231dbe0897a6068e95f33b560be6bdc8f0c0141fc5",
+    "command": [
+      "spike",
+      "-l",
+      "--extension=gemmini",
+      "/repo/gemmini-rocc-tests/bareMetalMLIR/tiled_matmul_64x64.opt.acc_dialect.x"
+    ],
+    "scope": "whole-program trace, including startup; first printed cycle-counter interval recorded separately"
+  },
+  {
+    "traced_instructions_total": 17660306,
+    "rocc_unknown_total": 30,
+    "measured_instructions": 607,
+    "custom3_funct7_zero_total": 5,
+    "custom3_funct7_counts": {
+      "0": 5,
+      "7": 1,
+      "8": 4,
+      "9": 4,
+      "10": 4,
+      "11": 4,
+      "12": 4,
+      "13": 4
+    },
+    "size": 128,
+    "option": "C baseline",
+    "spike_exit_code": 0,
+    "binary_sha256": "dacd19f7a168a564ef005bb7001af4186d23d2f949e03e4479f669c5fbdff708",
+    "command": [
+      "spike",
+      "-l",
+      "--extension=gemmini",
+      "/repo/gemmini-rocc-tests/build/bareMetalC/tiled_matmul_ws_128x128-baremetal"
+    ],
+    "scope": "whole-program trace, including startup; first printed cycle-counter interval recorded separately"
+  },
+  {
+    "traced_instructions_total": 17660307,
+    "rocc_unknown_total": 26,
+    "measured_instructions": 167,
+    "custom3_funct7_zero_total": 5,
+    "custom3_funct7_counts": {
+      "0": 5,
+      "7": 1,
+      "8": 4,
+      "9": 5,
+      "10": 4,
+      "11": 5,
+      "12": 1,
+      "13": 1
+    },
+    "size": 128,
+    "option": "MLIR deduplicated",
+    "spike_exit_code": 0,
+    "binary_sha256": "b84ec6ac5a7740d3969e157cfbdebd64a6c4666ef6321c9e1d2c87fba5faddd8",
+    "command": [
+      "spike",
+      "-l",
+      "--extension=gemmini",
+      "/repo/gemmini-rocc-tests/bareMetalMLIR/tiled_matmul_128x128.opt.acc_dialect.x"
+    ],
+    "scope": "whole-program trace, including startup; first printed cycle-counter interval recorded separately"
+  },
+  {
+    "traced_instructions_total": 137609748,
+    "rocc_unknown_total": 78,
+    "measured_instructions": 1373,
+    "custom3_funct7_zero_total": 5,
+    "custom3_funct7_counts": {
+      "0": 5,
+      "7": 1,
+      "8": 12,
+      "9": 12,
+      "10": 12,
+      "11": 12,
+      "12": 12,
+      "13": 12
+    },
+    "size": 256,
+    "option": "C baseline",
+    "spike_exit_code": 0,
+    "binary_sha256": "f83fff370d98d5a31887ce17be47ccfeacc42a4def135f06b081d432acc9fb4a",
+    "command": [
+      "spike",
+      "-l",
+      "--extension=gemmini",
+      "/repo/gemmini-rocc-tests/build/bareMetalC/tiled_matmul_ws_256x256-baremetal"
+    ],
+    "scope": "whole-program trace, including startup; first printed cycle-counter interval recorded separately"
+  },
+  {
+    "traced_instructions_total": 137609750,
+    "rocc_unknown_total": 58,
+    "measured_instructions": 259,
+    "custom3_funct7_zero_total": 5,
+    "custom3_funct7_counts": {
+      "0": 5,
+      "7": 1,
+      "8": 12,
+      "9": 13,
+      "10": 12,
+      "11": 13,
+      "12": 1,
+      "13": 1
+    },
+    "size": 256,
+    "option": "MLIR deduplicated",
+    "spike_exit_code": 0,
+    "binary_sha256": "9eae1a47cb17f022d051011c5e12487b0bab9e3b27030c515fa97a36e50d55af",
+    "command": [
+      "spike",
+      "-l",
+      "--extension=gemmini",
+      "/repo/gemmini-rocc-tests/bareMetalMLIR/tiled_matmul_256x256.opt.acc_dialect.x"
+    ],
+    "scope": "whole-program trace, including startup; first printed cycle-counter interval recorded separately"
+  },
+  {
+    "traced_instructions_total": 1086239412,
+    "rocc_unknown_total": 258,
+    "measured_instructions": 4159,
+    "custom3_funct7_zero_total": 5,
+    "custom3_funct7_counts": {
+      "0": 5,
+      "7": 1,
+      "8": 42,
+      "9": 42,
+      "10": 42,
+      "11": 42,
+      "12": 42,
+      "13": 42
+    },
+    "size": 512,
+    "option": "C baseline",
+    "spike_exit_code": 0,
+    "binary_sha256": "ae3b6531a5562f86c9b3efd9b0fed222917d4046a75ca010a73bd9161f75da06",
+    "command": [
+      "spike",
+      "-l",
+      "--extension=gemmini",
+      "/repo/gemmini-rocc-tests/build/bareMetalC/tiled_matmul_ws_512x512-baremetal"
+    ],
+    "scope": "whole-program trace, including startup; first printed cycle-counter interval recorded separately"
+  },
+  {
+    "traced_instructions_total": 1086239413,
+    "rocc_unknown_total": 178,
+    "measured_instructions": 482,
+    "custom3_funct7_zero_total": 5,
+    "custom3_funct7_counts": {
+      "0": 5,
+      "7": 1,
+      "8": 42,
+      "9": 43,
+      "10": 42,
+      "11": 43,
+      "12": 1,
+      "13": 1
+    },
+    "size": 512,
+    "option": "MLIR deduplicated",
+    "spike_exit_code": 0,
+    "binary_sha256": "3da27b9d350f31a24cad0fc2dd7e5155d09439a62540699b12efbf264f219b81",
+    "command": [
+      "spike",
+      "-l",
+      "--extension=gemmini",
+      "/repo/gemmini-rocc-tests/bareMetalMLIR/tiled_matmul_512x512.opt.acc_dialect.x"
+    ],
+    "scope": "whole-program trace, including startup; first printed cycle-counter interval recorded separately"
+  }
+]

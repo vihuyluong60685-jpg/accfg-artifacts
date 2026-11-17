@@ -66,7 +66,7 @@ def main():
     tables = ROOT / "reports/tables"
     for name, records in [("result_file_manifest.csv", rows), ("command_audit.csv", commands)]:
         with (tables / name).open("w", newline="") as stream:
-            writer = csv.DictWriter(stream, fieldnames=list(records[0]))
+            writer = csv.DictWriter(stream, fieldnames=list(records[0]), lineterminator="\n")
             writer.writeheader()
             writer.writerows(records)
     print("Hashed", len(rows), "retained files; recorded", len(commands), "completed commands")
