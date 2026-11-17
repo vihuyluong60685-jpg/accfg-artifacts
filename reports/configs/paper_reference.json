@@ -1,0 +1,14 @@
+{
+  "doi": "10.1145/3760250.3762225",
+  "source_url": "https://arxiv.org/pdf/2511.10397",
+  "local_path": "reports/raw/The_Configuration_Wall_arxiv_2511.10397.pdf",
+  "sha256": "48c4be05a45f8c4b7c36add11495d543e56d25385dab641d02de9d7e9d1564d3",
+  "bytes": 1657400,
+  "reference_figures": [
+    10,
+    11,
+    12
+  ],
+  "reference_metrics": "PDF Appendix A.6; precise per-case reference numbers from baseline README.md",
+  "publisher_access": "ACM DOI/PDF endpoint unavailable to web tool; author arXiv PDF carries the same DOI"
+}
