@@ -132,3 +132,15 @@ git branch -vv
 和 HTTPS，核实 `gh api user --jq .login` 是用户账户，再执行 `gh auth setup-git`，
 重试上述推送。也可通过可信的凭据管理器配置 HTTPS 凭据；不把令牌写进 URL、
 报告、命令历史或版本库。认证与实际远程同步结果以最终验收为准。
+
+## 2026-11-17 后续复现阶段更新
+
+上述初始化过程保留为历史记录。本轮用户已完成 GitHub CLI 登录及推送；
+重新核验 origin 的 `repro/accfg-2026` 指向初始化提交 `d9d1b5642d5f69420717357c9deed8f0283285b6`，
+远程 `paper-original` 指向 `ce1567e40962037cda59a236bea6e3458caeb63a`。
+本轮继承分支、身份和远程，不重新初始化、不移动基线、不向 upstream 推送。
+当前授权已扩展到依赖修复、官方环境测试及实际论文实验；先前“不运行实验”的文字描述的是初始化阶段。
+
+命令审计使用 `reports/scripts/record_command.py LABEL -- COMMAND ...`：保存合并 stdout/stderr、
+开始/结束时间、真实退出码、源码 commit、脏状态和递归依赖状态至被忽略的 `reports/logs/`。
+大型日志保留本地；阶段报告、命令摘要和文件哈希进入 Git。
