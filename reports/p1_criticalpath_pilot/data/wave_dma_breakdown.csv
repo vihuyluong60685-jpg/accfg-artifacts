@@ -1,0 +1,13 @@
+Method,Variant,Gap,Gap_Start,Gap_End,Gap_Cycles,DMA_Busy_Cycles,Non_DMA_Busy_In_Gap,Total_Window_Cycles,Wave_On_Equals_Off
+D,original,1,5891,6188,297,180.0,117.0,1664,yes
+D,original,2,6210,6618,408,223.0,185.0,1664,yes
+D,original,3,6656,7063,407,227.0,180.0,1664,yes
+D,original,4,7084,7493,409,223.0,186.0,1664,yes
+E,guard,1,5884,6191,307,180.0,127.0,1694,yes
+E,guard,2,6215,6638,423,227.0,196.0,1694,yes
+E,guard,3,6662,7071,409,223.0,186.0,1694,yes
+E,guard,4,7100,7510,410,227.0,183.0,1694,yes
+F,omit,1,5873,6174,301,172.0,129.0,1680,yes
+F,omit,2,6193,6619,426,223.0,203.0,1680,yes
+F,omit,3,6642,7064,422,227.0,195.0,1680,yes
+F,omit,4,7084,7495,411,223.0,188.0,1680,yes

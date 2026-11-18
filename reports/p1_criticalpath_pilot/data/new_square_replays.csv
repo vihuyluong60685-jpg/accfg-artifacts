@@ -1,0 +1,29 @@
+Matrix_Size,Scope,Method,Label,Evidence,Cycles,CSR_Writes,Host_Instructions,Launches,Launch_CSRS,Await_Sequences,Await_CSRS,Barrier_CSRS,Correctness,ELF_SHA256,ELF_Bytes,Build_Ms,Simulator_Exit,DMA,Same_Cycle_And_Counts_As_Historical,Run_ID
+16x16x16,no_copy,A,Base,NEW,169,100,129,4,8,4,12,0,not_checked,5fb5c7a555ea483caa615f6e57aaeafcfe42d5b58999cceb185ac0f1078bbe3d,127188,832,0,off in timed window,yes,no_copy_16_A
+16x16x16,no_copy,B,Dedup,NEW,84,34,56,4,8,4,12,0,not_checked,90d560bac6f4c39b21941deed553767161f46efe83a485d672b19b8db6f053a0,127188,709,0,off in timed window,yes,no_copy_16_B
+16x16x16,no_copy,C,Overlap,NEW,225,150,179,4,8,4,12,0,not_checked,4c23a6a52d0d9abc945c801522959f1efa0b24e580a75ae376c1cc77f0c2b798,127316,709,0,off in timed window,yes,no_copy_16_C
+16x16x16,no_copy,D,Both,NEW,91,40,62,4,8,4,12,0,not_checked,8ea760c0aeeb28b676eac38cc16cbb4e78399378cde043e52e3afc36f96625c5,127188,671,0,off in timed window,yes,no_copy_16_D
+16x16x16,no_copy,E,Guard,NEW,84,34,56,4,8,4,12,0,not_checked,200a293ef4a277cfdf2d6b98385856c40d71652b47591b07a65c09821ac3be19,127188,1073,0,off in timed window,yes,no_copy_16_E
+16x16x16,no_copy,F,Omit,NEW,77,28,50,4,8,4,12,0,not_checked,af5825a1601f72aa745226a520ebea2f24fafa6ae67769da78d1405c73e297aa,127124,1044,0,off in timed window,yes,no_copy_16_F
+32x32x32,no_copy,A,Base,NEW,608,400,531,16,32,16,48,0,not_checked,4fabe3c32736a59add096c2b346cbbf7abab0ab15e35d5a5dadce79521e7a5a9,134804,678,0,off in timed window,yes,no_copy_32_A
+32x32x32,no_copy,B,Dedup,NEW,251,70,162,16,32,16,48,0,not_checked,baa545066ed8208462951c7dd224136ebe3819d4143324a5b1c703c39dca2562,134868,689,0,off in timed window,yes,no_copy_32_B
+32x32x32,no_copy,C,Overlap,NEW,671,500,631,16,32,16,48,0,not_checked,0cd171e82088e5d992a633b9ffa58ef4b1f037bfeb163e9a2c68341a4eaec38f,134868,666,0,off in timed window,yes,no_copy_32_C
+32x32x32,no_copy,D,Both,NEW,224,82,174,16,32,16,48,0,not_checked,48f43c9506e81988883cdcd01a99e4cb8b649d9f2efc80072e9144f9f8da70a3,134868,716,0,off in timed window,yes,no_copy_32_D
+64x64x64,no_copy,A,Base,NEW,2624,1600,2084,64,128,64,192,0,not_checked,8548285d9f5f80d3d3b6d8a4a89fe76c6320621d700e9e92912b80aa1d786f0a,165524,696,0,off in timed window,yes,no_copy_64_A
+64x64x64,no_copy,B,Dedup,NEW,1136,214,555,64,128,64,192,0,not_checked,16c50e1b8a12042d42850862521c42f99913a87eb6b01532ac60a14fe7fa7ba3,165716,743,0,off in timed window,yes,no_copy_64_B
+64x64x64,no_copy,C,Overlap,NEW,2352,1800,2284,64,128,64,192,0,not_checked,a3262e6e32fa5e04336b48b259b5742852948244606cdab86306db903c4e35fd,165588,735,0,off in timed window,yes,no_copy_64_C
+64x64x64,no_copy,D,Both,NEW,968,238,579,64,128,64,192,0,not_checked,bea9750f6345e59091ac53f20b36ecfcaa3fb7236801c3a7c896306c0315afec,165716,667,0,off in timed window,yes,no_copy_64_D
+16x16x16,checked,A,Base,NEW,1802,100,153,4,8,4,12,8,golden,a80217b088d186876b5d8361cdb8cf75c23c2d1cfadc509767ab8893cd4ef806,129020,746,0,enabled,yes,checked_16_A
+16x16x16,checked,B,Dedup,NEW,1700,34,80,4,8,4,12,8,golden,7f5f5c2a4c0329d949210cfe1eeb0b0ee824706f07f53ffe2972ac1ed9027297,128956,735,0,enabled,yes,checked_16_B
+16x16x16,checked,C,Overlap,NEW,1778,150,203,4,8,4,12,8,golden,48f917818c4031207044500165fa1d9fcdb47e5db488cb385419bb50084b23fe,129084,763,0,enabled,yes,checked_16_C
+16x16x16,checked,D,Both,NEW,1664,40,86,4,8,4,12,8,golden,d66721823413bf030ed12405d0dd2bd0bfe8511fd8dc7fadb0257e58002b44ce,128956,801,0,enabled,yes,checked_16_D
+16x16x16,checked,E,Guard,NEW,1694,34,80,4,8,4,12,8,golden,df8ed8fb721015b951e6359d83dd013ce94d0b42fa6e47cb48aa8105f6e880b5,128956,1152,0,enabled,yes,checked_16_E
+16x16x16,checked,F,Omit,NEW,1680,28,74,4,8,4,12,8,golden,0e4c89c0ada2ed38237469a4f6036aa924eac5b7121825ce7db43838abead603,128892,1173,0,enabled,yes,checked_16_F
+32x32x32,checked,A,Base,NEW,11985,400,627,16,32,16,48,32,golden,1e250388b1d5dc5eddeeb40300663c24e374b4257e1ed204beb561ba47e6d073,137404,770,0,enabled,yes,checked_32_A
+32x32x32,checked,B,Dedup,NEW,11758,70,258,16,32,16,48,32,golden,4683ebab088cd8a34fbc67c4fd6165d9b4b61891f3e890f957b5766c637a84c7,137468,782,0,enabled,yes,checked_32_B
+32x32x32,checked,C,Overlap,NEW,11882,500,727,16,32,16,48,32,golden,2a9d441af00bf471b12823abd0ab919390e72ccde22506f04b5f521c40f3fcf8,137532,775,0,enabled,yes,checked_32_C
+32x32x32,checked,D,Both,NEW,11545,82,270,16,32,16,48,32,golden,098d4a11718db67efacb80d2e1dc013ad9baa4ef99013dfc9efc33220d64ffa5,137468,772,0,enabled,yes,checked_32_D
+64x64x64,checked,A,Base,NEW,85195,1600,2468,64,128,64,192,128,golden,8da3e2aa90952c67d647e3e71b2395c5936c983e531fe49b7e475c584ebf4ab3,167932,1875,0,enabled,yes,checked_64_A
+64x64x64,checked,B,Dedup,NEW,83424,214,939,64,128,64,192,128,golden,dcf1886e4e80e09faea08f046d403a0e921a82d67aed4bcdf52c767ffa527133,168188,814,0,enabled,yes,checked_64_B
+64x64x64,checked,C,Overlap,NEW,84294,1800,2668,64,128,64,192,128,golden,3b80f418adda9eb9fe2cf2f29a1f97ad28cd94205031832903058954ff55428f,168060,781,0,enabled,yes,checked_64_C
+64x64x64,checked,D,Both,NEW,83460,238,963,64,128,64,192,128,golden,4b39a5a80c74a86e3383a3e938a08164e65910abe11f9c7d3315bd74ffce8375,168188,772,0,enabled,yes,checked_64_D

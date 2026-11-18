@@ -6,14 +6,23 @@ cd "$archive"
 tar -xf -
 export PYTHONDONTWRITEBYTECODE=1 PYTHONPATH="$archive"
 cd kernels/streamer_matmul
-for scope in no_copy checked; do
+scopes=(no_copy checked)
+sizes=(16 32 64)
+output=/out/original
+if [[ "${1:-}" == wave_controls ]]; then
+  scopes=(checked)
+  sizes=(16)
+  output=/out/wave_controls
+fi
+for scope in "${scopes[@]}"; do
   flags=()
   [[ "$scope" != no_copy ]] || flags+=(NO_CHECK=1)
-  for size in 16 32 64; do
+  for size in "${sizes[@]}"; do
     methods=(A B C D)
     [[ "$size" != 16 ]] || methods+=(E F)
+    [[ "$output" != /out/wave_controls ]] || methods=(D E F)
     for method in "${methods[@]}"; do
-      dest="/out/original/${scope}_${size}_${method}"
+      dest="$output/${scope}_${size}_${method}"
       mkdir -p "$dest"
       if test -f "$dest/DONE"; then continue; fi
       rm -f generated.* data.c data.h main.o data.o
@@ -42,6 +51,7 @@ for scope in no_copy checked; do
         fi
         make -j1 generated.stream.x "$mode" "${flags[@]}" "SIZE_M=$size" "SIZE_N=$size" "SIZE_K=$size"
         printf '%s\n' "$(( ($(date +%s%N) - start_ns) / 1000000 ))" > "$dest/build_ms"
+        if [[ "$output" == /out/wave_controls ]]; then cp generated.stream.x "$dest/pilot.x"; fi
         sha256sum generated.stream.x > "$dest/elf.sha256"
         wc -c < generated.stream.x > "$dest/elf.bytes"
         sim_rc=0

@@ -1,0 +1,4 @@
+Variant,Window_Cycles,Barrier_Gaps,Outside_Gaps,DMA_Sample_Sum,Inside_Gaps_Other,Requests,Carry_In,Overlapped_Request_to_Idle,Start_Cycle
+original,1664,1521,143,833,688,18,1,878,5851
+guard,1694,1549,145,884,665,19,0,884,5844
+omit,1680,1560,120,833,727,18,1,870,5833

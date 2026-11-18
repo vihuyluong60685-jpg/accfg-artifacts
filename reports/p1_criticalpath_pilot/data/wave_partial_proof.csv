@@ -1,0 +1,2 @@
+Run_ID,Waveform_Cycles,First_GEMM_Busy_Start,First_GEMM_Busy_End,A_Set,C_Set,DMA_Busy_Start,DMA_Busy_End,B_Set,A_Address,B_Address,C_Address
+G_k16_t1_d1_s3_r1,172,21061.0,21064.0,21062.0,21063.0,21112.0,21127.0,21148.0,0x10000200,0x10000800,0x10000e00
