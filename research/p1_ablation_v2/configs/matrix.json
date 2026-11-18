@@ -1,0 +1,12 @@
+{
+  "p1_base": "75e16e3be1dbbe08280d1e22330dacafe477d17a",
+  "p1_family": {"K": [16,32,64], "trips":3, "seed":11, "dma":[0,1],
+    "methods":["s","g","g-late","s-reg","s-compact"],
+    "additional_k16":["g-private","g-full-late"]},
+  "comparison": "G minus G-late moves the A/C pair from after the first await to before it without moving branch/call sites; all other instruction bytes, registers and ELF layout are identical. G-private minus G-full-late additionally crosses the late helper; call is re-encoded at its moved PC. S-reg replaces six instructions with NOPs, S-compact skips those six sites via straight-line compaction; helper and both call sites use an audited private ABI.",
+  "phase_two": {
+    "family": "GEMM -> signed saturating SPM packing of the full producer output -> dependent second GEMM",
+    "planned_cases": ["all-ready/independent", "short-K", "long-K", "zero", "one", "tensor-chain", "DMA-long", "all-late", "unknown-call", "observable-staging-state", "different-dependent-field"],
+    "policy": "Execute only validated schedules. When no write is early or staging side effects are unknown, retain serial and compare refusal to serial. Record any case invalid on the frozen backend."
+  }
+}
