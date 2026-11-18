@@ -1,0 +1,67 @@
+{
+  "source_repo": "/home/yanmo/research/projects/accfg-artifacts",
+  "source_branch": "repro/accfg-2026",
+  "base_commit": "cbf660f1cc73dfffd589541c9c382b346a7206fd",
+  "paper_original": "ce1567e40962037cda59a236bea6e3458caeb63a",
+  "submodules": [
+    {
+      "path": "gemmini-rocc-tests",
+      "target": "4fec505cadacec4c371305b90973fa18758e9ac0",
+      "actual": "4fec505cadacec4c371305b90973fa18758e9ac0"
+    },
+    {
+      "path": "gemmini-rocc-tests/riscv-tests",
+      "target": "c84daca8824635b7d896003c78f9c6245997cf7a",
+      "actual": "c84daca8824635b7d896003c78f9c6245997cf7a"
+    },
+    {
+      "path": "gemmini-rocc-tests/riscv-tests/env",
+      "target": "0666378f353599d01fc48562b431b1dd049faab5",
+      "actual": "0666378f353599d01fc48562b431b1dd049faab5"
+    },
+    {
+      "path": "gemmini-rocc-tests/rocc-software",
+      "target": "fddb795a0b52e82f8f4ce9ead9b1428440a62ab0",
+      "actual": "fddb795a0b52e82f8f4ce9ead9b1428440a62ab0"
+    },
+    {
+      "path": "snax-mlir",
+      "target": "0df8b515768232036bceb6af7a6d5935b5e1a3db",
+      "actual": "0df8b515768232036bceb6af7a6d5935b5e1a3db"
+    }
+  ],
+  "backup_local_path": "/home/yanmo/research/projects/accfg-artifacts/.git/p1-start.Gxkn6v/research_opportunities.tar.gz",
+  "backup_sha256": "0e3bc32d2d77961763bb5efc26c72e3500eb49a934b2f219534ff8358fe191fa",
+  "docker": "ghcr.io/kuleuven-micas/accfg-artifacts@sha256:a3dd42b69696b63e3c83a1a1719c0b2ae1965673d60251c468b337b3bf9ad813",
+  "simulator": {
+    "path": "/opt/snax-streamer-gemm-rtl/bin/snitch_cluster.vlt",
+    "sha256": "39ab1f5e980f8afb7e8f018c5a8678f93c26be96bff717af834c0223af7b29d9",
+    "version": "Verilator 5.026 v5.026-43-g065f36ab5"
+  },
+  "trace_decoder_sha256": "5111e502b6ff480cfa956ca4c0df3bc9a37234cc33816baa94de3173c0641d53",
+  "original_files_sha256": {
+    "artifacts/gemmini_results.pkl": "bd314aad6e4854d003a0cc69283c0ec6e2267d0376c0187ed882b538a03902a1",
+    "artifacts/opengemm_results.pkl": "b98df083c2d786f924c2a667a4f5812d64ca46b61c129026bc11e481c8bcb0bf",
+    "artifacts/fig10_bar_plot.png": "003f8d4f10030e45a0a0fcd627f5413ed45e1e4a3a3154014c316eb1478446e4",
+    "artifacts/fig_11_bar_plot.png": "685543af88730330ef9577e1c4da0fc61176138f741184c9c328d1f164763761",
+    "artifacts/fig_12_roofline.png": "5786878a35744d8baa3bfb6a113b83f100fc580ed1b7e5d2e69167e06061a6f6",
+    "reports/tables/paper_alignment.csv": "191ca61d90e46d708f13ac59c0bc7b6384d1932becae28b669e3f2d23cacef8c",
+    "reports/configs/experiment_run.json": "7ebbbbe11f8377a70f54d5c86a48ff269e214f4ba2dced15e4eb65377b2fe90b",
+    "reports/configs/reproduction_config.json": "aff60de5ff3610f73950d06508284395e6c32b160981076304c27f8f4465915a",
+    "reports/research_opportunities/diagnostics/run_context.json": "3e7669636767f64c481f66abe3c1766b80293eb9b79cda4e3db678bfe4b5b470",
+    "reports/logs/20261117T055112Z_official-run-all_4fc66e/output.log": "fee27ad41127763565c9eadc10e2d4c2aeb50fe65fadb44534987c5ca6ff151c"
+  },
+  "tool_versions": {
+    "Docker": "29.9.3",
+    "Clang/MLIR": "17.0.6",
+    "xDSL": "791e89d87cc23303e9ce3ac2d7e48e25eecc0e03",
+    "Spike": "1.1.1-dev",
+    "GCC_RISCV": "13.2.0",
+    "host_python": "3.10.12"
+  },
+  "host_kernel": "6.18.58.1-microsoft-standard-WSL2",
+  "subprocess_limits": {
+    "build_jobs": 1,
+    "container_memory": "3g"
+  }
+}
