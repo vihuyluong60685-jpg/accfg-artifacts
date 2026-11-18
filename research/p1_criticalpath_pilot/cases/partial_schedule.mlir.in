@@ -1,0 +1,18 @@
+// The first launch captures its input/output addresses. The B address for the
+// second launch is selected using a real word written by the first GEMM.
+builtin.module {
+  func.func private @pilot_late_b(i32, i32, i32, i32) -> i32
+  func.func @pilot_step(%a0: i32, %b0: i32, %c0: i32, %a1: i32, %b_even: i32,
+                        %b_odd: i32, %c1: i32, %slot: i32) {
+    %one = arith.constant 1 : i5
+    %before = accfg.setup "snax_gemm" to ("a_ptr" = %a0 : i32, "b_ptr" = %b0 : i32, "c_ptr" = %c0 : i32) : !accfg.state<"snax_gemm">
+    %run0 = "accfg.launch"(%one, %one, %before) <{accelerator = "snax_gemm", param_names = ["launch_streamer", "launch_gemm"]}> : (i5, i5, !accfg.state<"snax_gemm">) -> !accfg.token<"snax_gemm">
+@EARLY@
+    "accfg.await"(%run0) : (!accfg.token<"snax_gemm">) -> ()
+    %b1 = func.call @pilot_late_b(%c0, %b_even, %b_odd, %slot) : (i32, i32, i32, i32) -> i32
+@LATE@
+    %run1 = "accfg.launch"(%one, %one, %after) <{accelerator = "snax_gemm", param_names = ["launch_streamer", "launch_gemm"]}> : (i5, i5, !accfg.state<"snax_gemm">) -> !accfg.token<"snax_gemm">
+    "accfg.await"(%run1) : (!accfg.token<"snax_gemm">) -> ()
+    func.return
+  }
+}
