@@ -20,7 +20,7 @@ def delay(source, disasm, target, audit, fields):
         start = gemm+1
         end = start+len(fields)
         selected = words[start:end]
-        assert all(w & 0xfffff == 0x01073 | ((w>>15 & 31)<<15) for w in selected), [hex(w) for w in selected]
+        assert all(w & 0x7fff == 0x1073 for w in selected), [hex(w) for w in selected]
         assert tuple(w >> 20 for w in selected) == tuple(fields)
         assert words[end:end+3] == AWAIT
         permuted = AWAIT+selected

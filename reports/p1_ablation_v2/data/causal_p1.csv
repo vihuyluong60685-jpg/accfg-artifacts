@@ -1,0 +1,7 @@
+Family,Scenario,K,Trips,DMA_Bytes,Seed,S,G,G_Late,Original_Saving,Strict_Early_Saving,Strict_Speedup,S_Reg,S_Compact,S_To_Reg,Reg_To_Compact,S_To_Compact,Same_Count_Serial_Minus_G,S_To_G_Speedup,G_Private,G_Full_Late,Full_Early_Saving
+p1_controls,metadata-select,16,3,0,11,272,249,253,23,4,1.0160642570281124,261,252,11,9,20,3,1.0923694779116466,249,252,3
+p1_controls,metadata-select,16,3,4,11,409,367,372,42,5,1.013623978201635,396,374,13,22,35,7,1.1144414168937329,367,374,7
+p1_controls,metadata-select,32,3,0,11,317,290,295,27,5,1.0172413793103448,303,293,14,10,24,3,1.0931034482758621,N/A,N/A,N/A
+p1_controls,metadata-select,32,3,4,11,445,403,409,42,6,1.0148883374689825,435,409,10,26,36,6,1.1042183622828785,N/A,N/A,N/A
+p1_controls,metadata-select,64,3,0,11,353,307,313,46,6,1.019543973941368,343,315,10,28,38,8,1.1498371335504887,N/A,N/A,N/A
+p1_controls,metadata-select,64,3,4,11,489,463,469,26,6,1.0129589632829374,474,469,15,5,20,6,1.0561555075593954,N/A,N/A,N/A

@@ -1,0 +1,147 @@
+Paired V2 IR input and lowering checks
+c0_s_k8_t1_b0_s11
+557073520b0166c57f6f56338a5af4554ed6938682539b8293f4799cdc1b3ff1  input.mlir
+bbff6d63638d440e18b698fa7e6fcb5a3bacb538d94730bb57650a68c92c39c9  lowered.mlir
+c0_w_k8_t1_b0_s11
+557073520b0166c57f6f56338a5af4554ed6938682539b8293f4799cdc1b3ff1  input.mlir
+bbff6d63638d440e18b698fa7e6fcb5a3bacb538d94730bb57650a68c92c39c9  lowered.mlir
+c0_g_k8_t1_b0_s11
+2139b0e2454a3af545ff246be758761f07a1f1b245106f37bc6e1231788afd05  input.mlir
+c10d1808193049dd04932c82bcf5fa89c8135b934e721d63b6e5854e58319406  lowered.mlir
+c1_g_k8_t1_b0_s11
+ad09f16fda0aa890761b830fd2b32487841ce86d57d0cd1077da8b893bddf88f  input.mlir
+b1e13bfd8809b5eaf530e4f2913fdc7f4375dc631ee07228e870bdb2585800d7  lowered.mlir
+c1_w_k8_t1_b0_s11
+e036581f493547f958cc01f066867853f6867c4900308f57e86227ac93284387  input.mlir
+b1e13bfd8809b5eaf530e4f2913fdc7f4375dc631ee07228e870bdb2585800d7  lowered.mlir
+
+Original whole-overlap diagnostic on the new chain
+Op with effects in use-def chain upwards of setup SetupOp(%after = accfg.setup "snax_gemm" from %before to ("a_ptr" = %a1 : i32, "b_ptr" = %b1 : i32, "c_ptr" = %c1 : i32) : !accfg.state<"snax_gemm">): Call(%a1 = func.call @materialize(%c0) : (i32) -> i32)
+
+IR diff: S vs G, new tensor chain
+--- chain_S.mlir
++++ chain_G.mlir
+@@ -5,10 +5,10 @@
+     %one = arith.constant 1 : i5
+     %before = accfg.setup "snax_gemm" to ("a_ptr" = %a0 : i32, "b_ptr" = %b0 : i32, "c_ptr" = %c0 : i32) : !accfg.state<"snax_gemm">
+     %run0 = "accfg.launch"(%one, %one, %before) <{accelerator = "snax_gemm", param_names = ["launch_streamer", "launch_gemm"]}> : (i5, i5, !accfg.state<"snax_gemm">) -> !accfg.token<"snax_gemm">
+-
++    %half = accfg.setup "snax_gemm" from %before to ("b_ptr" = %b1 : i32, "c_ptr" = %c1 : i32) : !accfg.state<"snax_gemm">
+     "accfg.await"(%run0) : (!accfg.token<"snax_gemm">) -> ()
+     %a1 = func.call @materialize(%c0) : (i32) -> i32
+-    %after = accfg.setup "snax_gemm" from %before to ("a_ptr" = %a1 : i32, "b_ptr" = %b1 : i32, "c_ptr" = %c1 : i32) : !accfg.state<"snax_gemm">
++    %after = accfg.setup "snax_gemm" from %half to ("a_ptr" = %a1 : i32) : !accfg.state<"snax_gemm">
+     %run1 = "accfg.launch"(%one, %one, %after) <{accelerator = "snax_gemm", param_names = ["launch_streamer", "launch_gemm"]}> : (i5, i5, !accfg.state<"snax_gemm">) -> !accfg.token<"snax_gemm">
+     "accfg.await"(%run1) : (!accfg.token<"snax_gemm">) -> ()
+     func.return
+
+Disassembly diff: G vs G-late, exact original P1 control at K16 / DMA
+--- G.objdump
++++ G-late.objdump
+@@ -6,11 +6,11 @@
+ 8000337c: 73 10 46 3d  	csrw	pmpaddr36, a2
+ 80003380: 73 d0 50 3d  	csrwi	pmpaddr37, 1
+ 80003384: 73 d0 b0 3d  	csrwi	pmpaddr43, 1
+-80003388: 73 90 26 3d  	csrw	pmpaddr34, a3
+-8000338c: 73 10 48 3d  	csrw	pmpaddr36, a6
+-80003390: 73 50 b0 3d  	csrwi	pmpaddr43, 0
+-80003394: 73 50 b0 3d  	csrwi	pmpaddr43, 0
+-80003398: 73 50 50 3d  	csrwi	pmpaddr37, 0
++80003388: 73 50 b0 3d  	csrwi	pmpaddr43, 0
++8000338c: 73 50 b0 3d  	csrwi	pmpaddr43, 0
++80003390: 73 50 50 3d  	csrwi	pmpaddr37, 0
++80003394: 73 90 26 3d  	csrw	pmpaddr34, a3
++80003398: 73 10 48 3d  	csrw	pmpaddr36, a6
+ 8000339c: 13 05 06 00  	mv	a0, a2
+ 800033a0: 93 05 07 00  	mv	a1, a4
+ 800033a4: 13 86 07 00  	mv	a2, a5
+
+Disassembly diff: S vs S-compact, original P1 at K16 / DMA
+--- S.objdump
++++ S-compact.objdump
+@@ -1,34 +1,34 @@
+ 8000336c <pilot_step>:
+ 8000336c: 13 01 01 ff  	addi	sp, sp, -16
+ 80003370: 23 26 11 00  	sw	ra, 12(sp)
+-80003374: 23 24 81 00  	sw	s0, 8(sp)
+-80003378: 23 22 91 00  	sw	s1, 4(sp)
+-8000337c: 13 04 08 00  	mv	s0, a6
+-80003380: 93 84 06 00  	mv	s1, a3
+-80003384: 73 10 25 3d  	csrw	pmpaddr34, a0
+-80003388: 73 90 35 3d  	csrw	pmpaddr35, a1
+-8000338c: 73 10 46 3d  	csrw	pmpaddr36, a2
+-80003390: 73 d0 50 3d  	csrwi	pmpaddr37, 1
+-80003394: 73 d0 b0 3d  	csrwi	pmpaddr43, 1
+-80003398: 73 50 b0 3d  	csrwi	pmpaddr43, 0
+-8000339c: 73 50 b0 3d  	csrwi	pmpaddr43, 0
+-800033a0: 73 50 50 3d  	csrwi	pmpaddr37, 0
+-800033a4: 13 05 06 00  	mv	a0, a2
+-800033a8: 93 05 07 00  	mv	a1, a4
+-800033ac: 13 86 07 00  	mv	a2, a5
+-800033b0: 93 86 08 00  	mv	a3, a7
+-800033b4: ef f0 8f a6  	jal	0x8000261c <_mlir_ciface_pilot_late_b>
+-800033b8: 73 90 24 3d  	csrw	pmpaddr34, s1
+-800033bc: 73 10 35 3d  	csrw	pmpaddr35, a0
+-800033c0: 73 10 44 3d  	csrw	pmpaddr36, s0
+-800033c4: 73 d0 50 3d  	csrwi	pmpaddr37, 1
+-800033c8: 73 d0 b0 3d  	csrwi	pmpaddr43, 1
+-800033cc: 73 50 b0 3d  	csrwi	pmpaddr43, 0
+-800033d0: 73 50 b0 3d  	csrwi	pmpaddr43, 0
+-800033d4: 73 50 50 3d  	csrwi	pmpaddr37, 0
+-800033d8: 83 20 c1 00  	lw	ra, 12(sp)
+-800033dc: 03 24 81 00  	lw	s0, 8(sp)
+-800033e0: 83 24 41 00  	lw	s1, 4(sp)
+-800033e4: 13 01 01 01  	addi	sp, sp, 16
+-800033e8: 67 80 00 00  	ret
++80003374: 73 10 25 3d  	csrw	pmpaddr34, a0
++80003378: 73 90 35 3d  	csrw	pmpaddr35, a1
++8000337c: 73 10 46 3d  	csrw	pmpaddr36, a2
++80003380: 73 d0 50 3d  	csrwi	pmpaddr37, 1
++80003384: 73 d0 b0 3d  	csrwi	pmpaddr43, 1
++80003388: 73 50 b0 3d  	csrwi	pmpaddr43, 0
++8000338c: 73 50 b0 3d  	csrwi	pmpaddr43, 0
++80003390: 73 50 50 3d  	csrwi	pmpaddr37, 0
++80003394: 13 05 06 00  	mv	a0, a2
++80003398: 93 05 07 00  	mv	a1, a4
++8000339c: 13 86 07 00  	mv	a2, a5
++800033a0: 13 8e 08 00  	mv	t3, a7
++800033a4: ef f0 8f a7  	jal	0x8000261c <_mlir_ciface_pilot_late_b>
++800033a8: 73 90 26 3d  	csrw	pmpaddr34, a3
++800033ac: 73 10 35 3d  	csrw	pmpaddr35, a0
++800033b0: 73 10 48 3d  	csrw	pmpaddr36, a6
++800033b4: 73 d0 50 3d  	csrwi	pmpaddr37, 1
++800033b8: 73 d0 b0 3d  	csrwi	pmpaddr43, 1
++800033bc: 73 50 b0 3d  	csrwi	pmpaddr43, 0
++800033c0: 73 50 b0 3d  	csrwi	pmpaddr43, 0
++800033c4: 73 50 50 3d  	csrwi	pmpaddr37, 0
++800033c8: 83 20 c1 00  	lw	ra, 12(sp)
++800033cc: 13 01 01 01  	addi	sp, sp, 16
++800033d0: 67 80 00 00  	ret
++800033d4: 13 00 00 00  	nop
++800033d8: 13 00 00 00  	nop
++800033dc: 13 00 00 00  	nop
++800033e0: 13 00 00 00  	nop
++800033e4: 13 00 00 00  	nop
++800033e8: 13 00 00 00  	nop
+
+
+Disassembly diff: G vs L, new chain K32 / 4096-byte DMA
+--- chain_G.objdump
++++ chain_L.objdump
+@@ -6,11 +6,11 @@
+ 80003f00: 73 10 46 3d  	csrw	pmpaddr36, a2
+ 80003f04: 73 d0 50 3d  	csrwi	pmpaddr37, 1
+ 80003f08: 73 d0 b0 3d  	csrwi	pmpaddr43, 1
+-80003f0c: 73 10 37 3d  	csrw	pmpaddr35, a4
+-80003f10: 73 10 48 3d  	csrw	pmpaddr36, a6
+-80003f14: 73 50 b0 3d  	csrwi	pmpaddr43, 0
+-80003f18: 73 50 b0 3d  	csrwi	pmpaddr43, 0
+-80003f1c: 73 50 50 3d  	csrwi	pmpaddr37, 0
++80003f0c: 73 50 b0 3d  	csrwi	pmpaddr43, 0
++80003f10: 73 50 b0 3d  	csrwi	pmpaddr43, 0
++80003f14: 73 50 50 3d  	csrwi	pmpaddr37, 0
++80003f18: 73 10 37 3d  	csrw	pmpaddr35, a4
++80003f1c: 73 10 48 3d  	csrw	pmpaddr36, a6
+ 80003f20: 13 05 06 00  	mv	a0, a2
+ 80003f24: ef e0 8f ef  	jal	0x8000261c <_mlir_ciface_materialize>
+ 80003f28: 73 10 25 3d  	csrw	pmpaddr34, a0

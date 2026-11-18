@@ -42,7 +42,7 @@ def analyze(path, audited_call):
             continue
         if op.name in {"arith.cmpi","arith.select"}:
             continue
-        if isinstance(op,func.CallOp) and op.callee.root_reference.data==audited_call:
+        if isinstance(op,func.Call) and op.callee.root_reference.data==audited_call:
             continue
         unknown.append(op.name)
     action = "retain-serial" if unknown or not ready else ("whole" if not late else "partial")

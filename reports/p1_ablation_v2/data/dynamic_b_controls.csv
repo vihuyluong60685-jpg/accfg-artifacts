@@ -1,0 +1,3 @@
+Family,Scenario,K,Trips,DMA_Bytes,Seed,S,G,G_Late,Original_Saving,Strict_Early_Saving,Strict_Speedup,Observed_Choice_Mask
+p1_edges,metadata-select,16,1,4,1,173,156,156,17,0,1.0,1
+p1_edges,metadata-select,16,1,4,11,191,172,172,19,0,1.0,2

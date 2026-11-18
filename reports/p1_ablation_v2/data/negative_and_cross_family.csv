@@ -1,0 +1,12 @@
+Family,Scenario,K,Trips,DMA_Bytes,Seed,Decision,S,Gain_vs_Safe_Reference,G,L,W,Strict_Early_Saving,Strict_Speedup
+chain,all-fields-late,16,1,0,1,retain-serial,1274,0,N/A,N/A,N/A,N/A,N/A
+chain,all-fields-late,16,1,0,11,retain-serial,1271,0,N/A,N/A,N/A,N/A,N/A
+chain,all-ready,8,1,0,11,whole,58,0,58,58,58,0,1.0
+chain,all-ready,64,3,0,11,whole,223,9,214,223,N/A,9,1.0420560747663552
+chain,observable-staging,16,1,0,11,retain-serial,1253,0,N/A,N/A,N/A,N/A,N/A
+chain,tensor-chain,8,1,0,11,partial,1243,14,1229,1229,1243,0,1.0
+chain,tensor-chain,16,0,0,11,partial,1,0,1,1,N/A,0,1.0
+chain,tensor-chain,32,1,0,1,partial,1245,20,1225,1230,N/A,5,1.0040816326530613
+chain,tensor-chain,32,3,0,11,partial,3675,27,3648,3652,N/A,4,1.0010964912280702
+chain,tensor-chain,32,3,256,11,partial,3843,21,3822,3828,N/A,6,1.0015698587127158
+chain,tensor-chain,32,3,4096,11,partial,4205,28,4177,4183,N/A,6,1.001436437634666

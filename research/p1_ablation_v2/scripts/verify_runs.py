@@ -17,7 +17,6 @@ from traces import POINTERS, counts, dma_events, read_trace, window
 BRANCH = {"beq","beqz","bne","bnez","bge","bgez","bgeu","blt","bltz","bltu","bgtz","blez"}
 LOAD = {"lw","lb","lbu","lh","lhu","flw"}
 STORE = {"sw","sb","sh","fsw"}
-ABI = {"mv","nop"}
 MEMORY_WORD = re.compile(r"Word\[(0x[0-9a-f]+)\]")
 MCYCLE = re.compile(r"\bmcycle = (0x[0-9a-f]+|\d+)")
 HEX_KEYS = {"first_a","first_b","first_c","next_a","next_b","next_c","source"}
@@ -185,10 +184,12 @@ def analyse_execution(job, family, method, mode):
                        Hart0_Give=left.cycle,Hart0_Receive=right.cycle,Hart1_Acquire=left_dma.cycle,Hart1_Give=right_dma.cycle)
         events.append(row)
     ops = Counter(op.mnemonic for op in cpu)
+    path = [(op.pc, cpu[index+1].pc) for index,op in enumerate(cpu[:-1]) if op.mnemonic in BRANCH]
+    branch_sha = sha256(json.dumps(path, separators=(",",":")).encode()).hexdigest()
     result = dict(Run_ID=job.name,Family=family,Mode=mode,Method=method,K=meta["K"],Trips=trips,
                   Seed=meta["seed"],DMA_Bytes=size,Scenario="metadata-select" if family.startswith("p1") else SCENARIOS[meta["scenario"]],
                   Cycles=meta["cycles"],**resources,Branches=sum(ops[key] for key in BRANCH),
-                  Calls=ops["jal"]+ops["jalr"],Returns=ops["ret"],
+                  Calls=ops["jal"]+ops["jalr"],Returns=ops["ret"],Branch_Path_SHA256=branch_sha,
                   Loads=sum(ops[key] for key in LOAD),Stores=sum(ops[key] for key in STORE),
                   Moves=ops["mv"],Nops=ops["nop"],GEMM_Handoff_Cycles=sum(e["Second_GEMM"]-e["First_GEMM"] for e in events),
                   DMA_Request_To_Idle=sum(e["DMA_Idle"]-e["DMA_Request"] for e in events if "DMA_Idle" in e),

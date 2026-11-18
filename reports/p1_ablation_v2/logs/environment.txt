@@ -1,0 +1,15 @@
+v2 starts from P1 75e16e3be1dbbe08280d1e22330dacafe477d17a
+git version 2.34.1
+Docker client 29.9.3 / server 29.9.3
+RTL simulator SHA-256 39ab1f5e980f8afb7e8f018c5a8678f93c26be96bff717af834c0223af7b29d9
+5111e502b6ff480cfa956ca4c0df3bc9a37234cc33816baa94de3173c0641d53  /opt/gen_trace.py
+Ubuntu clang version 17.0.6 (9ubuntu1)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Ubuntu LLVM version 17.0.6
+  Optimized build.
+Verilator 5.026 2024-06-15 rev v5.026-43-g065f36ab5
+Python 3.10.14
+xDSL package 0.22.0+12.g791e89d8
+Linux 2a94c9ec59a6 6.18.58.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Tue Oct 27 00:24:11 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
