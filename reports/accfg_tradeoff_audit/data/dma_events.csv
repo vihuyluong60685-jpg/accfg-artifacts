@@ -1,0 +1,187 @@
+Mode,Cycle,Offset,Signal,Value,Source
+B,5887,43,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+B,5888.0,44.0,hart1_dma_busy,0x1,RTL VCD
+B,5933.0,89.0,hart1_dma_busy,0x0,RTL VCD
+B,5971,127,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+B,5972.0,128.0,hart1_dma_busy,0x1,RTL VCD
+B,6017.0,173.0,hart1_dma_busy,0x0,RTL VCD
+B,6052,208,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+B,6053.0,209.0,hart1_dma_busy,0x1,RTL VCD
+B,6098.0,254.0,hart1_dma_busy,0x0,RTL VCD
+B,6134,290,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+B,6135.0,291.0,hart1_dma_busy,0x1,RTL VCD
+B,6180.0,336.0,hart1_dma_busy,0x0,RTL VCD
+B,6189.0,345.0,cluster_barrier_out,0x1,RTL VCD
+B,6190.0,346.0,cluster_barrier_out,0x0,RTL VCD
+B,6193.0,349.0,stage_A,0x10000040,RTL VCD
+B,6194.0,350.0,stage_B,0x100001c0,RTL VCD
+B,6195.0,351.0,stage_C,0x10000340,RTL VCD
+B,6196.0,352.0,streamer_busy_o,0x1,RTL VCD
+B,6197.0,353.0,gemm_busy,0x1,RTL VCD
+B,6200.0,356.0,gemm_busy,0x0,RTL VCD
+B,6201.0,357.0,streamer_busy_o,0x0,RTL VCD
+B,6208.0,364.0,cluster_barrier_out,0x1,RTL VCD
+B,6209.0,365.0,cluster_barrier_out,0x0,RTL VCD
+B,6243,399,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+B,6244.0,400.0,hart1_dma_busy,0x1,RTL VCD
+B,6287.0,443.0,hart1_dma_busy,0x0,RTL VCD
+B,6328,484,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+B,6329.0,485.0,hart1_dma_busy,0x1,RTL VCD
+B,6374.0,530.0,hart1_dma_busy,0x0,RTL VCD
+B,6411,567,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+B,6412.0,568.0,hart1_dma_busy,0x1,RTL VCD
+B,6457.0,613.0,hart1_dma_busy,0x0,RTL VCD
+B,6493,649,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+B,6494.0,650.0,hart1_dma_busy,0x1,RTL VCD
+B,6539.0,695.0,hart1_dma_busy,0x0,RTL VCD
+B,6574,730,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+B,6575.0,731.0,hart1_dma_busy,0x1,RTL VCD
+B,6620.0,776.0,hart1_dma_busy,0x0,RTL VCD
+B,6629.0,785.0,cluster_barrier_out,0x1,RTL VCD
+B,6630.0,786.0,cluster_barrier_out,0x0,RTL VCD
+B,6636.0,792.0,streamer_busy_o,0x1,RTL VCD
+B,6637.0,793.0,gemm_busy,0x1,RTL VCD
+B,6640.0,796.0,gemm_busy,0x0,RTL VCD
+B,6641.0,797.0,streamer_busy_o,0x0,RTL VCD
+B,6648.0,804.0,cluster_barrier_out,0x1,RTL VCD
+B,6649.0,805.0,cluster_barrier_out,0x0,RTL VCD
+B,6682,838,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+B,6683.0,839.0,hart1_dma_busy,0x1,RTL VCD
+B,6730.0,886.0,hart1_dma_busy,0x0,RTL VCD
+B,6771,927,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+B,6772.0,928.0,hart1_dma_busy,0x1,RTL VCD
+B,6817.0,973.0,hart1_dma_busy,0x0,RTL VCD
+B,6852,1008,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+B,6853.0,1009.0,hart1_dma_busy,0x1,RTL VCD
+B,6898.0,1054.0,hart1_dma_busy,0x0,RTL VCD
+B,6932,1088,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+B,6933.0,1089.0,hart1_dma_busy,0x1,RTL VCD
+B,6978.0,1134.0,hart1_dma_busy,0x0,RTL VCD
+B,7012,1168,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+B,7013.0,1169.0,hart1_dma_busy,0x1,RTL VCD
+B,7058.0,1214.0,hart1_dma_busy,0x0,RTL VCD
+B,7067.0,1223.0,cluster_barrier_out,0x1,RTL VCD
+B,7068.0,1224.0,cluster_barrier_out,0x0,RTL VCD
+B,7083.0,1239.0,streamer_busy_o,0x1,RTL VCD
+B,7084.0,1240.0,gemm_busy,0x1,RTL VCD
+B,7087.0,1243.0,gemm_busy,0x0,RTL VCD
+B,7088.0,1244.0,streamer_busy_o,0x0,RTL VCD
+B,7091.0,1247.0,cluster_barrier_out,0x1,RTL VCD
+B,7092.0,1248.0,cluster_barrier_out,0x0,RTL VCD
+B,7124,1280,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+B,7125.0,1281.0,hart1_dma_busy,0x1,RTL VCD
+B,7168.0,1324.0,hart1_dma_busy,0x0,RTL VCD
+B,7207,1363,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+B,7208.0,1364.0,hart1_dma_busy,0x1,RTL VCD
+B,7253.0,1409.0,hart1_dma_busy,0x0,RTL VCD
+B,7286,1442,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+B,7287.0,1443.0,hart1_dma_busy,0x1,RTL VCD
+B,7332.0,1488.0,hart1_dma_busy,0x0,RTL VCD
+B,7359,1515,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+B,7360.0,1516.0,hart1_dma_busy,0x1,RTL VCD
+B,7405.0,1561.0,hart1_dma_busy,0x0,RTL VCD
+B,7443,1599,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+B,7444.0,1600.0,hart1_dma_busy,0x1,RTL VCD
+B,7489.0,1645.0,hart1_dma_busy,0x0,RTL VCD
+B,7498.0,1654.0,cluster_barrier_out,0x1,RTL VCD
+B,7499.0,1655.0,cluster_barrier_out,0x0,RTL VCD
+B,7517.0,1673.0,streamer_busy_o,0x1,RTL VCD
+B,7518.0,1674.0,gemm_busy,0x1,RTL VCD
+B,7521.0,1677.0,gemm_busy,0x0,RTL VCD
+B,7522.0,1678.0,streamer_busy_o,0x0,RTL VCD
+B,7525.0,1681.0,cluster_barrier_out,0x1,RTL VCD
+B,7526.0,1682.0,cluster_barrier_out,0x0,RTL VCD
+B,7550,1706,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+D,5888.0,37.0,stage_A,0x10000040,RTL VCD
+D,5889.0,38.0,stage_B,0x100001c0,RTL VCD
+D,5890.0,39.0,stage_C,0x10000340,RTL VCD
+D,5890,39,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+D,5891.0,40.0,hart1_dma_busy,0x1,RTL VCD
+D,5936.0,85.0,hart1_dma_busy,0x0,RTL VCD
+D,5972,121,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+D,5973.0,122.0,hart1_dma_busy,0x1,RTL VCD
+D,6018.0,167.0,hart1_dma_busy,0x0,RTL VCD
+D,6051,200,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+D,6052.0,201.0,hart1_dma_busy,0x1,RTL VCD
+D,6097.0,246.0,hart1_dma_busy,0x0,RTL VCD
+D,6131,280,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+D,6132.0,281.0,hart1_dma_busy,0x1,RTL VCD
+D,6177.0,326.0,hart1_dma_busy,0x0,RTL VCD
+D,6186.0,335.0,cluster_barrier_out,0x1,RTL VCD
+D,6187.0,336.0,cluster_barrier_out,0x0,RTL VCD
+D,6190.0,339.0,streamer_busy_o,0x1,RTL VCD
+D,6191.0,340.0,gemm_busy,0x1,RTL VCD
+D,6194.0,343.0,gemm_busy,0x0,RTL VCD
+D,6195.0,344.0,streamer_busy_o,0x0,RTL VCD
+D,6206.0,355.0,cluster_barrier_out,0x1,RTL VCD
+D,6207.0,356.0,cluster_barrier_out,0x0,RTL VCD
+D,6238,387,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+D,6239.0,388.0,hart1_dma_busy,0x1,RTL VCD
+D,6286.0,435.0,hart1_dma_busy,0x0,RTL VCD
+D,6326,475,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+D,6327.0,476.0,hart1_dma_busy,0x1,RTL VCD
+D,6372.0,521.0,hart1_dma_busy,0x0,RTL VCD
+D,6407,556,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+D,6408.0,557.0,hart1_dma_busy,0x1,RTL VCD
+D,6453.0,602.0,hart1_dma_busy,0x0,RTL VCD
+D,6487,636,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+D,6488.0,637.0,hart1_dma_busy,0x1,RTL VCD
+D,6533.0,682.0,hart1_dma_busy,0x0,RTL VCD
+D,6566,715,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+D,6567.0,716.0,hart1_dma_busy,0x1,RTL VCD
+D,6612.0,761.0,hart1_dma_busy,0x0,RTL VCD
+D,6621.0,770.0,cluster_barrier_out,0x1,RTL VCD
+D,6622.0,771.0,cluster_barrier_out,0x0,RTL VCD
+D,6625.0,774.0,streamer_busy_o,0x1,RTL VCD
+D,6626.0,775.0,gemm_busy,0x1,RTL VCD
+D,6629.0,778.0,gemm_busy,0x0,RTL VCD
+D,6630.0,779.0,streamer_busy_o,0x0,RTL VCD
+D,6643.0,792.0,cluster_barrier_out,0x1,RTL VCD
+D,6644.0,793.0,cluster_barrier_out,0x0,RTL VCD
+D,6676,825,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+D,6677.0,826.0,hart1_dma_busy,0x1,RTL VCD
+D,6720.0,869.0,hart1_dma_busy,0x0,RTL VCD
+D,6758,907,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+D,6759.0,908.0,hart1_dma_busy,0x1,RTL VCD
+D,6804.0,953.0,hart1_dma_busy,0x0,RTL VCD
+D,6837,986,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+D,6838.0,987.0,hart1_dma_busy,0x1,RTL VCD
+D,6883.0,1032.0,hart1_dma_busy,0x0,RTL VCD
+D,6910,1059,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+D,6911.0,1060.0,hart1_dma_busy,0x1,RTL VCD
+D,6956.0,1105.0,hart1_dma_busy,0x0,RTL VCD
+D,6995,1144,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+D,6996.0,1145.0,hart1_dma_busy,0x1,RTL VCD
+D,7041.0,1190.0,hart1_dma_busy,0x0,RTL VCD
+D,7061.0,1210.0,cluster_barrier_out,0x1,RTL VCD
+D,7062.0,1211.0,cluster_barrier_out,0x0,RTL VCD
+D,7065.0,1214.0,streamer_busy_o,0x1,RTL VCD
+D,7066.0,1215.0,gemm_busy,0x1,RTL VCD
+D,7069.0,1218.0,gemm_busy,0x0,RTL VCD
+D,7070.0,1219.0,streamer_busy_o,0x0,RTL VCD
+D,7080.0,1229.0,cluster_barrier_out,0x1,RTL VCD
+D,7081.0,1230.0,cluster_barrier_out,0x0,RTL VCD
+D,7112,1261,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+D,7113.0,1262.0,hart1_dma_busy,0x1,RTL VCD
+D,7160.0,1309.0,hart1_dma_busy,0x0,RTL VCD
+D,7190,1339,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+D,7191.0,1340.0,hart1_dma_busy,0x1,RTL VCD
+D,7236.0,1385.0,hart1_dma_busy,0x0,RTL VCD
+D,7274,1423,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+D,7275.0,1424.0,hart1_dma_busy,0x1,RTL VCD
+D,7320.0,1469.0,hart1_dma_busy,0x0,RTL VCD
+D,7358,1507,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+D,7359.0,1508.0,hart1_dma_busy,0x1,RTL VCD
+D,7404.0,1553.0,hart1_dma_busy,0x0,RTL VCD
+D,7441,1590,hart1_dma_submit,"a0, a4, 2",hart1 retire trace
+D,7442.0,1591.0,hart1_dma_busy,0x1,RTL VCD
+D,7487.0,1636.0,hart1_dma_busy,0x0,RTL VCD
+D,7496.0,1645.0,cluster_barrier_out,0x1,RTL VCD
+D,7497.0,1646.0,cluster_barrier_out,0x0,RTL VCD
+D,7500.0,1649.0,streamer_busy_o,0x1,RTL VCD
+D,7501.0,1650.0,gemm_busy,0x1,RTL VCD
+D,7504.0,1653.0,gemm_busy,0x0,RTL VCD
+D,7505.0,1654.0,streamer_busy_o,0x0,RTL VCD
+D,7517.0,1666.0,cluster_barrier_out,0x1,RTL VCD
+D,7518.0,1667.0,cluster_barrier_out,0x0,RTL VCD
+D,7553,1702,hart1_dma_submit,"a0, a4, 2",hart1 retire trace

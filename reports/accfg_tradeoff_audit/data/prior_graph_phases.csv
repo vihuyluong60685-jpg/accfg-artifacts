@@ -1,0 +1,13 @@
+Graph,Mode,Seed,Cycles,Config_CSR_Writes,Host_Instructions,Correctness,Packing_To_First_CSR,Initial_Dispatch,First_Compute_To_Host,Host_Middle,Host_End_To_Second_Launch,Second_Launch_To_Await,After_Last_Await_To_End,Timed_DMA,Evidence,Source
+mobile,A,11,9312,50,4842,GOLDEN_PASS,2939,41,17,4411,51,5,1848,absent,PRIOR_READ_ONLY_GRAPH,/home/yanmo/research/projects/accfg-p1-workload-gate/reports/p1_workload_gate/data/execution_phases.csv
+mobile,A,37,9071,50,4846,GOLDEN_PASS,2945,37,10,4184,30,6,1859,absent,PRIOR_READ_ONLY_GRAPH,/home/yanmo/research/projects/accfg-p1-workload-gate/reports/p1_workload_gate/data/execution_phases.csv
+mobile,B,11,9246,28,4814,GOLDEN_PASS,2936,45,20,4387,9,10,1839,absent,PRIOR_READ_ONLY_GRAPH,/home/yanmo/research/projects/accfg-p1-workload-gate/reports/p1_workload_gate/data/execution_phases.csv
+mobile,B,37,8986,28,4818,GOLDEN_PASS,2942,41,10,4145,9,6,1833,absent,PRIOR_READ_ONLY_GRAPH,/home/yanmo/research/projects/accfg-p1-workload-gate/reports/p1_workload_gate/data/execution_phases.csv
+mobile,C,11,9218,28,4805,GOLDEN_PASS,2930,41,18,4383,13,6,1827,absent,PRIOR_READ_ONLY_GRAPH,/home/yanmo/research/projects/accfg-p1-workload-gate/reports/p1_workload_gate/data/execution_phases.csv
+mobile,C,37,8959,28,4809,GOLDEN_PASS,2917,29,10,4176,4,6,1817,absent,PRIOR_READ_ONLY_GRAPH,/home/yanmo/research/projects/accfg-p1-workload-gate/reports/p1_workload_gate/data/execution_phases.csv
+attention,A,11,6746,50,3272,GOLDEN_PASS,2939,41,17,2299,53,5,1392,absent,PRIOR_READ_ONLY_GRAPH,/home/yanmo/research/projects/accfg-p1-workload-gate/reports/p1_workload_gate/data/execution_phases.csv
+attention,A,37,6717,50,3283,GOLDEN_PASS,2943,37,10,2290,32,6,1399,absent,PRIOR_READ_ONLY_GRAPH,/home/yanmo/research/projects/accfg-p1-workload-gate/reports/p1_workload_gate/data/execution_phases.csv
+attention,B,11,6688,28,3244,GOLDEN_PASS,2936,45,20,2277,9,10,1391,absent,PRIOR_READ_ONLY_GRAPH,/home/yanmo/research/projects/accfg-p1-workload-gate/reports/p1_workload_gate/data/execution_phases.csv
+attention,B,37,6608,28,3255,GOLDEN_PASS,2922,29,10,2242,9,6,1390,absent,PRIOR_READ_ONLY_GRAPH,/home/yanmo/research/projects/accfg-p1-workload-gate/reports/p1_workload_gate/data/execution_phases.csv
+attention,C,11,6678,28,3235,GOLDEN_PASS,2930,41,18,2289,15,6,1379,absent,PRIOR_READ_ONLY_GRAPH,/home/yanmo/research/projects/accfg-p1-workload-gate/reports/p1_workload_gate/data/execution_phases.csv
+attention,C,37,6656,28,3246,GOLDEN_PASS,2932,41,10,2266,15,6,1386,absent,PRIOR_READ_ONLY_GRAPH,/home/yanmo/research/projects/accfg-p1-workload-gate/reports/p1_workload_gate/data/execution_phases.csv

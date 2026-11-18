@@ -1,0 +1,140 @@
+
+open_extras_host.log
+extras no_copy 8x8x8 A/1 status 2
+extras checked 8x8x8 A/1 status 2
+extras no_copy 20x20x20 A/1 status 2
+extras checked 20x20x20 A/1 status 2
+extras no_copy 24x24x24 A/1 status 0
+extras no_copy 24x24x24 B/1 status 0
+extras no_copy 24x24x24 C/1 status 0
+extras no_copy 24x24x24 D/1 status 0
+extras checked 24x24x24 A/1 status 0
+extras checked 24x24x24 B/1 status 0
+extras checked 24x24x24 C/1 status 0
+extras checked 24x24x24 D/1 status 0
+extras no_copy 24x16x32 A/1 status 0
+extras no_copy 24x16x32 B/1 status 0
+extras no_copy 24x16x32 C/1 status 0
+extras no_copy 24x16x32 D/1 status 0
+extras checked 24x16x32 A/1 status 0
+extras checked 24x16x32 B/1 status 0
+extras checked 24x16x32 C/1 status 0
+extras checked 24x16x32 D/1 status 0
+extras no_copy 40x40x40 A/1 status 0
+extras no_copy 40x40x40 B/1 status 0
+extras no_copy 40x40x40 C/1 status 0
+extras no_copy 40x40x40 D/1 status 0
+extras checked 40x40x40 A/1 status 0
+extras checked 40x40x40 B/1 status 0
+extras checked 40x40x40 C/1 status 0
+extras checked 40x40x40 D/1 status 0
+
+open_envelope_host.log
+envelope checked 16x16x16 A/1 status 0
+envelope checked 16x16x16 B/1 status 0
+envelope checked 16x16x16 C/1 status 0
+envelope checked 16x16x16 D/1 status 0
+
+gemmini_host.log
+32 baseline check0 status 0
+32 dedup check0 status 0
+32 baseline check1 status 0
+32 dedup check1 status 0
+64 baseline check0 status 0
+64 dedup check0 status 0
+128 baseline check0 status 0
+128 dedup check0 status 0
+
+open_compile_host.log
+compile no_copy 16x16x16 A/1 status 1
+compile no_copy 16x16x16 B/1 status 1
+compile no_copy 16x16x16 C/1 status 1
+compile no_copy 16x16x16 D/1 status 1
+compile no_copy 16x16x16 B/2 status 0
+compile no_copy 16x16x16 C/2 status 0
+compile no_copy 16x16x16 D/2 status 0
+compile no_copy 16x16x16 A/2 status 0
+compile no_copy 16x16x16 C/3 status 0
+compile no_copy 16x16x16 D/3 status 0
+compile no_copy 16x16x16 A/3 status 0
+compile no_copy 16x16x16 B/3 status 0
+compile no_copy 16x16x16 D/4 status 0
+compile no_copy 16x16x16 A/4 status 0
+compile no_copy 16x16x16 B/4 status 0
+compile no_copy 16x16x16 C/4 status 0
+compile no_copy 128x128x128 A/1 status 1
+compile no_copy 128x128x128 B/1 status 1
+compile no_copy 128x128x128 C/1 status 1
+compile no_copy 128x128x128 D/1 status 1
+compile no_copy 128x128x128 B/2 status 0
+compile no_copy 128x128x128 C/2 status 0
+compile no_copy 128x128x128 D/2 status 0
+compile no_copy 128x128x128 A/2 status 0
+compile no_copy 128x128x128 C/3 status 0
+compile no_copy 128x128x128 D/3 status 0
+compile no_copy 128x128x128 A/3 status 0
+compile no_copy 128x128x128 B/3 status 0
+compile no_copy 128x128x128 D/4 status 0
+compile no_copy 128x128x128 A/4 status 0
+compile no_copy 128x128x128 B/4 status 0
+compile no_copy 128x128x128 C/4 status 0
+compile no_copy 512x512x512 A/1 status 1
+compile no_copy 512x512x512 B/1 status 1
+compile no_copy 512x512x512 C/1 status 1
+compile no_copy 512x512x512 D/1 status 1
+compile no_copy 512x512x512 B/2 status 0
+compile no_copy 512x512x512 C/2 status 0
+compile no_copy 512x512x512 D/2 status 0
+compile no_copy 512x512x512 A/2 status 0
+compile no_copy 512x512x512 C/3 status 0
+compile no_copy 512x512x512 D/3 status 0
+compile no_copy 512x512x512 A/3 status 0
+compile no_copy 512x512x512 B/3 status 0
+compile no_copy 512x512x512 D/4 status 0
+compile no_copy 512x512x512 A/4 status 0
+compile no_copy 512x512x512 B/4 status 0
+compile no_copy 512x512x512 C/4 status 0
+
+passes_host.log
+16 A timed pass preparation 0
+16 B timed pass preparation 0
+16 C timed pass preparation 0
+16 D timed pass preparation 0
+128 A timed pass preparation 0
+128 B timed pass preparation 0
+128 C timed pass preparation 0
+128 D timed pass preparation 0
+512 A timed pass preparation 0
+512 B timed pass preparation 0
+512 C timed pass preparation 0
+512 D timed pass preparation 0
+
+boundary_consumer_host.log
+A boundary exit 0
+B boundary exit 0
+C boundary exit 1
+D boundary exit 1
+
+boundary_guarded_host.log
+R boundary exit 0
+
+extras/no_copy_8x8x8_A_r1/build.log (first transform diagnostic)
+    raise NotImplementedError("need to check behaviour in this case")
+NotImplementedError: need to check behaviour in this case
+
+extras/no_copy_20x20x20_A_r1/build.log (first transform diagnostic)
+AttributeError: 'Generic' object has no attribute 'stride_patterns'
+AttributeError: Error while applying pattern: 'Generic' object has no attribute 'stride_patterns'
+FileCheck acc-dedup 0
+FileCheck accfg-config-overlap 0
+FileCheck accfg-insert-resets 0
+FileCheck accfg-trace-states 0
+FileCheck rocc-dedup 0
+cmp wave B vcd.csv: 0
+cmp wave B trace_hart_00000.json: 0
+cmp wave B trace_hart_00001.json: 0
+gzip -t wave B: 0
+cmp wave D vcd.csv: 0
+cmp wave D trace_hart_00000.json: 0
+cmp wave D trace_hart_00001.json: 0
+gzip -t wave D: 0

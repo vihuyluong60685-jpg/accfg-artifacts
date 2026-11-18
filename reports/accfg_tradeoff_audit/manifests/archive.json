@@ -1,0 +1,16 @@
+{
+  "archive_local_path": "/home/yanmo/research/projects/accfg-tradeoff-audit/research/accfg_tradeoff_audit/local/archives/accfg-tradeoff-audit.tar.gz",
+  "archive_bytes": 145063933,
+  "archive_sha256": "aa0de14ff86dd4a3e1fa31cf5538deff0fc65ffb3b890c98523dc4584bd73386",
+  "raw_file_count": 1472,
+  "raw_bytes": 692310448,
+  "verified_archive_members": 1472,
+  "exit_records_by_code": {
+    "0": 180,
+    "1": 21,
+    "2": 4
+  },
+  "study_input_sha256": "5c22c2d2b5e6b78f4b07557ab67c4c15029660038aeb826b03f90aab04104a34",
+  "official_base_git_sha": "cbf660f1cc73dfffd589541c9c382b346a7206fd",
+  "archive_entry_scope": "All files under local/ except archives/. Historical originals remain in their original checkout."
+}

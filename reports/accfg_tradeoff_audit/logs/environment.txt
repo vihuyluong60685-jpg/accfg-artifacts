@@ -1,0 +1,35 @@
+Host and Docker
+git version 2.34.1
+6.18.58.1-microsoft-standard-WSL2
+Python 3.10.12
+docker client 29.9.3 server 29.9.3
+sha256:a3dd42b69696b63e3c83a1a1719c0b2ae1965673d60251c468b337b3bf9ad813 ghcr.io/kuleuven-micas/accfg-artifacts@sha256:a3dd42b69696b63e3c83a1a1719c0b2ae1965673d60251c468b337b3bf9ad813
+Official image
++ docker run --rm --memory 2g --entrypoint bash ghcr.io/kuleuven-micas/accfg-artifacts@sha256:a3dd42b69696b63e3c83a1a1719c0b2ae1965673d60251c468b337b3bf9ad813 -c '
+      sha256sum /opt/snax-streamer-gemm-rtl/bin/snitch_cluster.vlt /opt/gen_trace.py
+      clang-17 --version
+      mlir-opt-17 --version
+      verilator --version
+      riscv64-unknown-elf-gcc --version
+      spike --help 2>&1 | sed -n "1,4p"
+      python3 -c "from importlib.metadata import version; print(\"xDSL\", version(\"xdsl\"))"
+  '
+39ab1f5e980f8afb7e8f018c5a8678f93c26be96bff717af834c0223af7b29d9  /opt/snax-streamer-gemm-rtl/bin/snitch_cluster.vlt
+5111e502b6ff480cfa956ca4c0df3bc9a37234cc33816baa94de3173c0641d53  /opt/gen_trace.py
+Ubuntu clang version 17.0.6 (9ubuntu1)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Ubuntu LLVM version 17.0.6
+  Optimized build.
+Verilator 5.026 2024-06-15 rev v5.026-43-g065f36ab5
+riscv64-unknown-elf-gcc () 13.2.0
+Copyright (C) 2023 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Spike RISC-V ISA Simulator 1.1.1-dev
+
+usage: spike [host options] <target program> [target options]
+Host Options:
+xDSL 0.22.0+12.g791e89d8

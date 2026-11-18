@@ -1,0 +1,21 @@
+Metric,Paper_Status,Study_Status,Paper_Location,Scope_or_Interpretation,Study_Evidence
+计算性能和加速比,REPORTED,MEASURED_THIS_STUDY,PDF p274–276 §6 Figs 10–12,OpenGeMM RTL loop；Gemmini 可达吞吐建模,data/runtime_summary.csv
+CPU 动态指令数,REPORTED,MEASURED_THIS_STUDY,PDF p271 §4.6 与 p274 §6.1,Gemmini 主机指令用于估计；本次另解码 OpenGeMM 同窗口及 Gemmini 计数窗口,data/gemmini_cases.csv
+加速器配置指令数量,REPORTED,MEASURED_THIS_STUDY,PDF p267 Table 1 与 p271 §4.6 p275–276 Figs 10–12,区分 setup 专用写与 launch/await CSR 写；RoCC 的时间窗另列,data/opengemm_cases.csv
+真正接口配置字节流,NOT_REPORTED,NOT_MEASURABLE,PDF p269–271 Eqs 3–8 与 §4.6,模型以每个 Gemmini RoCC 两个 64 位操作数计容量；缺物理字节计数器,data/multi_metric_comparison.csv
+总执行周期,REPORTED,MEASURED_THIS_STUDY,PDF p275 §6.2；p274 §6.1,设备 RTL 仅指定循环；Gemmini Spike 的 mcycle 是指令计数；整机上电至结束未测,data/opengemm_cases.csv
+数据搬运与等待,DISCLOSED_LIMITATION,MEASURED_THIS_STUDY,PDF p267 §2.3 与 p275 §6.2,明示关闭 scratchpad copy 以隔离配置；本次 checked trace 和波形分解,data/dma_summary.csv
+生成代码及 ELF 大小,NOT_REPORTED,MEASURED_THIS_STUDY,PDF p273–276 §§5–6；p280 A.2,以 ELF section / symbol 单列；附录磁盘体积为 artifact 体积,data/opengemm_cases.csv
+编译时间,NOT_REPORTED,MEASURED_THIS_STUDY,PDF p273–276 §§5–6；p280 A.5,附录流程耗时未拆 pass；本次 48 次构建和单 pass 计时,data/build_samples.csv
+编译器峰值 RSS,NOT_REPORTED,MEASURED_THIS_STUDY,PDF p280 A.2–A.5,8GB 仅宿主基准要求；Linux max child RSS 和 xDSL 结构压力分列,data/build_summary.csv
+栈/ABI 访存/寄存器压力,NOT_REPORTED,MEASURED_THIS_STUDY,PDF p273–276 §§5–6,测栈帧和可认定 ABI save/restore；真实活跃区间未单独测,data/opengemm_cases.csv
+可证普通 spill/reload,NOT_REPORTED,NOT_MEASURABLE,PDF p273–276 §§5–6,未取得 regalloc provenance；普通访存或 ABI 保存不能算成 spill,04_code_size_and_instruction_cost.md
+最差负载性能,REPORTED,MEASURED_THIS_STUDY,PDF p275 Fig 11 与 p280 A.6,图中可读分形状，未汇总最差退化，本次补齐,data/runtime_summary.csv
+小规模负优化,REPORTED,MEASURED_THIS_STUDY,PDF p274 §5.5 Fig 9 与 p275 Fig 11,图可见 Overlap 单开小尺寸退化；正文解释预置与提前下一轮，未量化机制成本,data/regression_cases.csv
+多算子端到端延迟,DISCLOSED_LIMITATION,MEASURED_THIS_STUDY,PDF p274 §6 与 p275 §6.2,范围限定 tiled matmul；本次同程序外层区间和只读缩减图，完整应用未测,data/prior_graph_phases.csv
+能源消耗,NOT_REPORTED,NOT_MEASURABLE,PDF p265 Abstract 与 p274–276 §6 p280 A.3,能效是动机；模拟和模型无芯片或校准功耗测量,data/multi_metric_comparison.csv
+平均/峰值功耗,NOT_REPORTED,NOT_MEASURABLE,PDF p274–276 §6 与 p280 A.3,活动量不是瓦特,data/multi_metric_comparison.csv
+面积/额外资源/频率,NOT_REPORTED,NOT_MEASURABLE,PDF p267 §2.2 与 p274 §6 p280 A.3,讨论已有配置并发能力；无接口的 PPA 实验,data/multi_metric_comparison.csv
+正确性,REPORTED,MEASURED_THIS_STUDY,PDF p273 §§5.3–5.4 与 p274 §5.5,原文陈述语义前提；本次 checked 数值与活跃状态反例,data/boundary_cases.csv
+配置接口参数和 CPI 灵敏度,REPORTED,MODEL,PDF p268–271 §4 与 p274 §6.1,Roofline 比较并发接口；本研究只改变假定 CPI,data/gemmini_cpi_sensitivity.csv
+编译器版本敏感性,NOT_REPORTED,NOT TESTED,PDF p280 A.2,本研究固定原编译器版本,02_fair_baseline_design.md

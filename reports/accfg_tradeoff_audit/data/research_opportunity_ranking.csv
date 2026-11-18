@@ -1,0 +1,4 @@
+Rank,Problem,Evidence,Novelty_1_5,Practical_Importance_1_5,Reproducibility_1_5,Modification_Difficulty_1_5,HW_SW_Codesign_1_5,Publication_Potential_1_5,Decision,Condition
+1,按捕获与活性保护配置流水,同一 ACCFG 退出状态消费在 C/D 数值错误且 A/B/R 通过,3,5,5,3,5,3,CONDITIONAL,两个真实负载或两接口复用并验证状态等价与周期开销
+2,同范围解释 DMA 与配置等待,checked16 B/D 内差26外差4并出现忙与非忙方向差,3,4,4,4,4,2,CONDITIONAL,同布局多负载下匹配观测验证具体调度因果
+3,收益感知小循环流水与工具成本,16³ Overlap 退化33.1%且代码+100B；48次全构建无稳健大退化,2,3,5,2,2,1,NO-GO_AS_STANDALONE,作为保护交接语义之后的轻量规则和基线

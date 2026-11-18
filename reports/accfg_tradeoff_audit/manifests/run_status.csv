@@ -1,0 +1,206 @@
+Local_Exit_Record,Exit_Code,Local_Evidence
+attempts/boundary_consumer_wrong_reference/A/sim.exit,1,attempts/boundary_consumer_wrong_reference/A/commands.log | attempts/boundary_consumer_wrong_reference/A/stdout.txt
+attempts/boundary_consumer_wrong_reference/B/sim.exit,1,attempts/boundary_consumer_wrong_reference/B/commands.log | attempts/boundary_consumer_wrong_reference/B/stdout.txt
+attempts/boundary_consumer_wrong_reference/C/sim.exit,1,attempts/boundary_consumer_wrong_reference/C/commands.log | attempts/boundary_consumer_wrong_reference/C/stdout.txt
+attempts/boundary_consumer_wrong_reference/D/sim.exit,1,attempts/boundary_consumer_wrong_reference/D/commands.log | attempts/boundary_consumer_wrong_reference/D/stdout.txt
+attempts/filecheck_first/accfg-config-overlap.exit,0,attempts/filecheck_first/accfg-config-overlap.log
+attempts/filecheck_first/accfg-insert-resets.exit,0,attempts/filecheck_first/accfg-insert-resets.log
+attempts/filecheck_first/accfg-trace-states.exit,0,attempts/filecheck_first/accfg-trace-states.log
+attempts/filecheck_first/rocc-dedup.exit,1,attempts/filecheck_first/rocc-dedup.log
+attempts/stress_loop_only/1_A.exit,0,attempts/stress_loop_only/1_A.log
+attempts/stress_loop_only/1_D.exit,0,attempts/stress_loop_only/1_D.log
+attempts/stress_loop_only/32_A.exit,0,attempts/stress_loop_only/32_A.log
+attempts/stress_loop_only/32_D.exit,0,attempts/stress_loop_only/32_D.log
+attempts/stress_loop_only/8_A.exit,0,attempts/stress_loop_only/8_A.log
+attempts/stress_loop_only/8_D.exit,0,attempts/stress_loop_only/8_D.log
+backend/ABCD_A/profile.exit,0,backend/ABCD_A/backend.log | backend/ABCD_A/link.log
+backend/ABCD_B/profile.exit,0,backend/ABCD_B/backend.log | backend/ABCD_B/link.log
+backend/ABCD_C/profile.exit,0,backend/ABCD_C/backend.log | backend/ABCD_C/link.log
+backend/ABCD_D/profile.exit,0,backend/ABCD_D/backend.log | backend/ABCD_D/link.log
+backend/BCDA_A/profile.exit,0,backend/BCDA_A/backend.log | backend/BCDA_A/link.log
+backend/BCDA_B/profile.exit,0,backend/BCDA_B/backend.log | backend/BCDA_B/link.log
+backend/BCDA_C/profile.exit,0,backend/BCDA_C/backend.log | backend/BCDA_C/link.log
+backend/BCDA_D/profile.exit,0,backend/BCDA_D/backend.log | backend/BCDA_D/link.log
+backend/CDAB_A/profile.exit,0,backend/CDAB_A/backend.log | backend/CDAB_A/link.log
+backend/CDAB_B/profile.exit,0,backend/CDAB_B/backend.log | backend/CDAB_B/link.log
+backend/CDAB_C/profile.exit,0,backend/CDAB_C/backend.log | backend/CDAB_C/link.log
+backend/CDAB_D/profile.exit,0,backend/CDAB_D/backend.log | backend/CDAB_D/link.log
+boundary/A/sim.exit,0,boundary/A/commands.log | boundary/A/stdout.txt
+boundary/B/sim.exit,0,boundary/B/commands.log | boundary/B/stdout.txt
+boundary/C/sim.exit,1,boundary/C/commands.log | boundary/C/stdout.txt
+boundary/D/sim.exit,1,boundary/D/commands.log | boundary/D/stdout.txt
+boundary/static/acc-dedup.exit,0,boundary/static/acc-dedup.log
+boundary/static/accfg-config-overlap.exit,0,boundary/static/accfg-config-overlap.log
+boundary/static/accfg-insert-resets.exit,0,boundary/static/accfg-insert-resets.log
+boundary/static/accfg-trace-states.exit,0,boundary/static/accfg-trace-states.log
+boundary/static/rocc-dedup.exit,0,boundary/static/rocc-dedup.log
+boundary_consumer/A/sim.exit,0,boundary_consumer/A/commands.log | boundary_consumer/A/stdout.txt
+boundary_consumer/B/sim.exit,0,boundary_consumer/B/commands.log | boundary_consumer/B/stdout.txt
+boundary_consumer/C/sim.exit,1,boundary_consumer/C/commands.log | boundary_consumer/C/stdout.txt
+boundary_consumer/D/sim.exit,1,boundary_consumer/D/commands.log | boundary_consumer/D/stdout.txt
+boundary_guarded/R/sim.exit,0,boundary_guarded/R/commands.log | boundary_guarded/R/stdout.txt
+compile/no_copy_128x128x128_A_r1/build.exit,0,compile/no_copy_128x128x128_A_r1/build.log
+compile/no_copy_128x128x128_A_r1/prepare.exit,0,compile/no_copy_128x128x128_A_r1/pass_prepare.log
+compile/no_copy_128x128x128_A_r1/prepare_first.exit,1,compile/no_copy_128x128x128_A_r1/pass_prepare_first.log
+compile/no_copy_128x128x128_A_r2/build.exit,0,compile/no_copy_128x128x128_A_r2/build.log
+compile/no_copy_128x128x128_A_r3/build.exit,0,compile/no_copy_128x128x128_A_r3/build.log
+compile/no_copy_128x128x128_A_r4/build.exit,0,compile/no_copy_128x128x128_A_r4/build.log
+compile/no_copy_128x128x128_B_r1/build.exit,0,compile/no_copy_128x128x128_B_r1/build.log
+compile/no_copy_128x128x128_B_r1/prepare.exit,0,compile/no_copy_128x128x128_B_r1/pass_prepare.log
+compile/no_copy_128x128x128_B_r1/prepare_first.exit,1,compile/no_copy_128x128x128_B_r1/pass_prepare_first.log
+compile/no_copy_128x128x128_B_r2/build.exit,0,compile/no_copy_128x128x128_B_r2/build.log
+compile/no_copy_128x128x128_B_r3/build.exit,0,compile/no_copy_128x128x128_B_r3/build.log
+compile/no_copy_128x128x128_B_r4/build.exit,0,compile/no_copy_128x128x128_B_r4/build.log
+compile/no_copy_128x128x128_C_r1/build.exit,0,compile/no_copy_128x128x128_C_r1/build.log
+compile/no_copy_128x128x128_C_r1/prepare.exit,0,compile/no_copy_128x128x128_C_r1/pass_prepare.log
+compile/no_copy_128x128x128_C_r1/prepare_first.exit,1,compile/no_copy_128x128x128_C_r1/pass_prepare_first.log
+compile/no_copy_128x128x128_C_r2/build.exit,0,compile/no_copy_128x128x128_C_r2/build.log
+compile/no_copy_128x128x128_C_r3/build.exit,0,compile/no_copy_128x128x128_C_r3/build.log
+compile/no_copy_128x128x128_C_r4/build.exit,0,compile/no_copy_128x128x128_C_r4/build.log
+compile/no_copy_128x128x128_D_r1/build.exit,0,compile/no_copy_128x128x128_D_r1/build.log
+compile/no_copy_128x128x128_D_r1/prepare.exit,0,compile/no_copy_128x128x128_D_r1/pass_prepare.log
+compile/no_copy_128x128x128_D_r1/prepare_first.exit,1,compile/no_copy_128x128x128_D_r1/pass_prepare_first.log
+compile/no_copy_128x128x128_D_r2/build.exit,0,compile/no_copy_128x128x128_D_r2/build.log
+compile/no_copy_128x128x128_D_r3/build.exit,0,compile/no_copy_128x128x128_D_r3/build.log
+compile/no_copy_128x128x128_D_r4/build.exit,0,compile/no_copy_128x128x128_D_r4/build.log
+compile/no_copy_16x16x16_A_r1/build.exit,0,compile/no_copy_16x16x16_A_r1/build.log
+compile/no_copy_16x16x16_A_r1/prepare.exit,0,compile/no_copy_16x16x16_A_r1/pass_prepare.log
+compile/no_copy_16x16x16_A_r1/prepare_first.exit,1,compile/no_copy_16x16x16_A_r1/pass_prepare_first.log
+compile/no_copy_16x16x16_A_r2/build.exit,0,compile/no_copy_16x16x16_A_r2/build.log
+compile/no_copy_16x16x16_A_r3/build.exit,0,compile/no_copy_16x16x16_A_r3/build.log
+compile/no_copy_16x16x16_A_r4/build.exit,0,compile/no_copy_16x16x16_A_r4/build.log
+compile/no_copy_16x16x16_B_r1/build.exit,0,compile/no_copy_16x16x16_B_r1/build.log
+compile/no_copy_16x16x16_B_r1/prepare.exit,0,compile/no_copy_16x16x16_B_r1/pass_prepare.log
+compile/no_copy_16x16x16_B_r1/prepare_first.exit,1,compile/no_copy_16x16x16_B_r1/pass_prepare_first.log
+compile/no_copy_16x16x16_B_r2/build.exit,0,compile/no_copy_16x16x16_B_r2/build.log
+compile/no_copy_16x16x16_B_r3/build.exit,0,compile/no_copy_16x16x16_B_r3/build.log
+compile/no_copy_16x16x16_B_r4/build.exit,0,compile/no_copy_16x16x16_B_r4/build.log
+compile/no_copy_16x16x16_C_r1/build.exit,0,compile/no_copy_16x16x16_C_r1/build.log
+compile/no_copy_16x16x16_C_r1/prepare.exit,0,compile/no_copy_16x16x16_C_r1/pass_prepare.log
+compile/no_copy_16x16x16_C_r1/prepare_first.exit,1,compile/no_copy_16x16x16_C_r1/pass_prepare_first.log
+compile/no_copy_16x16x16_C_r2/build.exit,0,compile/no_copy_16x16x16_C_r2/build.log
+compile/no_copy_16x16x16_C_r3/build.exit,0,compile/no_copy_16x16x16_C_r3/build.log
+compile/no_copy_16x16x16_C_r4/build.exit,0,compile/no_copy_16x16x16_C_r4/build.log
+compile/no_copy_16x16x16_D_r1/build.exit,0,compile/no_copy_16x16x16_D_r1/build.log
+compile/no_copy_16x16x16_D_r1/prepare.exit,0,compile/no_copy_16x16x16_D_r1/pass_prepare.log
+compile/no_copy_16x16x16_D_r1/prepare_first.exit,1,compile/no_copy_16x16x16_D_r1/pass_prepare_first.log
+compile/no_copy_16x16x16_D_r2/build.exit,0,compile/no_copy_16x16x16_D_r2/build.log
+compile/no_copy_16x16x16_D_r3/build.exit,0,compile/no_copy_16x16x16_D_r3/build.log
+compile/no_copy_16x16x16_D_r4/build.exit,0,compile/no_copy_16x16x16_D_r4/build.log
+compile/no_copy_512x512x512_A_r1/build.exit,0,compile/no_copy_512x512x512_A_r1/build.log
+compile/no_copy_512x512x512_A_r1/prepare.exit,0,compile/no_copy_512x512x512_A_r1/pass_prepare.log
+compile/no_copy_512x512x512_A_r1/prepare_first.exit,1,compile/no_copy_512x512x512_A_r1/pass_prepare_first.log
+compile/no_copy_512x512x512_A_r2/build.exit,0,compile/no_copy_512x512x512_A_r2/build.log
+compile/no_copy_512x512x512_A_r3/build.exit,0,compile/no_copy_512x512x512_A_r3/build.log
+compile/no_copy_512x512x512_A_r4/build.exit,0,compile/no_copy_512x512x512_A_r4/build.log
+compile/no_copy_512x512x512_B_r1/build.exit,0,compile/no_copy_512x512x512_B_r1/build.log
+compile/no_copy_512x512x512_B_r1/prepare.exit,0,compile/no_copy_512x512x512_B_r1/pass_prepare.log
+compile/no_copy_512x512x512_B_r1/prepare_first.exit,1,compile/no_copy_512x512x512_B_r1/pass_prepare_first.log
+compile/no_copy_512x512x512_B_r2/build.exit,0,compile/no_copy_512x512x512_B_r2/build.log
+compile/no_copy_512x512x512_B_r3/build.exit,0,compile/no_copy_512x512x512_B_r3/build.log
+compile/no_copy_512x512x512_B_r4/build.exit,0,compile/no_copy_512x512x512_B_r4/build.log
+compile/no_copy_512x512x512_C_r1/build.exit,0,compile/no_copy_512x512x512_C_r1/build.log
+compile/no_copy_512x512x512_C_r1/prepare.exit,0,compile/no_copy_512x512x512_C_r1/pass_prepare.log
+compile/no_copy_512x512x512_C_r1/prepare_first.exit,1,compile/no_copy_512x512x512_C_r1/pass_prepare_first.log
+compile/no_copy_512x512x512_C_r2/build.exit,0,compile/no_copy_512x512x512_C_r2/build.log
+compile/no_copy_512x512x512_C_r3/build.exit,0,compile/no_copy_512x512x512_C_r3/build.log
+compile/no_copy_512x512x512_C_r4/build.exit,0,compile/no_copy_512x512x512_C_r4/build.log
+compile/no_copy_512x512x512_D_r1/build.exit,0,compile/no_copy_512x512x512_D_r1/build.log
+compile/no_copy_512x512x512_D_r1/prepare.exit,0,compile/no_copy_512x512x512_D_r1/pass_prepare.log
+compile/no_copy_512x512x512_D_r1/prepare_first.exit,1,compile/no_copy_512x512x512_D_r1/pass_prepare_first.log
+compile/no_copy_512x512x512_D_r2/build.exit,0,compile/no_copy_512x512x512_D_r2/build.log
+compile/no_copy_512x512x512_D_r3/build.exit,0,compile/no_copy_512x512x512_D_r3/build.log
+compile/no_copy_512x512x512_D_r4/build.exit,0,compile/no_copy_512x512x512_D_r4/build.log
+elf/objdump.exit,0,elf/commands.log
+envelope/checked_16x16x16_A_r1/build.exit,0,envelope/checked_16x16x16_A_r1/build.log
+envelope/checked_16x16x16_A_r1/trace/sim.exit,0,envelope/checked_16x16x16_A_r1/trace/commands.log | envelope/checked_16x16x16_A_r1/trace/stdout.txt
+envelope/checked_16x16x16_B_r1/build.exit,0,envelope/checked_16x16x16_B_r1/build.log
+envelope/checked_16x16x16_B_r1/trace/sim.exit,0,envelope/checked_16x16x16_B_r1/trace/commands.log | envelope/checked_16x16x16_B_r1/trace/stdout.txt
+envelope/checked_16x16x16_B_r1/wave/filter.exit,0,envelope/checked_16x16x16_B_r1/wave/commands.log | envelope/checked_16x16x16_B_r1/wave/filter.log
+envelope/checked_16x16x16_B_r1/wave/sim.exit,0,envelope/checked_16x16x16_B_r1/wave/commands.log | envelope/checked_16x16x16_B_r1/wave/stdout.txt
+envelope/checked_16x16x16_C_r1/build.exit,0,envelope/checked_16x16x16_C_r1/build.log
+envelope/checked_16x16x16_C_r1/trace/sim.exit,0,envelope/checked_16x16x16_C_r1/trace/commands.log | envelope/checked_16x16x16_C_r1/trace/stdout.txt
+envelope/checked_16x16x16_D_r1/build.exit,0,envelope/checked_16x16x16_D_r1/build.log
+envelope/checked_16x16x16_D_r1/trace/sim.exit,0,envelope/checked_16x16x16_D_r1/trace/commands.log | envelope/checked_16x16x16_D_r1/trace/stdout.txt
+envelope/checked_16x16x16_D_r1/wave/filter.exit,0,envelope/checked_16x16x16_D_r1/wave/commands.log | envelope/checked_16x16x16_D_r1/wave/filter.log
+envelope/checked_16x16x16_D_r1/wave/sim.exit,0,envelope/checked_16x16x16_D_r1/wave/commands.log | envelope/checked_16x16x16_D_r1/wave/stdout.txt
+extras/checked_20x20x20_A_r1/build.exit,2,extras/checked_20x20x20_A_r1/build.log
+extras/checked_24x16x32_A_r1/build.exit,0,extras/checked_24x16x32_A_r1/build.log
+extras/checked_24x16x32_A_r1/trace/sim.exit,0,extras/checked_24x16x32_A_r1/trace/commands.log | extras/checked_24x16x32_A_r1/trace/stdout.txt
+extras/checked_24x16x32_B_r1/build.exit,0,extras/checked_24x16x32_B_r1/build.log
+extras/checked_24x16x32_B_r1/trace/sim.exit,0,extras/checked_24x16x32_B_r1/trace/commands.log | extras/checked_24x16x32_B_r1/trace/stdout.txt
+extras/checked_24x16x32_C_r1/build.exit,0,extras/checked_24x16x32_C_r1/build.log
+extras/checked_24x16x32_C_r1/trace/sim.exit,0,extras/checked_24x16x32_C_r1/trace/commands.log | extras/checked_24x16x32_C_r1/trace/stdout.txt
+extras/checked_24x16x32_D_r1/build.exit,0,extras/checked_24x16x32_D_r1/build.log
+extras/checked_24x16x32_D_r1/trace/sim.exit,0,extras/checked_24x16x32_D_r1/trace/commands.log | extras/checked_24x16x32_D_r1/trace/stdout.txt
+extras/checked_24x24x24_A_r1/build.exit,0,extras/checked_24x24x24_A_r1/build.log
+extras/checked_24x24x24_A_r1/trace/sim.exit,0,extras/checked_24x24x24_A_r1/trace/commands.log | extras/checked_24x24x24_A_r1/trace/stdout.txt
+extras/checked_24x24x24_B_r1/build.exit,0,extras/checked_24x24x24_B_r1/build.log
+extras/checked_24x24x24_B_r1/trace/sim.exit,0,extras/checked_24x24x24_B_r1/trace/commands.log | extras/checked_24x24x24_B_r1/trace/stdout.txt
+extras/checked_24x24x24_C_r1/build.exit,0,extras/checked_24x24x24_C_r1/build.log
+extras/checked_24x24x24_C_r1/trace/sim.exit,0,extras/checked_24x24x24_C_r1/trace/commands.log | extras/checked_24x24x24_C_r1/trace/stdout.txt
+extras/checked_24x24x24_D_r1/build.exit,0,extras/checked_24x24x24_D_r1/build.log
+extras/checked_24x24x24_D_r1/trace/sim.exit,0,extras/checked_24x24x24_D_r1/trace/commands.log | extras/checked_24x24x24_D_r1/trace/stdout.txt
+extras/checked_40x40x40_A_r1/build.exit,0,extras/checked_40x40x40_A_r1/build.log
+extras/checked_40x40x40_A_r1/trace/sim.exit,0,extras/checked_40x40x40_A_r1/trace/commands.log | extras/checked_40x40x40_A_r1/trace/stdout.txt
+extras/checked_40x40x40_B_r1/build.exit,0,extras/checked_40x40x40_B_r1/build.log
+extras/checked_40x40x40_B_r1/trace/sim.exit,0,extras/checked_40x40x40_B_r1/trace/commands.log | extras/checked_40x40x40_B_r1/trace/stdout.txt
+extras/checked_40x40x40_C_r1/build.exit,0,extras/checked_40x40x40_C_r1/build.log
+extras/checked_40x40x40_C_r1/trace/sim.exit,0,extras/checked_40x40x40_C_r1/trace/commands.log | extras/checked_40x40x40_C_r1/trace/stdout.txt
+extras/checked_40x40x40_D_r1/build.exit,0,extras/checked_40x40x40_D_r1/build.log
+extras/checked_40x40x40_D_r1/trace/sim.exit,0,extras/checked_40x40x40_D_r1/trace/commands.log | extras/checked_40x40x40_D_r1/trace/stdout.txt
+extras/checked_8x8x8_A_r1/build.exit,2,extras/checked_8x8x8_A_r1/build.log
+extras/no_copy_20x20x20_A_r1/build.exit,2,extras/no_copy_20x20x20_A_r1/build.log
+extras/no_copy_24x16x32_A_r1/build.exit,0,extras/no_copy_24x16x32_A_r1/build.log
+extras/no_copy_24x16x32_A_r1/trace/sim.exit,0,extras/no_copy_24x16x32_A_r1/trace/commands.log | extras/no_copy_24x16x32_A_r1/trace/stdout.txt
+extras/no_copy_24x16x32_B_r1/build.exit,0,extras/no_copy_24x16x32_B_r1/build.log
+extras/no_copy_24x16x32_B_r1/trace/sim.exit,0,extras/no_copy_24x16x32_B_r1/trace/commands.log | extras/no_copy_24x16x32_B_r1/trace/stdout.txt
+extras/no_copy_24x16x32_C_r1/build.exit,0,extras/no_copy_24x16x32_C_r1/build.log
+extras/no_copy_24x16x32_C_r1/trace/sim.exit,0,extras/no_copy_24x16x32_C_r1/trace/commands.log | extras/no_copy_24x16x32_C_r1/trace/stdout.txt
+extras/no_copy_24x16x32_D_r1/build.exit,0,extras/no_copy_24x16x32_D_r1/build.log
+extras/no_copy_24x16x32_D_r1/trace/sim.exit,0,extras/no_copy_24x16x32_D_r1/trace/commands.log | extras/no_copy_24x16x32_D_r1/trace/stdout.txt
+extras/no_copy_24x24x24_A_r1/build.exit,0,extras/no_copy_24x24x24_A_r1/build.log
+extras/no_copy_24x24x24_A_r1/trace/sim.exit,0,extras/no_copy_24x24x24_A_r1/trace/commands.log | extras/no_copy_24x24x24_A_r1/trace/stdout.txt
+extras/no_copy_24x24x24_B_r1/build.exit,0,extras/no_copy_24x24x24_B_r1/build.log
+extras/no_copy_24x24x24_B_r1/trace/sim.exit,0,extras/no_copy_24x24x24_B_r1/trace/commands.log | extras/no_copy_24x24x24_B_r1/trace/stdout.txt
+extras/no_copy_24x24x24_C_r1/build.exit,0,extras/no_copy_24x24x24_C_r1/build.log
+extras/no_copy_24x24x24_C_r1/trace/sim.exit,0,extras/no_copy_24x24x24_C_r1/trace/commands.log | extras/no_copy_24x24x24_C_r1/trace/stdout.txt
+extras/no_copy_24x24x24_D_r1/build.exit,0,extras/no_copy_24x24x24_D_r1/build.log
+extras/no_copy_24x24x24_D_r1/trace/sim.exit,0,extras/no_copy_24x24x24_D_r1/trace/commands.log | extras/no_copy_24x24x24_D_r1/trace/stdout.txt
+extras/no_copy_40x40x40_A_r1/build.exit,0,extras/no_copy_40x40x40_A_r1/build.log
+extras/no_copy_40x40x40_A_r1/trace/sim.exit,0,extras/no_copy_40x40x40_A_r1/trace/commands.log | extras/no_copy_40x40x40_A_r1/trace/stdout.txt
+extras/no_copy_40x40x40_B_r1/build.exit,0,extras/no_copy_40x40x40_B_r1/build.log
+extras/no_copy_40x40x40_B_r1/trace/sim.exit,0,extras/no_copy_40x40x40_B_r1/trace/commands.log | extras/no_copy_40x40x40_B_r1/trace/stdout.txt
+extras/no_copy_40x40x40_C_r1/build.exit,0,extras/no_copy_40x40x40_C_r1/build.log
+extras/no_copy_40x40x40_C_r1/trace/sim.exit,0,extras/no_copy_40x40x40_C_r1/trace/commands.log | extras/no_copy_40x40x40_C_r1/trace/stdout.txt
+extras/no_copy_40x40x40_D_r1/build.exit,0,extras/no_copy_40x40x40_D_r1/build.log
+extras/no_copy_40x40x40_D_r1/trace/sim.exit,0,extras/no_copy_40x40x40_D_r1/trace/commands.log | extras/no_copy_40x40x40_D_r1/trace/stdout.txt
+extras/no_copy_8x8x8_A_r1/build.exit,2,extras/no_copy_8x8x8_A_r1/build.log
+gemmini/128_baseline_check0/build.exit,0,gemmini/128_baseline_check0/build.log
+gemmini/128_baseline_check0/spike.exit,0,gemmini/128_baseline_check0/build.log | gemmini/128_baseline_check0/run.log | gemmini/128_baseline_check0/spike.json
+gemmini/128_dedup_check0/build.exit,0,gemmini/128_dedup_check0/build.log
+gemmini/128_dedup_check0/spike.exit,0,gemmini/128_dedup_check0/build.log | gemmini/128_dedup_check0/run.log | gemmini/128_dedup_check0/spike.json
+gemmini/32_baseline_check0/build.exit,0,gemmini/32_baseline_check0/build.log
+gemmini/32_baseline_check0/spike.exit,0,gemmini/32_baseline_check0/build.log | gemmini/32_baseline_check0/run.log | gemmini/32_baseline_check0/spike.json
+gemmini/32_baseline_check1/build.exit,0,gemmini/32_baseline_check1/build.log
+gemmini/32_baseline_check1/spike.exit,0,gemmini/32_baseline_check1/build.log | gemmini/32_baseline_check1/run.log | gemmini/32_baseline_check1/spike.json
+gemmini/32_dedup_check0/build.exit,0,gemmini/32_dedup_check0/build.log
+gemmini/32_dedup_check0/spike.exit,0,gemmini/32_dedup_check0/build.log | gemmini/32_dedup_check0/run.log | gemmini/32_dedup_check0/spike.json
+gemmini/32_dedup_check1/build.exit,0,gemmini/32_dedup_check1/build.log
+gemmini/32_dedup_check1/spike.exit,0,gemmini/32_dedup_check1/build.log | gemmini/32_dedup_check1/run.log | gemmini/32_dedup_check1/spike.json
+gemmini/64_baseline_check0/build.exit,0,gemmini/64_baseline_check0/build.log
+gemmini/64_baseline_check0/spike.exit,0,gemmini/64_baseline_check0/build.log | gemmini/64_baseline_check0/run.log | gemmini/64_baseline_check0/spike.json
+gemmini/64_dedup_check0/build.exit,0,gemmini/64_dedup_check0/build.log
+gemmini/64_dedup_check0/spike.exit,0,gemmini/64_dedup_check0/build.log | gemmini/64_dedup_check0/run.log | gemmini/64_dedup_check0/spike.json
+stress/1_A.exit,0,stress/1_A.log
+stress/1_D.exit,0,stress/1_D.log
+stress/32_A.exit,0,stress/32_A.log
+stress/32_D.exit,0,stress/32_D.log
+stress/8_A.exit,0,stress/8_A.log
+stress/8_D.exit,0,stress/8_D.log
+wave_retained/B/wave/compress.exit,0,wave_retained/B/wave/commands.log
+wave_retained/B/wave/filter.exit,0,wave_retained/B/wave/commands.log | wave_retained/B/wave/filter.log
+wave_retained/B/wave/sim.exit,0,wave_retained/B/wave/commands.log | wave_retained/B/wave/stdout.txt
+wave_retained/D/wave/compress.exit,0,wave_retained/D/wave/commands.log
+wave_retained/D/wave/filter.exit,0,wave_retained/D/wave/commands.log | wave_retained/D/wave/filter.log
+wave_retained/D/wave/sim.exit,0,wave_retained/D/wave/commands.log | wave_retained/D/wave/stdout.txt

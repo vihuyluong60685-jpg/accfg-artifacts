@@ -1,0 +1,7 @@
+Scope,Workload,Pair,Cells,Geomean_Speedup,Best_Speedup,Worst_Speedup,Worst_Seed,Regressions,Max_Slowdown_Pct
+prior reduced graph marked window,attention,AB,2,1.0125761483946363,1.0164951573849879,1.0086722488038278,11,0,0
+prior reduced graph marked window,attention,AC,2,1.0096735481388288,1.0101826894279724,1.0091646634615385,37,0,0
+prior reduced graph marked window,attention,BC,2,0.9971334499035855,1.001497454327643,0.9927884615384616,37,1,0.7263922518159807
+prior reduced graph marked window,mobile,AB,2,1.0082980225107814,1.0094591586912975,1.0071382219338092,11,0,0
+prior reduced graph marked window,mobile,AC,2,1.0113487614379326,1.012501395245005,1.010197439791712,11,0,0
+prior reduced graph marked window,mobile,BC,2,1.0030256321633502,1.0030375352571057,1.0030137292108494,37,0,0

@@ -1,0 +1,79 @@
+
+boundary/A/stdout.txt
+AUDIT_LIVE trips=0 golden_errors=0 live_errors=0 reset_errors=0 actual_a=10000000 expected_a=10000000 actual_c=10000600 expected_c=10000600
+AUDIT_LIVE trips=1 golden_errors=0 live_errors=0 reset_errors=0 actual_a=10000100 expected_a=10000100 actual_c=10000700 expected_c=10000700
+AUDIT_LIVE trips=3 golden_errors=0 live_errors=0 reset_errors=0 actual_a=10000300 expected_a=10000300 actual_c=10000900 expected_c=10000900
+sim.exit=0
+
+boundary/B/stdout.txt
+AUDIT_LIVE trips=0 golden_errors=0 live_errors=0 reset_errors=0 actual_a=10000000 expected_a=10000000 actual_c=10000600 expected_c=10000600
+AUDIT_LIVE trips=1 golden_errors=0 live_errors=0 reset_errors=0 actual_a=10000100 expected_a=10000100 actual_c=10000700 expected_c=10000700
+AUDIT_LIVE trips=3 golden_errors=0 live_errors=0 reset_errors=0 actual_a=10000300 expected_a=10000300 actual_c=10000900 expected_c=10000900
+sim.exit=0
+
+boundary/C/stdout.txt
+AUDIT_LIVE trips=0 golden_errors=0 live_errors=2 reset_errors=0 actual_a=10000100 expected_a=10000000 actual_c=10000700 expected_c=10000600
+AUDIT_LIVE trips=1 golden_errors=0 live_errors=2 reset_errors=0 actual_a=10000200 expected_a=10000100 actual_c=10000800 expected_c=10000700
+AUDIT_LIVE trips=3 golden_errors=0 live_errors=2 reset_errors=0 actual_a=10000400 expected_a=10000300 actual_c=10000a00 expected_c=10000900
+*** FAILED *** (tohost = 1)
+sim.exit=1
+
+boundary/D/stdout.txt
+AUDIT_LIVE trips=0 golden_errors=0 live_errors=2 reset_errors=0 actual_a=10000100 expected_a=10000000 actual_c=10000700 expected_c=10000600
+AUDIT_LIVE trips=1 golden_errors=0 live_errors=2 reset_errors=0 actual_a=10000200 expected_a=10000100 actual_c=10000800 expected_c=10000700
+AUDIT_LIVE trips=3 golden_errors=0 live_errors=2 reset_errors=0 actual_a=10000400 expected_a=10000300 actual_c=10000a00 expected_c=10000900
+*** FAILED *** (tohost = 1)
+sim.exit=1
+
+boundary_consumer/A/stdout.txt
+AUDIT_LIVE trips=0 golden_errors=0 live_errors=0 reset_errors=0 actual_a=10000000 expected_a=10000000 actual_c=10000600 expected_c=10000600
+AUDIT_LIVE trips=1 golden_errors=0 live_errors=0 reset_errors=0 actual_a=10000100 expected_a=10000100 actual_c=10000700 expected_c=10000700
+AUDIT_LIVE trips=3 golden_errors=0 live_errors=0 reset_errors=0 actual_a=10000300 expected_a=10000300 actual_c=10000900 expected_c=10000900
+sim.exit=0
+
+boundary_consumer/B/stdout.txt
+AUDIT_LIVE trips=0 golden_errors=0 live_errors=0 reset_errors=0 actual_a=10000000 expected_a=10000000 actual_c=10000600 expected_c=10000600
+AUDIT_LIVE trips=1 golden_errors=0 live_errors=0 reset_errors=0 actual_a=10000100 expected_a=10000100 actual_c=10000700 expected_c=10000700
+AUDIT_LIVE trips=3 golden_errors=0 live_errors=0 reset_errors=0 actual_a=10000300 expected_a=10000300 actual_c=10000900 expected_c=10000900
+sim.exit=0
+
+boundary_consumer/C/stdout.txt
+AUDIT_LIVE trips=0 golden_errors=128 live_errors=2 reset_errors=0 actual_a=10000100 expected_a=10000000 actual_c=10000700 expected_c=10000600
+AUDIT_LIVE trips=1 golden_errors=64 live_errors=2 reset_errors=0 actual_a=10000200 expected_a=10000100 actual_c=10000800 expected_c=10000700
+AUDIT_LIVE trips=3 golden_errors=64 live_errors=2 reset_errors=0 actual_a=10000400 expected_a=10000300 actual_c=10000a00 expected_c=10000900
+*** FAILED *** (tohost = 1)
+sim.exit=1
+
+boundary_consumer/D/stdout.txt
+AUDIT_LIVE trips=0 golden_errors=128 live_errors=2 reset_errors=0 actual_a=10000100 expected_a=10000000 actual_c=10000700 expected_c=10000600
+AUDIT_LIVE trips=1 golden_errors=64 live_errors=2 reset_errors=0 actual_a=10000200 expected_a=10000100 actual_c=10000800 expected_c=10000700
+AUDIT_LIVE trips=3 golden_errors=64 live_errors=2 reset_errors=0 actual_a=10000400 expected_a=10000300 actual_c=10000a00 expected_c=10000900
+*** FAILED *** (tohost = 1)
+sim.exit=1
+
+boundary_guarded/R/stdout.txt
+AUDIT_LIVE trips=0 golden_errors=0 live_errors=0 reset_errors=0 actual_a=10000000 expected_a=10000000 actual_c=10000600 expected_c=10000600
+AUDIT_LIVE trips=1 golden_errors=0 live_errors=0 reset_errors=0 actual_a=10000100 expected_a=10000100 actual_c=10000700 expected_c=10000700
+AUDIT_LIVE trips=3 golden_errors=0 live_errors=0 reset_errors=0 actual_a=10000300 expected_a=10000300 actual_c=10000900 expected_c=10000900
+sim.exit=0
+
+Scheduled consumer A (control, state, and consumers)
+    %initial = accfg.setup "snax_gemm" to ("a_ptr" = %a0 : i32, "b_ptr" = %b : i32, "c_ptr" = %c0 : i32) : !accfg.state<"snax_gemm">
+    %exit = scf.for %i = %zero to %trips step %step iter_args(%state = %initial) -> (!accfg.state<"snax_gemm">) {
+      %cfg = accfg.setup "snax_gemm" from %state to ("a_ptr" = %aj : i32, "c_ptr" = %cj : i32) : !accfg.state<"snax_gemm">
+      %run = "accfg.launch"(%one, %one, %cfg) <{"accelerator" = "snax_gemm", "param_names" = ["launch_streamer", "launch_gemm"]}> : (i5, i5, !accfg.state<"snax_gemm">) -> !accfg.token<"snax_gemm">
+      "accfg.await"(%run) : (!accfg.token<"snax_gemm">) -> ()
+      scf.yield %cfg : !accfg.state<"snax_gemm">
+    %follow = "accfg.launch"(%one, %one, %exit) <{"accelerator" = "snax_gemm", "param_names" = ["launch_streamer", "launch_gemm"]}> : (i5, i5, !accfg.state<"snax_gemm">) -> !accfg.token<"snax_gemm">
+    "accfg.await"(%follow) : (!accfg.token<"snax_gemm">) -> ()
+
+Scheduled consumer C (control, state, and consumers)
+    %initial = accfg.setup "snax_gemm" to ("a_ptr" = %a0 : i32, "b_ptr" = %b : i32, "c_ptr" = %c0 : i32) : !accfg.state<"snax_gemm">
+    %cfg = accfg.setup "snax_gemm" from %initial to ("a_ptr" = %aj : i32, "c_ptr" = %cj : i32) : !accfg.state<"snax_gemm">
+    %exit = scf.for %i = %zero to %trips step %step iter_args(%state = %cfg) -> (!accfg.state<"snax_gemm">) {
+      %run = "accfg.launch"(%one, %one, %state) <{"accelerator" = "snax_gemm", "param_names" = ["launch_streamer", "launch_gemm"]}> : (i5, i5, !accfg.state<"snax_gemm">) -> !accfg.token<"snax_gemm">
+      %cfg_1 = accfg.setup "snax_gemm" from %state to ("a_ptr" = %aj_2 : i32, "c_ptr" = %cj_2 : i32) : !accfg.state<"snax_gemm">
+      "accfg.await"(%run) : (!accfg.token<"snax_gemm">) -> ()
+      scf.yield %cfg_1 : !accfg.state<"snax_gemm">
+    %follow = "accfg.launch"(%one, %one, %exit) <{"accelerator" = "snax_gemm", "param_names" = ["launch_streamer", "launch_gemm"]}> : (i5, i5, !accfg.state<"snax_gemm">) -> !accfg.token<"snax_gemm">
+    "accfg.await"(%follow) : (!accfg.token<"snax_gemm">) -> ()

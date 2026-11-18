@@ -1,0 +1,3 @@
+Mode,Inner_Cycles,Outer_Cycles,Window_Source,DMA_Submits_Inner,Long_Barrier_Gaps,Long_Gaps_Cycles,DMA_Busy_Inside_Gaps,DMA_Nonbusy_Inside_Gaps,Outside_Gaps,DMA_Busy_Inner,GEMM_Busy_Inner,Wave_Equals_Trace
+B,1695,2449,instrumented same ELF,19,4,1550,853.0,697.0,145,853.0,12.0,yes
+D,1669,2445,instrumented same ELF,19,4,1526,857.0,669.0,143,857.0,12.0,yes
