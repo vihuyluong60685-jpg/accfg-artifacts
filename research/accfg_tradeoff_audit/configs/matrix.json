@@ -1,0 +1,14 @@
+{
+  "base": "cbf660f1cc73dfffd589541c9c382b346a7206fd",
+  "open_original_sizes": [16,32,64,128,256,512],
+  "open_extra_shapes_N_K_M": [[8,8,8],[20,20,20],[24,24,24],[24,16,32],[40,40,40]],
+  "open_extra_scopes": ["no_copy","checked"],
+  "open_compile_sizes": [16,128,512],
+  "compile_order": ["ABCD","BCDA","CDAB","DABC"],
+  "gemmini_matched_sizes": [32,64,128],
+  "gemmini_original_equivalent": "CHECK_RESULT=0",
+  "gemmini_golden_probe_size": 32,
+  "open_wave_size": 16,
+  "max_container_memory": "3g",
+  "phases": "Original four flags only. Exact timing windows are separate. Positive-control P1 artifacts are read-only and never substituted for official baseline."
+}
