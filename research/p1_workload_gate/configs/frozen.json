@@ -81,5 +81,7 @@
     "manifests/run_status.csv": "953d328c24ad5ad50963f85a73365ddbbd230b485fae1f0c1d5f4496e5c5b4a1",
     "manifests/sources_sha256.csv": "d3131bdad729c176ee6f767fa360fdbf8c9a8064bc0a98e84b3d2f153ccf4ec0"
   },
-  "experiment_sha256": "3701e01a02d9da47400caa83deb71a4911165561e6e934da130110ae7d280213"
+  "experiment_sha256": "35d2daa30a96c77e3d18a4007ebf3db2c93a80476a2bdb4df71e39cd14cd945f",
+  "native_tflite_source": "https://raw.githubusercontent.com/mlcommons/tiny/v1.0/benchmark/training/anomaly_detection/trained_models/ad01_int8.tflite",
+  "native_tflite_sha256": "87cf24194ef93d1d9b11a591d805526b98008e351655d29883c825c9c106ba24"
 }

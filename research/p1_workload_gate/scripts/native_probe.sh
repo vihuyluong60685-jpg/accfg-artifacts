@@ -14,7 +14,7 @@ if [[ "$rc" != 0 ]]; then exit "$rc"; fi
 timeout 30s mlir-opt-17 --allow-unregistered-dialect --mlir-print-op-generic ad01.tosa.mlir.bc -o ad01.tosa.mlir
 export PYTHONPATH="$kit"
 rc=0
-timeout 40s mlir-opt-17 --pass-pipeline='builtin.module(func.func(tosa-to-linalg-named, tosa-to-tensor, tosa-to-linalg),one-shot-bufferize{bufferize-function-boundaries allow-return-allocs function-boundary-type-conversion=identity-layout-map})' --mlir-print-op-generic ad01.tosa.mlir -o ad01.bufferized.mlir || rc=$?
+timeout 40s mlir-opt-17 --pass-pipeline='builtin.module(func.func(tosa-to-linalg-named, tosa-to-tensor, tosa-to-linalg),tosa-to-arith{include-apply-rescale},linalg-generalize-named,empty-tensor-to-alloc-tensor,one-shot-bufferize{bufferize-function-boundaries allow-return-allocs function-boundary-type-conversion=identity-layout-map})' --mlir-print-op-generic ad01.tosa.mlir -o ad01.bufferized.mlir || rc=$?
 printf '%s\n' "$rc" > bufferize.exit
 if [[ "$rc" != 0 ]]; then exit "$rc"; fi
 rc=0

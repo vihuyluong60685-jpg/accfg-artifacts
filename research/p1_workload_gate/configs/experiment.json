@@ -5,14 +5,18 @@
     "mobile": "2x4 NHWC, eight channels, pointwise -> ReLU6/requant -> zero-padded spatial depthwise 3x3 -> ReLU6/requant -> pointwise -> projection rescale and residual",
     "attention": "eight tokens, eight features per head; QK transpose -> scale and stable per-row fixed-point exponential softmax -> PV -> output rescale"
   },
-  "validation_seeds": [11,37],
+  "validation_seeds": [
+    11,
+    37
+  ],
   "timing": "Per-invocation graph latency, both mcycle reads in same harness, from before input and weight packing to after final output consumed by the caller. Include both full accelerator dispatches, host middle and final arithmetic. Data fixture provisioning and untimed independent checks excluded. No DMA in the two reduced graphs.",
   "comparison": {
-    "A":"pinned lowering, full setup for both launches",
-    "B":"pinned accfg-dedup",
-    "C":"pinned accfg-dedup then accfg-config-overlap",
-    "D":"same linked C ELF, all changed pointer fields after producer await and before audited host middle",
-    "E":"best measured strict subset of changed pointers before the producer await in the same C layout; enumerate masks 1 through 6, plus D=0 and C=7 as endpoints"
+    "A": "pinned lowering, full setup for both launches",
+    "B": "pinned accfg-dedup",
+    "C": "pinned accfg-dedup then accfg-config-overlap",
+    "D": "same linked C ELF, all changed pointer fields after producer await and before audited host middle",
+    "E": "best measured strict subset of changed pointers before the producer await in the same C layout; enumerate masks 1 through 6, plus D=0 and C=7 as endpoints",
+    "F": "fixed static read-port order A/B before await, C after (measured mask 3). Independent policy baseline; no new software-pipeline pass."
   },
   "weights": "fixed synthetic int8 coefficient fixtures, seeded; their graphs preserve dataflow and execute actual operators. Independent untuned graph instances, not pretrained accuracy or whole applications.",
   "decision_note": "Report both candidate existence and practical system value. Label within-family masks as an empirical oracle. Never fill unsupported workloads with modeled cycles."
