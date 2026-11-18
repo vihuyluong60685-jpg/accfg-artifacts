@@ -1,0 +1,83 @@
+Normalized command outputs with real exit values
+mobile A build exit 0
+mobile A trace exit 0
+mobile C build exit 0
+mobile C trace exit 0
+attention A build exit 0
+attention A trace exit 0
+attention C build exit 0
+attention C trace exit 0
+mobile A trace exit 0
+mobile B trace exit 0
+mobile C trace exit 0
+mobile M0 build exit 0
+mobile M0 trace exit 0
+mobile M1 build exit 0
+mobile M1 trace exit 0
+mobile M2 build exit 0
+mobile M2 trace exit 0
+mobile M3 build exit 0
+mobile M3 trace exit 0
+mobile M4 build exit 0
+mobile M4 trace exit 0
+mobile M5 build exit 0
+mobile M5 trace exit 0
+mobile M6 build exit 0
+mobile M6 trace exit 0
+attention A trace exit 0
+attention B trace exit 0
+attention C trace exit 0
+attention M0 build exit 0
+attention M0 trace exit 0
+attention M1 build exit 0
+attention M1 trace exit 0
+attention M2 build exit 0
+attention M2 trace exit 0
+attention M3 build exit 0
+attention M3 trace exit 0
+attention M4 build exit 0
+attention M4 trace exit 0
+attention M5 build exit 0
+attention M5 trace exit 0
+attention M6 build exit 0
+attention M6 trace exit 0
+mobile C wave exit 0
+mobile M0 wave exit 0
+attention C wave exit 0
+attention M0 wave exit 0
+
+Archived prior mask build / wave command statuses
+mobile A trace exit 0
+mobile B build exit 0
+mobile B trace exit 0
+mobile C trace exit 0
+mobile M0 build exit 1
+mobile M1 build exit 1
+mobile M2 build exit 1
+mobile M3 build exit 1
+mobile M4 build exit 1
+mobile M5 build exit 1
+mobile M6 build exit 1
+attention A trace exit 0
+attention B build exit 0
+attention B trace exit 0
+attention C trace exit 0
+attention M0 build exit 1
+attention M1 build exit 1
+attention M2 build exit 1
+attention M3 build exit 1
+attention M4 build exit 1
+attention M5 build exit 1
+attention M6 build exit 1
+mobile C wave exit 0
+mobile M0 wave exit 1
+attention C wave exit 0
+attention M0 wave exit 1
+
+Native recognized GEMM counts and exact template failure
+native_ad01
++ timeout 40s /tmp/tmp.jiUkxQ9dFv/compiler/snax-opt -p 'insert-accfg-op{accelerator=snax_gemm},dispatch-kernels,guarded-linalg-to-memref-stream,schedule-memref-linalg,stream-snaxify,convert-linalg-to-accfg' ad01.bufferized.mlir -o ad01.scheduled-native.mlir
+NotImplementedError: Error while applying pattern: need to check behaviour in this case
+native_ad01_batch1
++ timeout 40s /tmp/tmp.jiUkxQ9dFv/compiler/snax-opt -p 'insert-accfg-op{accelerator=snax_gemm},dispatch-kernels,guarded-linalg-to-memref-stream,schedule-memref-linalg,stream-snaxify,convert-linalg-to-accfg' ad01.bufferized.mlir -o ad01.scheduled-native.mlir
+NotImplementedError: Error while applying pattern: need to check behaviour in this case

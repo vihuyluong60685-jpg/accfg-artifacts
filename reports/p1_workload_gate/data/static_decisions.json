@@ -1,0 +1,552 @@
+[
+  {
+    "Graph": "mobile",
+    "Input": "/out/mobile/B/scheduled.mlir",
+    "Contract": "publish_middle",
+    "Fields_Before_Dedup": 25,
+    "Deduplicated_Fields": [
+      "K",
+      "M",
+      "N",
+      "a_sstride_0",
+      "a_sstride_1",
+      "a_tstride_0",
+      "a_tstride_1",
+      "a_tstride_2",
+      "b_sstride_0",
+      "b_sstride_1",
+      "b_tstride_0",
+      "b_tstride_1",
+      "b_tstride_2",
+      "c_sstride_0",
+      "c_sstride_1",
+      "c_tstride_0",
+      "c_tstride_1",
+      "c_tstride_2",
+      "loop_bound_0",
+      "loop_bound_1",
+      "loop_bound_2",
+      "subtractions"
+    ],
+    "First_Setup_Fields": 25,
+    "Effective_Fields": 3,
+    "Fields": [
+      {
+        "Field": "a_ptr",
+        "CSR": 978,
+        "Available_From": "block entry",
+        "SSA_Position": -1,
+        "Ready_At_Launch": true,
+        "Atomic_Group": "a_ptr",
+        "Independent_Target_Scope": true,
+        "Safe_To_Move": true
+      },
+      {
+        "Field": "b_ptr",
+        "CSR": 979,
+        "Available_From": "block entry",
+        "SSA_Position": -1,
+        "Ready_At_Launch": true,
+        "Atomic_Group": "b_ptr",
+        "Independent_Target_Scope": true,
+        "Safe_To_Move": true
+      },
+      {
+        "Field": "c_ptr",
+        "CSR": 980,
+        "Available_From": "block entry",
+        "SSA_Position": -1,
+        "Ready_At_Launch": true,
+        "Atomic_Group": "c_ptr",
+        "Independent_Target_Scope": true,
+        "Safe_To_Move": true
+      }
+    ],
+    "Late_Fields": [],
+    "Safe_Early_Fields": [
+      "a_ptr",
+      "b_ptr",
+      "c_ptr"
+    ],
+    "Stable_State_Capture_CSR": "0x3d5 streamer trigger; GEMM capture 0x3db",
+    "Capture_Protocol": "single owner and independently staged pointer fields only; VCD checked separately",
+    "First_Launch_SSA_Index": 9,
+    "First_Await_SSA_Index": 10,
+    "Intervening_Effects": [
+      {
+        "Operation": "func.call",
+        "Callee": "publish_middle",
+        "Position": 11,
+        "Effect": "audited memory-only; preserve execution order",
+        "Blocked": false
+      }
+    ],
+    "Both_Moved": [
+      "a_ptr",
+      "b_ptr",
+      "c_ptr"
+    ],
+    "Both_Observation": "whole setup placed before await",
+    "Strict_Partial_Opportunity": false,
+    "Missed_Safe_Fields": []
+  },
+  {
+    "Graph": "mobile_untrusted",
+    "Input": "/out/mobile/B/scheduled.mlir",
+    "Contract": null,
+    "Fields_Before_Dedup": 25,
+    "Deduplicated_Fields": [
+      "K",
+      "M",
+      "N",
+      "a_sstride_0",
+      "a_sstride_1",
+      "a_tstride_0",
+      "a_tstride_1",
+      "a_tstride_2",
+      "b_sstride_0",
+      "b_sstride_1",
+      "b_tstride_0",
+      "b_tstride_1",
+      "b_tstride_2",
+      "c_sstride_0",
+      "c_sstride_1",
+      "c_tstride_0",
+      "c_tstride_1",
+      "c_tstride_2",
+      "loop_bound_0",
+      "loop_bound_1",
+      "loop_bound_2",
+      "subtractions"
+    ],
+    "First_Setup_Fields": 25,
+    "Effective_Fields": 3,
+    "Fields": [
+      {
+        "Field": "a_ptr",
+        "CSR": 978,
+        "Available_From": "block entry",
+        "SSA_Position": -1,
+        "Ready_At_Launch": true,
+        "Atomic_Group": "a_ptr",
+        "Independent_Target_Scope": true,
+        "Safe_To_Move": false
+      },
+      {
+        "Field": "b_ptr",
+        "CSR": 979,
+        "Available_From": "block entry",
+        "SSA_Position": -1,
+        "Ready_At_Launch": true,
+        "Atomic_Group": "b_ptr",
+        "Independent_Target_Scope": true,
+        "Safe_To_Move": false
+      },
+      {
+        "Field": "c_ptr",
+        "CSR": 980,
+        "Available_From": "block entry",
+        "SSA_Position": -1,
+        "Ready_At_Launch": true,
+        "Atomic_Group": "c_ptr",
+        "Independent_Target_Scope": true,
+        "Safe_To_Move": false
+      }
+    ],
+    "Late_Fields": [],
+    "Safe_Early_Fields": [],
+    "Stable_State_Capture_CSR": "0x3d5 streamer trigger; GEMM capture 0x3db",
+    "Capture_Protocol": "single owner and independently staged pointer fields only; VCD checked separately",
+    "First_Launch_SSA_Index": 9,
+    "First_Await_SSA_Index": 10,
+    "Intervening_Effects": [
+      {
+        "Operation": "func.call",
+        "Callee": "publish_middle",
+        "Position": 11,
+        "Effect": "unknown/observable; block motion",
+        "Blocked": true
+      }
+    ],
+    "Both_Moved": [
+      "a_ptr",
+      "b_ptr",
+      "c_ptr"
+    ],
+    "Both_Observation": "whole setup placed before await",
+    "Strict_Partial_Opportunity": false,
+    "Missed_Safe_Fields": []
+  },
+  {
+    "Graph": "attention",
+    "Input": "/out/attention/B/scheduled.mlir",
+    "Contract": "publish_middle",
+    "Fields_Before_Dedup": 25,
+    "Deduplicated_Fields": [
+      "K",
+      "M",
+      "N",
+      "a_sstride_0",
+      "a_sstride_1",
+      "a_tstride_0",
+      "a_tstride_1",
+      "a_tstride_2",
+      "b_sstride_0",
+      "b_sstride_1",
+      "b_tstride_0",
+      "b_tstride_1",
+      "b_tstride_2",
+      "c_sstride_0",
+      "c_sstride_1",
+      "c_tstride_0",
+      "c_tstride_1",
+      "c_tstride_2",
+      "loop_bound_0",
+      "loop_bound_1",
+      "loop_bound_2",
+      "subtractions"
+    ],
+    "First_Setup_Fields": 25,
+    "Effective_Fields": 3,
+    "Fields": [
+      {
+        "Field": "a_ptr",
+        "CSR": 978,
+        "Available_From": "block entry",
+        "SSA_Position": -1,
+        "Ready_At_Launch": true,
+        "Atomic_Group": "a_ptr",
+        "Independent_Target_Scope": true,
+        "Safe_To_Move": true
+      },
+      {
+        "Field": "b_ptr",
+        "CSR": 979,
+        "Available_From": "block entry",
+        "SSA_Position": -1,
+        "Ready_At_Launch": true,
+        "Atomic_Group": "b_ptr",
+        "Independent_Target_Scope": true,
+        "Safe_To_Move": true
+      },
+      {
+        "Field": "c_ptr",
+        "CSR": 980,
+        "Available_From": "block entry",
+        "SSA_Position": -1,
+        "Ready_At_Launch": true,
+        "Atomic_Group": "c_ptr",
+        "Independent_Target_Scope": true,
+        "Safe_To_Move": true
+      }
+    ],
+    "Late_Fields": [],
+    "Safe_Early_Fields": [
+      "a_ptr",
+      "b_ptr",
+      "c_ptr"
+    ],
+    "Stable_State_Capture_CSR": "0x3d5 streamer trigger; GEMM capture 0x3db",
+    "Capture_Protocol": "single owner and independently staged pointer fields only; VCD checked separately",
+    "First_Launch_SSA_Index": 9,
+    "First_Await_SSA_Index": 10,
+    "Intervening_Effects": [
+      {
+        "Operation": "func.call",
+        "Callee": "publish_middle",
+        "Position": 11,
+        "Effect": "audited memory-only; preserve execution order",
+        "Blocked": false
+      }
+    ],
+    "Both_Moved": [
+      "a_ptr",
+      "b_ptr",
+      "c_ptr"
+    ],
+    "Both_Observation": "whole setup placed before await",
+    "Strict_Partial_Opportunity": false,
+    "Missed_Safe_Fields": []
+  },
+  {
+    "Graph": "attention_untrusted",
+    "Input": "/out/attention/B/scheduled.mlir",
+    "Contract": null,
+    "Fields_Before_Dedup": 25,
+    "Deduplicated_Fields": [
+      "K",
+      "M",
+      "N",
+      "a_sstride_0",
+      "a_sstride_1",
+      "a_tstride_0",
+      "a_tstride_1",
+      "a_tstride_2",
+      "b_sstride_0",
+      "b_sstride_1",
+      "b_tstride_0",
+      "b_tstride_1",
+      "b_tstride_2",
+      "c_sstride_0",
+      "c_sstride_1",
+      "c_tstride_0",
+      "c_tstride_1",
+      "c_tstride_2",
+      "loop_bound_0",
+      "loop_bound_1",
+      "loop_bound_2",
+      "subtractions"
+    ],
+    "First_Setup_Fields": 25,
+    "Effective_Fields": 3,
+    "Fields": [
+      {
+        "Field": "a_ptr",
+        "CSR": 978,
+        "Available_From": "block entry",
+        "SSA_Position": -1,
+        "Ready_At_Launch": true,
+        "Atomic_Group": "a_ptr",
+        "Independent_Target_Scope": true,
+        "Safe_To_Move": false
+      },
+      {
+        "Field": "b_ptr",
+        "CSR": 979,
+        "Available_From": "block entry",
+        "SSA_Position": -1,
+        "Ready_At_Launch": true,
+        "Atomic_Group": "b_ptr",
+        "Independent_Target_Scope": true,
+        "Safe_To_Move": false
+      },
+      {
+        "Field": "c_ptr",
+        "CSR": 980,
+        "Available_From": "block entry",
+        "SSA_Position": -1,
+        "Ready_At_Launch": true,
+        "Atomic_Group": "c_ptr",
+        "Independent_Target_Scope": true,
+        "Safe_To_Move": false
+      }
+    ],
+    "Late_Fields": [],
+    "Safe_Early_Fields": [],
+    "Stable_State_Capture_CSR": "0x3d5 streamer trigger; GEMM capture 0x3db",
+    "Capture_Protocol": "single owner and independently staged pointer fields only; VCD checked separately",
+    "First_Launch_SSA_Index": 9,
+    "First_Await_SSA_Index": 10,
+    "Intervening_Effects": [
+      {
+        "Operation": "func.call",
+        "Callee": "publish_middle",
+        "Position": 11,
+        "Effect": "unknown/observable; block motion",
+        "Blocked": true
+      }
+    ],
+    "Both_Moved": [
+      "a_ptr",
+      "b_ptr",
+      "c_ptr"
+    ],
+    "Both_Observation": "whole setup placed before await",
+    "Strict_Partial_Opportunity": false,
+    "Missed_Safe_Fields": []
+  },
+  {
+    "Graph": "calibration_late_A",
+    "Input": "/v2/research/p1_ablation_v2/local/chain/c0_s_k8_t1_b0_s11/input.mlir",
+    "Contract": "materialize",
+    "Fields_Before_Dedup": 3,
+    "Deduplicated_Fields": [],
+    "First_Setup_Fields": 3,
+    "Effective_Fields": 3,
+    "Fields": [
+      {
+        "Field": "a_ptr",
+        "CSR": 978,
+        "Available_From": "func.call",
+        "SSA_Position": 4,
+        "Ready_At_Launch": false,
+        "Atomic_Group": "a_ptr",
+        "Independent_Target_Scope": true,
+        "Safe_To_Move": false
+      },
+      {
+        "Field": "b_ptr",
+        "CSR": 979,
+        "Available_From": "block entry",
+        "SSA_Position": -1,
+        "Ready_At_Launch": true,
+        "Atomic_Group": "b_ptr",
+        "Independent_Target_Scope": true,
+        "Safe_To_Move": true
+      },
+      {
+        "Field": "c_ptr",
+        "CSR": 980,
+        "Available_From": "block entry",
+        "SSA_Position": -1,
+        "Ready_At_Launch": true,
+        "Atomic_Group": "c_ptr",
+        "Independent_Target_Scope": true,
+        "Safe_To_Move": true
+      }
+    ],
+    "Late_Fields": [
+      "a_ptr"
+    ],
+    "Safe_Early_Fields": [
+      "b_ptr",
+      "c_ptr"
+    ],
+    "Stable_State_Capture_CSR": "0x3d5 streamer trigger; GEMM capture 0x3db",
+    "Capture_Protocol": "single owner and independently staged pointer fields only; VCD checked separately",
+    "First_Launch_SSA_Index": 2,
+    "First_Await_SSA_Index": 3,
+    "Intervening_Effects": [
+      {
+        "Operation": "func.call",
+        "Callee": "materialize",
+        "Position": 4,
+        "Effect": "audited memory-only; preserve execution order",
+        "Blocked": false
+      }
+    ],
+    "Both_Moved": [],
+    "Both_Observation": "effectful or unsupported setup operand use-def chain",
+    "Strict_Partial_Opportunity": true,
+    "Missed_Safe_Fields": [
+      "b_ptr",
+      "c_ptr"
+    ]
+  },
+  {
+    "Graph": "calibration_all_late",
+    "Input": "/v2/research/p1_ablation_v2/local/chain/c2_s_k16_t1_b0_s11/input.mlir",
+    "Contract": "materialize",
+    "Fields_Before_Dedup": 3,
+    "Deduplicated_Fields": [],
+    "First_Setup_Fields": 3,
+    "Effective_Fields": 3,
+    "Fields": [
+      {
+        "Field": "a_ptr",
+        "CSR": 978,
+        "Available_From": "func.call",
+        "SSA_Position": 4,
+        "Ready_At_Launch": false,
+        "Atomic_Group": "a_ptr",
+        "Independent_Target_Scope": true,
+        "Safe_To_Move": false
+      },
+      {
+        "Field": "b_ptr",
+        "CSR": 979,
+        "Available_From": "arith.select",
+        "SSA_Position": 6,
+        "Ready_At_Launch": false,
+        "Atomic_Group": "b_ptr",
+        "Independent_Target_Scope": true,
+        "Safe_To_Move": false
+      },
+      {
+        "Field": "c_ptr",
+        "CSR": 980,
+        "Available_From": "arith.select",
+        "SSA_Position": 7,
+        "Ready_At_Launch": false,
+        "Atomic_Group": "c_ptr",
+        "Independent_Target_Scope": true,
+        "Safe_To_Move": false
+      }
+    ],
+    "Late_Fields": [
+      "a_ptr",
+      "b_ptr",
+      "c_ptr"
+    ],
+    "Safe_Early_Fields": [],
+    "Stable_State_Capture_CSR": "0x3d5 streamer trigger; GEMM capture 0x3db",
+    "Capture_Protocol": "single owner and independently staged pointer fields only; VCD checked separately",
+    "First_Launch_SSA_Index": 2,
+    "First_Await_SSA_Index": 3,
+    "Intervening_Effects": [
+      {
+        "Operation": "func.call",
+        "Callee": "materialize",
+        "Position": 4,
+        "Effect": "audited memory-only; preserve execution order",
+        "Blocked": false
+      }
+    ],
+    "Both_Moved": [],
+    "Both_Observation": "effectful or unsupported setup operand use-def chain",
+    "Strict_Partial_Opportunity": false,
+    "Missed_Safe_Fields": []
+  },
+  {
+    "Graph": "calibration_state_observer",
+    "Input": "/v2/research/p1_ablation_v2/local/chain/c3_s_k16_t1_b0_s11/input.mlir",
+    "Contract": null,
+    "Fields_Before_Dedup": 3,
+    "Deduplicated_Fields": [],
+    "First_Setup_Fields": 3,
+    "Effective_Fields": 3,
+    "Fields": [
+      {
+        "Field": "a_ptr",
+        "CSR": 978,
+        "Available_From": "func.call",
+        "SSA_Position": 4,
+        "Ready_At_Launch": false,
+        "Atomic_Group": "a_ptr",
+        "Independent_Target_Scope": true,
+        "Safe_To_Move": false
+      },
+      {
+        "Field": "b_ptr",
+        "CSR": 979,
+        "Available_From": "block entry",
+        "SSA_Position": -1,
+        "Ready_At_Launch": true,
+        "Atomic_Group": "b_ptr",
+        "Independent_Target_Scope": true,
+        "Safe_To_Move": false
+      },
+      {
+        "Field": "c_ptr",
+        "CSR": 980,
+        "Available_From": "block entry",
+        "SSA_Position": -1,
+        "Ready_At_Launch": true,
+        "Atomic_Group": "c_ptr",
+        "Independent_Target_Scope": true,
+        "Safe_To_Move": false
+      }
+    ],
+    "Late_Fields": [
+      "a_ptr"
+    ],
+    "Safe_Early_Fields": [],
+    "Stable_State_Capture_CSR": "0x3d5 streamer trigger; GEMM capture 0x3db",
+    "Capture_Protocol": "single owner and independently staged pointer fields only; VCD checked separately",
+    "First_Launch_SSA_Index": 2,
+    "First_Await_SSA_Index": 3,
+    "Intervening_Effects": [
+      {
+        "Operation": "func.call",
+        "Callee": "materialize",
+        "Position": 4,
+        "Effect": "unknown/observable; block motion",
+        "Blocked": true
+      }
+    ],
+    "Both_Moved": [],
+    "Both_Observation": "effectful or unsupported setup operand use-def chain",
+    "Strict_Partial_Opportunity": false,
+    "Missed_Safe_Fields": []
+  }
+]

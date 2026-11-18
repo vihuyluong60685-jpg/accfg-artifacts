@@ -1,0 +1,87 @@
+Step,Exit,Command_Log,Disposition
+attempts/mask_import/attention/M0/build.exit,1,attempts/mask_import/attention/M0/build.log,retained failure
+attempts/mask_import/attention/M0/wave/filter.exit,143,attempts/mask_import/attention/M0/wave/commands.log,retained failure
+attempts/mask_import/attention/M0/wave/sim.exit,255,attempts/mask_import/attention/M0/wave/commands.log,retained failure
+attempts/mask_import/attention/M1/build.exit,1,attempts/mask_import/attention/M1/build.log,retained failure
+attempts/mask_import/attention/M2/build.exit,1,attempts/mask_import/attention/M2/build.log,retained failure
+attempts/mask_import/attention/M3/build.exit,1,attempts/mask_import/attention/M3/build.log,retained failure
+attempts/mask_import/attention/M4/build.exit,1,attempts/mask_import/attention/M4/build.log,retained failure
+attempts/mask_import/attention/M5/build.exit,1,attempts/mask_import/attention/M5/build.log,retained failure
+attempts/mask_import/attention/M6/build.exit,1,attempts/mask_import/attention/M6/build.log,retained failure
+attempts/mask_import/mobile/M0/build.exit,1,attempts/mask_import/mobile/M0/build.log,retained failure
+attempts/mask_import/mobile/M0/wave/filter.exit,143,attempts/mask_import/mobile/M0/wave/commands.log,retained failure
+attempts/mask_import/mobile/M0/wave/sim.exit,255,attempts/mask_import/mobile/M0/wave/commands.log,retained failure
+attempts/mask_import/mobile/M1/build.exit,1,attempts/mask_import/mobile/M1/build.log,retained failure
+attempts/mask_import/mobile/M2/build.exit,1,attempts/mask_import/mobile/M2/build.log,retained failure
+attempts/mask_import/mobile/M3/build.exit,1,attempts/mask_import/mobile/M3/build.log,retained failure
+attempts/mask_import/mobile/M4/build.exit,1,attempts/mask_import/mobile/M4/build.log,retained failure
+attempts/mask_import/mobile/M5/build.exit,1,attempts/mask_import/mobile/M5/build.log,retained failure
+attempts/mask_import/mobile/M6/build.exit,1,attempts/mask_import/mobile/M6/build.log,retained failure
+attention/A/build.exit,0,attention/A/build.log,completed
+attention/A/trace/sim.exit,0,attention/A/trace/commands.log,completed
+attention/B/build.exit,0,attention/B/build.log,completed
+attention/B/trace/sim.exit,0,attention/B/trace/commands.log,completed
+attention/C/build.exit,0,attention/C/build.log,completed
+attention/C/trace/sim.exit,0,attention/C/trace/commands.log,completed
+attention/C/wave/filter.exit,0,attention/C/wave/filter.stderr,completed
+attention/C/wave/sim.exit,0,attention/C/wave/commands.log,completed
+attention/M0/build.exit,0,attention/M0/build.log,completed
+attention/M0/trace/sim.exit,0,attention/M0/trace/commands.log,completed
+attention/M0/wave/filter.exit,0,attention/M0/wave/filter.stderr,completed
+attention/M0/wave/sim.exit,0,attention/M0/wave/commands.log,completed
+attention/M1/build.exit,0,attention/M1/build.log,completed
+attention/M1/trace/sim.exit,0,attention/M1/trace/commands.log,completed
+attention/M2/build.exit,0,attention/M2/build.log,completed
+attention/M2/trace/sim.exit,0,attention/M2/trace/commands.log,completed
+attention/M3/build.exit,0,attention/M3/build.log,completed
+attention/M3/trace/sim.exit,0,attention/M3/trace/commands.log,completed
+attention/M4/build.exit,0,attention/M4/build.log,completed
+attention/M4/trace/sim.exit,0,attention/M4/trace/commands.log,completed
+attention/M5/build.exit,0,attention/M5/build.log,completed
+attention/M5/trace/sim.exit,0,attention/M5/trace/commands.log,completed
+attention/M6/build.exit,0,attention/M6/build.log,completed
+attention/M6/trace/sim.exit,0,attention/M6/trace/commands.log,completed
+mobile/A/build.exit,0,mobile/A/build.log,completed
+mobile/A/trace/sim.exit,0,mobile/A/trace/commands.log,completed
+mobile/B/build.exit,0,mobile/B/build.log,completed
+mobile/B/trace/sim.exit,0,mobile/B/trace/commands.log,completed
+mobile/C/build.exit,0,mobile/C/build.log,completed
+mobile/C/trace/sim.exit,0,mobile/C/trace/commands.log,completed
+mobile/C/wave/filter.exit,0,mobile/C/wave/filter.stderr,completed
+mobile/C/wave/sim.exit,0,mobile/C/wave/commands.log,completed
+mobile/M0/build.exit,0,mobile/M0/build.log,completed
+mobile/M0/trace/sim.exit,0,mobile/M0/trace/commands.log,completed
+mobile/M0/wave/filter.exit,0,mobile/M0/wave/filter.stderr,completed
+mobile/M0/wave/sim.exit,0,mobile/M0/wave/commands.log,completed
+mobile/M1/build.exit,0,mobile/M1/build.log,completed
+mobile/M1/trace/sim.exit,0,mobile/M1/trace/commands.log,completed
+mobile/M2/build.exit,0,mobile/M2/build.log,completed
+mobile/M2/trace/sim.exit,0,mobile/M2/trace/commands.log,completed
+mobile/M3/build.exit,0,mobile/M3/build.log,completed
+mobile/M3/trace/sim.exit,0,mobile/M3/trace/commands.log,completed
+mobile/M4/build.exit,0,mobile/M4/build.log,completed
+mobile/M4/trace/sim.exit,0,mobile/M4/trace/commands.log,completed
+mobile/M5/build.exit,0,mobile/M5/build.log,completed
+mobile/M5/trace/sim.exit,0,mobile/M5/trace/commands.log,completed
+mobile/M6/build.exit,0,mobile/M6/build.log,completed
+mobile/M6/trace/sim.exit,0,mobile/M6/trace/commands.log,completed
+native_ad01/bufferize.exit,0,native_ad01/commands.log,completed
+native_ad01/conversion.exit,0,native_ad01/commands.log,completed
+native_ad01/dispatch.exit,0,native_ad01/commands.log,completed
+native_ad01/probe.exit,0,native_ad01/commands.log,completed
+native_ad01/scheduling.exit,1,native_ad01/scheduling.log,retained failure
+native_ad01_batch1/bufferize.exit,0,native_ad01_batch1/commands.log,completed
+native_ad01_batch1/conversion.exit,0,native_ad01_batch1/commands.log,completed
+native_ad01_batch1/dispatch.exit,0,native_ad01_batch1/commands.log,completed
+native_ad01_batch1/probe.exit,0,native_ad01_batch1/commands.log,completed
+native_ad01_batch1/scheduling.exit,1,native_ad01_batch1/scheduling.log,retained failure
+native_ad01_first/bufferize.exit,1,native_ad01_first/commands.log,retained failure
+native_ad01_first/conversion.exit,0,native_ad01_first/commands.log,completed
+native_ad01_first/download.exit,0,native_ad01_first/download.log,completed
+native_ad01_first/probe.exit,1,native_ad01_first/commands.log,retained failure
+native_ad01_flag/bufferize.exit,1,native_ad01_flag/commands.log,retained failure
+native_ad01_flag/conversion.exit,0,native_ad01_flag/commands.log,completed
+native_ad01_flag/probe.exit,1,native_ad01_flag/commands.log,retained failure
+native_ad01_pipeline_scope/bufferize.exit,1,native_ad01_pipeline_scope/commands.log,retained failure
+native_ad01_pipeline_scope/conversion.exit,0,native_ad01_pipeline_scope/commands.log,completed
+native_ad01_pipeline_scope/probe.exit,1,native_ad01_pipeline_scope/commands.log,retained failure

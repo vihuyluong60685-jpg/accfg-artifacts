@@ -1,0 +1,42 @@
+{
+  "Static_Workload_Transitions": 2,
+  "Opportunities_Any_Safe": 2,
+  "Opportunities_Strict_Partial": 0,
+  "Safe_Pointer_Fields": 6,
+  "Fields_Missed_By_Both": 0,
+  "Dynamic_Workload_Invocations": 4,
+  "Exposed_Single_Field_Cases": 6,
+  "Eligible_Dynamic_Field_Cases": 12,
+  "Strongest_Fixed": "C",
+  "Overall_Oracle_Geomean_Speedup_Over_Fixed": 1.001811054807463,
+  "Strict_Subsets_Negative_vs_D": 0,
+  "Strict_Subsets_Negative_vs_C": 12,
+  "Native_Probes": [
+    {
+      "Probe": "native_ad01",
+      "TOSA_Fully_Connected": 10,
+      "Remaining_Linalg_Generic": 49,
+      "ACCFG_Launches": 0,
+      "ACCFG_Setups": 0,
+      "SNAX_Streaming_Regions": 0,
+      "Recognized_SNAX_GEMM": 10,
+      "IR_Probe_Exit": 0,
+      "Template_Exit": 1,
+      "Observed_Template_Reason": "need to check behaviour in this case",
+      "Performance": "N/A"
+    },
+    {
+      "Probe": "native_ad01_batch1",
+      "TOSA_Fully_Connected": 10,
+      "Remaining_Linalg_Generic": 49,
+      "ACCFG_Launches": 0,
+      "ACCFG_Setups": 0,
+      "SNAX_Streaming_Regions": 0,
+      "Recognized_SNAX_GEMM": 10,
+      "IR_Probe_Exit": 0,
+      "Template_Exit": 1,
+      "Observed_Template_Reason": "need to check behaviour in this case",
+      "Performance": "N/A"
+    }
+  ]
+}

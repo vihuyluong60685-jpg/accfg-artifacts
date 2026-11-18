@@ -20,7 +20,13 @@ def permute(source,disas,target,audit,mask):
     modified=bytearray(original)
     changes=[]
     sites=[]
-    for name,(pc,words,_) in functions(disas.read_text(),NAMES).items():
+    symbols=functions(disas.read_text(),NAMES)
+    wrapper_pc,wrapper,listing=symbols[NAMES[1]]
+    entry=symbols[NAMES[0]][0]
+    if len(wrapper)==1:
+        assert f"0x{entry:x} <gate_graph>" in listing and wrapper[0] & 0xfff == 0x06f, wrapper_pc
+        del symbols[NAMES[1]]
+    for name,(pc,words,_) in symbols.items():
         assert words.count(LAUNCH_GEMM)==2
         begin=words.index(LAUNCH_GEMM)+1
         original_slot=words[begin:begin+6]

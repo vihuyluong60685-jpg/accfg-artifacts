@@ -83,5 +83,11 @@
   },
   "experiment_sha256": "35d2daa30a96c77e3d18a4007ebf3db2c93a80476a2bdb4df71e39cd14cd945f",
   "native_tflite_source": "https://raw.githubusercontent.com/mlcommons/tiny/v1.0/benchmark/training/anomaly_detection/trained_models/ad01_int8.tflite",
-  "native_tflite_sha256": "87cf24194ef93d1d9b11a591d805526b98008e351655d29883c825c9c106ba24"
+  "native_tflite_sha256": "87cf24194ef93d1d9b11a591d805526b98008e351655d29883c825c9c106ba24",
+  "v2_calibration_ir_sha256": {
+    "chain/c0_s_k8_t1_b0_s11/input.mlir": "557073520b0166c57f6f56338a5af4554ed6938682539b8293f4799cdc1b3ff1",
+    "chain/c0_w_k8_t1_b0_s11/scheduled.mlir": "1e6aaf739169e8f906ce09f829abacd47a1861c82662580eb512e2a4d4079d9c",
+    "chain/c2_s_k16_t1_b0_s11/input.mlir": "534f8b588af6440ad8d394dd1fc168dd19c09c8aa4288845bdc37413e49c5e76",
+    "chain/c3_s_k16_t1_b0_s11/input.mlir": "557073520b0166c57f6f56338a5af4554ed6938682539b8293f4799cdc1b3ff1"
+  }
 }

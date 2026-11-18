@@ -1,0 +1,8 @@
+Graph,Category,Original_Fields,Effective_Fields,Source_IR,Capture,Both_Observation,Safe_Early,Late,Strict_Partial_Opportunity,Missed_Safe_Fields
+mobile,workload,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,3,0,False,0
+mobile_untrusted,calibration,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,0,0,False,0
+attention,workload,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,3,0,False,0
+attention_untrusted,calibration,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,0,0,False,0
+calibration_late_A,calibration,3,3,/v2/research/p1_ablation_v2/local/chain/c0_s_k8_t1_b0_s11/input.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,effectful or unsupported setup operand use-def chain,2,1,True,2
+calibration_all_late,calibration,3,3,/v2/research/p1_ablation_v2/local/chain/c2_s_k16_t1_b0_s11/input.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,effectful or unsupported setup operand use-def chain,0,3,False,0
+calibration_state_observer,calibration,3,3,/v2/research/p1_ablation_v2/local/chain/c3_s_k16_t1_b0_s11/input.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,effectful or unsupported setup operand use-def chain,0,1,False,0

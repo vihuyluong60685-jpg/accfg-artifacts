@@ -1,0 +1,60 @@
+Core IR and native flags
+9c3174c386083af34e210f268080aec6f0957ed5ebf05d2c0bfaff57cf89a9be  base.mlir
+75f0d68f4fbf39e620d5130d5f09749871ca5465ba34756ab9696fb38227a7fb  scheduled.mlir
+1d67cdea11eea7ce2eb7fb8d9bcb8870cdffbfce2f9f9e3e7ae9f40961ce1cae  lowered.mlir
+6d23dbcb1ac3296d7872ef8eab288b502ca7821024fc543ec7951c3659605317  gate.x
++ ../../compiler/snax-opt -p 'insert-accfg-op{accelerator=snax_gemm}' /out/mobile/A/base.mlir -o /out/mobile/A/scheduled.mlir
++ ../../compiler/snax-opt -p convert-accfg-to-csr /out/mobile/A/scheduled.mlir -o gates.snax-opt.mlir
+9c3174c386083af34e210f268080aec6f0957ed5ebf05d2c0bfaff57cf89a9be  base.mlir
+c40c86dca96e8166db830d776a5dcc1ef09ba75b7e1c226310a6db3e3022499f  scheduled.mlir
+bc44c081b0d61a7af0dc75e8c8f1c69a175f7d78febdcee04df3b6a5150e648d  lowered.mlir
+dd85c2446b74f63217060641429bcb43f1d95e7e853e8020e9481463513cd4f2  gate.x
++ ../../compiler/snax-opt -p 'insert-accfg-op{accelerator=snax_gemm},accfg-dedup' /out/mobile/B/base.mlir -o /out/mobile/B/scheduled.mlir
++ ../../compiler/snax-opt -p convert-accfg-to-csr /out/mobile/B/scheduled.mlir -o gates.snax-opt.mlir
+9c3174c386083af34e210f268080aec6f0957ed5ebf05d2c0bfaff57cf89a9be  base.mlir
+7514a5e93007e3e128101b517c5cfdc331f393234d59577151c001bc504842bc  scheduled.mlir
+8af93fb4291ddf2d368664e69384d65f75402d06e945ee2dfba2b695cf6f2b99  lowered.mlir
+9407f526c7a04f38b3975f28ffc257fd34a8e9f7e7b8610e9494457db2d5e6d2  gate.x
++ ../../compiler/snax-opt -p 'insert-accfg-op{accelerator=snax_gemm},accfg-dedup,accfg-config-overlap' /out/mobile/C/base.mlir -o /out/mobile/C/scheduled.mlir
++ ../../compiler/snax-opt -p convert-accfg-to-csr /out/mobile/C/scheduled.mlir -o gates.snax-opt.mlir
+
+Representative machine-code delta from Both to D
+--- Both.objdump
++++ D.objdump
+@@ -31,12 +31,12 @@
+ 80002690: 73 50 a0 3d  	csrwi	pmpaddr42, 0
+ 80002694: 73 d0 50 3d  	csrwi	pmpaddr37, 1
+ 80002698: 73 d0 b0 3d  	csrwi	pmpaddr43, 1
+-8000269c: 73 90 26 3d  	csrw	pmpaddr34, a3
+-800026a0: 73 10 37 3d  	csrw	pmpaddr35, a4
+-800026a4: 73 90 47 3d  	csrw	pmpaddr36, a5
+-800026a8: 73 50 b0 3d  	csrwi	pmpaddr43, 0
+-800026ac: 73 50 b0 3d  	csrwi	pmpaddr43, 0
+-800026b0: 73 50 50 3d  	csrwi	pmpaddr37, 0
++8000269c: 73 50 b0 3d  	csrwi	pmpaddr43, 0
++800026a0: 73 50 b0 3d  	csrwi	pmpaddr43, 0
++800026a4: 73 50 50 3d  	csrwi	pmpaddr37, 0
++800026a8: 73 90 26 3d  	csrw	pmpaddr34, a3
++800026ac: 73 10 37 3d  	csrw	pmpaddr35, a4
++800026b0: 73 90 47 3d  	csrw	pmpaddr36, a5
+ 800026b4: 13 05 06 00  	mv	a0, a2
+ 800026b8: 93 85 06 00  	mv	a1, a3
+ 800026bc: ef 00 80 02  	jal	0x800026e4 <_mlir_ciface_publish_middle>
+
+Representative numerical and CSR checks
+research/p1_workload_gate/local/attention/M0/trace/simulation.txt:GATE seed=11 start=629 end=7307 cycles=6678 errors=0 live_errors=0 first_a=10000000 first_b=10000200 first_c=10000400 next_a=10000100 next_b=10000300 next_c=10000500
+research/p1_workload_gate/local/attention/M0/trace/simulation.txt:GATE seed=37 start=30843 end=37502 cycles=6659 errors=0 live_errors=0 first_a=10000000 first_b=10000200 first_c=10000400 next_a=10000100 next_b=10000300 next_c=10000500
+research/p1_workload_gate/local/attention/C/trace/simulation.txt:GATE seed=11 start=629 end=7307 cycles=6678 errors=0 live_errors=0 first_a=10000000 first_b=10000200 first_c=10000400 next_a=10000100 next_b=10000300 next_c=10000500
+research/p1_workload_gate/local/attention/C/trace/simulation.txt:GATE seed=37 start=30843 end=37499 cycles=6656 errors=0 live_errors=0 first_a=10000000 first_b=10000200 first_c=10000400 next_a=10000100 next_b=10000300 next_c=10000500
+research/p1_workload_gate/local/attention/B/trace/simulation.txt:GATE seed=11 start=630 end=7318 cycles=6688 errors=0 live_errors=0 first_a=10000000 first_b=10000200 first_c=10000400 next_a=10000100 next_b=10000300 next_c=10000500
+research/p1_workload_gate/local/attention/B/trace/simulation.txt:GATE seed=37 start=30855 end=37463 cycles=6608 errors=0 live_errors=0 first_a=10000000 first_b=10000200 first_c=10000400 next_a=10000100 next_b=10000300 next_c=10000500
+research/p1_workload_gate/local/attention/A/trace/simulation.txt:GATE seed=11 start=626 end=7372 cycles=6746 errors=0 live_errors=0 first_a=10000000 first_b=10000200 first_c=10000400 next_a=10000100 next_b=10000300 next_c=10000500
+research/p1_workload_gate/local/attention/A/trace/simulation.txt:GATE seed=37 start=30944 end=37661 cycles=6717 errors=0 live_errors=0 first_a=10000000 first_b=10000200 first_c=10000400 next_a=10000100 next_b=10000300 next_c=10000500
+research/p1_workload_gate/local/mobile/B/trace/simulation.txt:GATE seed=11 start=634 end=9880 cycles=9246 errors=0 live_errors=0 first_a=10000000 first_b=10000200 first_c=10000400 next_a=10000100 next_b=10000300 next_c=10000500
+research/p1_workload_gate/local/mobile/B/trace/simulation.txt:GATE seed=37 start=33439 end=42425 cycles=8986 errors=0 live_errors=0 first_a=10000000 first_b=10000200 first_c=10000400 next_a=10000100 next_b=10000300 next_c=10000500
+research/p1_workload_gate/local/mobile/M0/trace/simulation.txt:GATE seed=11 start=624 end=9842 cycles=9218 errors=0 live_errors=0 first_a=10000000 first_b=10000200 first_c=10000400 next_a=10000100 next_b=10000300 next_c=10000500
+research/p1_workload_gate/local/mobile/M0/trace/simulation.txt:GATE seed=37 start=33439 end=42401 cycles=8962 errors=0 live_errors=0 first_a=10000000 first_b=10000200 first_c=10000400 next_a=10000100 next_b=10000300 next_c=10000500
+research/p1_workload_gate/local/mobile/C/trace/simulation.txt:GATE seed=11 start=624 end=9842 cycles=9218 errors=0 live_errors=0 first_a=10000000 first_b=10000200 first_c=10000400 next_a=10000100 next_b=10000300 next_c=10000500
+research/p1_workload_gate/local/mobile/C/trace/simulation.txt:GATE seed=37 start=33439 end=42398 cycles=8959 errors=0 live_errors=0 first_a=10000000 first_b=10000200 first_c=10000400 next_a=10000100 next_b=10000300 next_c=10000500
+research/p1_workload_gate/local/mobile/A/trace/simulation.txt:GATE seed=11 start=627 end=9939 cycles=9312 errors=0 live_errors=0 first_a=10000000 first_b=10000200 first_c=10000400 next_a=10000100 next_b=10000300 next_c=10000500
+research/p1_workload_gate/local/mobile/A/trace/simulation.txt:GATE seed=37 start=33544 end=42615 cycles=9071 errors=0 live_errors=0 first_a=10000000 first_b=10000200 first_c=10000400 next_a=10000100 next_b=10000300 next_c=10000500

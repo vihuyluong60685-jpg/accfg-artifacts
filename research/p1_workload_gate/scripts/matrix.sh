@@ -30,7 +30,7 @@ for graph in mobile attention; do
         if [[ "$method" == M* ]]; then
           origin="/out/$graph/C"
           test -e "$origin/BUILT"
-          python3 /gate/scripts/permute.py "$origin/gate.x" "$origin/disassembly.txt" "$dir/gate.x" "$dir/patch.json" "${method#M}"
+          python3 /research/p1_workload_gate/scripts/permute.py "$origin/gate.x" "$origin/disassembly.txt" "$dir/gate.x" "$dir/patch.json" "${method#M}"
         else
           python3 /gate/scripts/generate.py "$graph" "$dir/base.mlir" gate_fixtures.h "$dir/golden.json"
           cp gate_fixtures.h "$dir"

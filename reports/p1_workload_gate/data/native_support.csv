@@ -1,0 +1,3 @@
+Probe,TOSA_Fully_Connected,Remaining_Linalg_Generic,ACCFG_Launches,ACCFG_Setups,SNAX_Streaming_Regions,Recognized_SNAX_GEMM,IR_Probe_Exit,Template_Exit,Observed_Template_Reason,Performance
+native_ad01,10,49,0,0,0,10,0,1,need to check behaviour in this case,N/A
+native_ad01_batch1,10,49,0,0,0,10,0,1,need to check behaviour in this case,N/A

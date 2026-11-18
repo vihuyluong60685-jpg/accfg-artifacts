@@ -1,0 +1,110 @@
+Graph,Category,Original_Fields,Effective_Fields,Source_IR,Capture,Both_Observation,Field,CSR,Available_From,SSA_Position,Ready_At_Launch,Atomic_Group,Independent_Target_Scope,Safe_To_Move,Deduplicated,Both_Moved
+mobile,workload,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,a_ptr,978,block entry,-1,True,a_ptr,True,True,False,True
+mobile,workload,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,b_ptr,979,block entry,-1,True,b_ptr,True,True,False,True
+mobile,workload,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,c_ptr,980,block entry,-1,True,c_ptr,True,True,False,True
+mobile,workload,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,K,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile,workload,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,M,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile,workload,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,N,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile,workload,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,a_sstride_0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile,workload,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,a_sstride_1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile,workload,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,a_tstride_0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile,workload,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,a_tstride_1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile,workload,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,a_tstride_2,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile,workload,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,b_sstride_0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile,workload,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,b_sstride_1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile,workload,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,b_tstride_0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile,workload,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,b_tstride_1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile,workload,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,b_tstride_2,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile,workload,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,c_sstride_0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile,workload,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,c_sstride_1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile,workload,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,c_tstride_0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile,workload,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,c_tstride_1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile,workload,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,c_tstride_2,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile,workload,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,loop_bound_0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile,workload,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,loop_bound_1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile,workload,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,loop_bound_2,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile,workload,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,subtractions,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile_untrusted,calibration,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,a_ptr,978,block entry,-1,True,a_ptr,True,False,False,True
+mobile_untrusted,calibration,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,b_ptr,979,block entry,-1,True,b_ptr,True,False,False,True
+mobile_untrusted,calibration,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,c_ptr,980,block entry,-1,True,c_ptr,True,False,False,True
+mobile_untrusted,calibration,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,K,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile_untrusted,calibration,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,M,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile_untrusted,calibration,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,N,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile_untrusted,calibration,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,a_sstride_0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile_untrusted,calibration,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,a_sstride_1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile_untrusted,calibration,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,a_tstride_0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile_untrusted,calibration,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,a_tstride_1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile_untrusted,calibration,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,a_tstride_2,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile_untrusted,calibration,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,b_sstride_0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile_untrusted,calibration,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,b_sstride_1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile_untrusted,calibration,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,b_tstride_0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile_untrusted,calibration,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,b_tstride_1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile_untrusted,calibration,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,b_tstride_2,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile_untrusted,calibration,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,c_sstride_0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile_untrusted,calibration,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,c_sstride_1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile_untrusted,calibration,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,c_tstride_0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile_untrusted,calibration,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,c_tstride_1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile_untrusted,calibration,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,c_tstride_2,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile_untrusted,calibration,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,loop_bound_0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile_untrusted,calibration,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,loop_bound_1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile_untrusted,calibration,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,loop_bound_2,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+mobile_untrusted,calibration,25,3,/out/mobile/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,subtractions,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention,workload,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,a_ptr,978,block entry,-1,True,a_ptr,True,True,False,True
+attention,workload,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,b_ptr,979,block entry,-1,True,b_ptr,True,True,False,True
+attention,workload,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,c_ptr,980,block entry,-1,True,c_ptr,True,True,False,True
+attention,workload,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,K,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention,workload,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,M,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention,workload,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,N,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention,workload,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,a_sstride_0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention,workload,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,a_sstride_1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention,workload,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,a_tstride_0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention,workload,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,a_tstride_1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention,workload,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,a_tstride_2,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention,workload,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,b_sstride_0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention,workload,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,b_sstride_1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention,workload,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,b_tstride_0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention,workload,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,b_tstride_1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention,workload,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,b_tstride_2,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention,workload,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,c_sstride_0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention,workload,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,c_sstride_1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention,workload,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,c_tstride_0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention,workload,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,c_tstride_1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention,workload,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,c_tstride_2,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention,workload,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,loop_bound_0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention,workload,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,loop_bound_1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention,workload,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,loop_bound_2,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention,workload,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,subtractions,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention_untrusted,calibration,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,a_ptr,978,block entry,-1,True,a_ptr,True,False,False,True
+attention_untrusted,calibration,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,b_ptr,979,block entry,-1,True,b_ptr,True,False,False,True
+attention_untrusted,calibration,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,c_ptr,980,block entry,-1,True,c_ptr,True,False,False,True
+attention_untrusted,calibration,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,K,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention_untrusted,calibration,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,M,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention_untrusted,calibration,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,N,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention_untrusted,calibration,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,a_sstride_0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention_untrusted,calibration,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,a_sstride_1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention_untrusted,calibration,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,a_tstride_0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention_untrusted,calibration,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,a_tstride_1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention_untrusted,calibration,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,a_tstride_2,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention_untrusted,calibration,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,b_sstride_0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention_untrusted,calibration,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,b_sstride_1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention_untrusted,calibration,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,b_tstride_0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention_untrusted,calibration,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,b_tstride_1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention_untrusted,calibration,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,b_tstride_2,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention_untrusted,calibration,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,c_sstride_0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention_untrusted,calibration,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,c_sstride_1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention_untrusted,calibration,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,c_tstride_0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention_untrusted,calibration,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,c_tstride_1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention_untrusted,calibration,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,c_tstride_2,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention_untrusted,calibration,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,loop_bound_0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention_untrusted,calibration,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,loop_bound_1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention_untrusted,calibration,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,loop_bound_2,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+attention_untrusted,calibration,25,3,/out/attention/B/scheduled.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,whole setup placed before await,subtractions,N/A,N/A,N/A,N/A,N/A,N/A,N/A,True,False
+calibration_late_A,calibration,3,3,/v2/research/p1_ablation_v2/local/chain/c0_s_k8_t1_b0_s11/input.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,effectful or unsupported setup operand use-def chain,a_ptr,978,func.call,4,False,a_ptr,True,False,False,False
+calibration_late_A,calibration,3,3,/v2/research/p1_ablation_v2/local/chain/c0_s_k8_t1_b0_s11/input.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,effectful or unsupported setup operand use-def chain,b_ptr,979,block entry,-1,True,b_ptr,True,True,False,False
+calibration_late_A,calibration,3,3,/v2/research/p1_ablation_v2/local/chain/c0_s_k8_t1_b0_s11/input.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,effectful or unsupported setup operand use-def chain,c_ptr,980,block entry,-1,True,c_ptr,True,True,False,False
+calibration_all_late,calibration,3,3,/v2/research/p1_ablation_v2/local/chain/c2_s_k16_t1_b0_s11/input.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,effectful or unsupported setup operand use-def chain,a_ptr,978,func.call,4,False,a_ptr,True,False,False,False
+calibration_all_late,calibration,3,3,/v2/research/p1_ablation_v2/local/chain/c2_s_k16_t1_b0_s11/input.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,effectful or unsupported setup operand use-def chain,b_ptr,979,arith.select,6,False,b_ptr,True,False,False,False
+calibration_all_late,calibration,3,3,/v2/research/p1_ablation_v2/local/chain/c2_s_k16_t1_b0_s11/input.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,effectful or unsupported setup operand use-def chain,c_ptr,980,arith.select,7,False,c_ptr,True,False,False,False
+calibration_state_observer,calibration,3,3,/v2/research/p1_ablation_v2/local/chain/c3_s_k16_t1_b0_s11/input.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,effectful or unsupported setup operand use-def chain,a_ptr,978,func.call,4,False,a_ptr,True,False,False,False
+calibration_state_observer,calibration,3,3,/v2/research/p1_ablation_v2/local/chain/c3_s_k16_t1_b0_s11/input.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,effectful or unsupported setup operand use-def chain,b_ptr,979,block entry,-1,True,b_ptr,True,False,False,False
+calibration_state_observer,calibration,3,3,/v2/research/p1_ablation_v2/local/chain/c3_s_k16_t1_b0_s11/input.mlir,0x3d5 streamer trigger; GEMM capture 0x3db,effectful or unsupported setup operand use-def chain,c_ptr,980,block entry,-1,True,c_ptr,True,False,False,False

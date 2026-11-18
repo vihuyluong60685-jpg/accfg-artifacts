@@ -1,0 +1,9 @@
+/home/yanmo/research/projects/accfg-artifacts cbf660f1cc73dfffd589541c9c382b346a7206fd
+/home/yanmo/research/projects/accfg-p1-pilot 75e16e3be1dbbe08280d1e22330dacafe477d17a
+/home/yanmo/research/projects/accfg-p1-ablation 289979d8491e6554a6a07a83a31193e78bfc100a
+gemmini-rocc-tests 4fec505cadacec4c371305b90973fa18758e9ac0
+gemmini-rocc-tests/riscv-tests c84daca8824635b7d896003c78f9c6245997cf7a
+gemmini-rocc-tests/riscv-tests/env 0666378f353599d01fc48562b431b1dd049faab5
+gemmini-rocc-tests/rocc-software fddb795a0b52e82f8f4ce9ead9b1428440a62ab0
+snax-mlir 0df8b515768232036bceb6af7a6d5935b5e1a3db
+Original frozen artifacts intact; verified V2 data, manifests and four raw calibration IR files
