@@ -9,6 +9,8 @@ import re
 import pandas as pd
 from traces import counts, read_trace, section, window
 
+COMPILER_SHA = "0df8b515768232036bceb6af7a6d5935b5e1a3db"
+
 METHODS = dict(A="NO_ACCFG_OPT", B="DEDUP_ONLY", C="OVERLAP_ONLY", D="ACCFG_BOTH")
 LABELS = dict(A="Base", B="Dedup", C="Overlap", D="Both", E="Guard", F="Omit", G="Partial")
 OLD = {
@@ -44,7 +46,7 @@ def rows_from_log(path):
 def save(path, rows):
     keys = list(dict.fromkeys(key for row in rows for key in row))
     with path.open("w", newline="") as stream:
-        writer = csv.DictWriter(stream, fieldnames=keys, restval="N/A")
+        writer = csv.DictWriter(stream, fieldnames=keys, restval="N/A", lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
@@ -70,7 +72,7 @@ def compare(repo, local, report):
             both = expected[3]
             for idx, method in enumerate("ABCDEFG"):
                 name = f"{scope}_{size}_{method}"
-                baseline = {"Matrix_Size": shape, "Scope": scope, "Method": method,
+                baseline = {"Matrix_Size": shape, "Scope": scope, "Method": method, "Compiler_Source_SHA": COMPILER_SHA,
                             "Label": LABELS[method], "Evidence": "HISTORICAL"}
                 if idx >= len(expected):
                     baseline.update(Correctness="N/A", Cycles="N/A", Evidence="N/A")

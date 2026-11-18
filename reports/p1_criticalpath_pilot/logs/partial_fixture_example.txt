@@ -1,0 +1,10 @@
+Run G_k16_t1_d1_s3_r1 (unfiltered stdout markers)
+P1_EXPECT slot=0 selector=-1 first_a=10000000 first_b=10000400 first_c=10000a00 next_a=10000200 next_b=10000800 next_c=10000e00
+P1_RESULT cycles=172 start=21000 end=21172 errors=0 live_errors=0 choices=2 K=16 steps=1 dma=1 seed=3
+
+Same ELF with --vcd
+P1_EXPECT slot=0 selector=-1 first_a=10000000 first_b=10000400 first_c=10000a00 next_a=10000200 next_b=10000800 next_c=10000e00
+P1_RESULT cycles=172 start=21000 end=21172 errors=0 live_errors=0 choices=2 K=16 steps=1 dma=1 seed=3
+
+ELF SHA-256
+4da6ca239926eda74340aa6b97680c46718a995d6a52d4f70e9c697203604b79  /out/partial/G_k16_t1_d1_s3_r1/pilot.x

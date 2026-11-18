@@ -24,7 +24,13 @@ for spec in "$@"; do
     cp pilot.snax-opt.mlir "$dest/lowered.mlir"
     rm -f partial_harness.o pilot.o pilot.{x,postproc.mlir,ll.mlir,ll,ll12}
     if [[ "$repeat" == 1 ]]; then
-      make -j1 -f partial.mk pilot.x "K=$k" "STEPS=$steps" "DMA=$dma" "SEED=$seed"
+      fast_gold=0
+      if [[ "$k" == 64 ]]; then
+        fast_gold=1
+        python3 /pilot/scripts/emit_golden.py "$k" "$seed" pilot_golden.h
+        cp pilot_golden.h "$dest/"
+      fi
+      make -j1 -f partial.mk pilot.x "K=$k" "STEPS=$steps" "DMA=$dma" "SEED=$seed" "FAST_GOLD=$fast_gold"
       cp pilot.x "$dest/pilot.x"
       printf '%s\n' "$(( ($(date +%s%N) - start_ns) / 1000000 ))" > "$dest/build_ms"
     else
@@ -45,6 +51,10 @@ for spec in "$@"; do
         spike-dasm < "$work/logs/$name.dasm" | /opt/gen_trace.py --permissive -d "$dest/$name.trace.json" | gzip -n > "$dest/$name.trace.txt.gz"
       done
       touch "$dest/DONE"
+    else
+      for path in "$work"/logs/*.dasm; do
+        if [[ -f "$path" ]]; then tail -1500 "$path" > "$dest/$(basename "$path").tail"; fi
+      done
     fi
   } > "$dest/commands.log" 2>&1
   printf '%s exit=%s\n' "$spec" "$sim_rc"

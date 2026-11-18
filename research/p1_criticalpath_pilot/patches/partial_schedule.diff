@@ -1,0 +1,15 @@
+--- serial.mlir
++++ partial.mlir
+@@ -7,10 +7,10 @@
+     %one = arith.constant 1 : i5
+     %before = accfg.setup "snax_gemm" to ("a_ptr" = %a0 : i32, "b_ptr" = %b0 : i32, "c_ptr" = %c0 : i32) : !accfg.state<"snax_gemm">
+     %run0 = "accfg.launch"(%one, %one, %before) <{accelerator = "snax_gemm", param_names = ["launch_streamer", "launch_gemm"]}> : (i5, i5, !accfg.state<"snax_gemm">) -> !accfg.token<"snax_gemm">
+-
++    %early = accfg.setup "snax_gemm" from %before to ("a_ptr" = %a1 : i32, "c_ptr" = %c1 : i32) : !accfg.state<"snax_gemm">
+     "accfg.await"(%run0) : (!accfg.token<"snax_gemm">) -> ()
+     %b1 = func.call @pilot_late_b(%c0, %b_even, %b_odd, %slot) : (i32, i32, i32, i32) -> i32
+-    %after = accfg.setup "snax_gemm" from %before to ("a_ptr" = %a1 : i32, "b_ptr" = %b1 : i32, "c_ptr" = %c1 : i32) : !accfg.state<"snax_gemm">
++    %after = accfg.setup "snax_gemm" from %early to ("b_ptr" = %b1 : i32) : !accfg.state<"snax_gemm">
+     %run1 = "accfg.launch"(%one, %one, %after) <{accelerator = "snax_gemm", param_names = ["launch_streamer", "launch_gemm"]}> : (i5, i5, !accfg.state<"snax_gemm">) -> !accfg.token<"snax_gemm">
+     "accfg.await"(%run1) : (!accfg.token<"snax_gemm">) -> ()
+     func.return

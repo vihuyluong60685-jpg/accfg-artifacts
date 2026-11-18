@@ -1,0 +1,10 @@
+Op with effects in use-def chain upwards of setup SetupOp(%after = accfg.setup "snax_gemm" from %before to ("a_ptr" = %a1 : i32, "b_ptr" = %b1 : i32, "c_ptr" = %c1 : i32) : !accfg.state<"snax_gemm">): Call(%b1 = func.call @pilot_late_b(%c0, %b_even, %b_odd, %slot) : (i32, i32, i32, i32) -> i32)
+Op with effects in use-def chain upwards of setup SetupOp(%after = accfg.setup "snax_gemm" from %before to ("a_ptr" = %a1 : i32, "b_ptr" = %b1 : i32, "c_ptr" = %c1 : i32) : !accfg.state<"snax_gemm">): Call(%b1 = func.call @pilot_late_b(%c0, %b_even, %b_odd, %slot) : (i32, i32, i32, i32) -> i32)
+identical lowered IR: dedup
+identical lowered IR: overlap
+identical lowered IR: both
+73d8883b84f571129f93d06a4de9103ce8474938515e4f7d75bbab5c12e121e7  /out/policy_ir/base.lowered.mlir
+73d8883b84f571129f93d06a4de9103ce8474938515e4f7d75bbab5c12e121e7  /out/policy_ir/both.lowered.mlir
+73d8883b84f571129f93d06a4de9103ce8474938515e4f7d75bbab5c12e121e7  /out/policy_ir/dedup.lowered.mlir
+73d8883b84f571129f93d06a4de9103ce8474938515e4f7d75bbab5c12e121e7  /out/policy_ir/overlap.lowered.mlir
+06c6ee4ca5a295d37b2f07fda32fc9f5d1ffc33728f9df8fd6bdd7daa2298449  /out/policy_ir/partial.lowered.mlir

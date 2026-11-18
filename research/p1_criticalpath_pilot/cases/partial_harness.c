@@ -4,6 +4,10 @@
 #include <snrt.h>
 #include "snax-streamer-gemm-lib.h"
 
+#if PILOT_FAST_GOLD
+#include "pilot_golden.h"
+#endif
+
 #define MAX_STEPS 4
 #define PACKED_BYTES ((PILOT_K / 8) * 256)
 
@@ -126,7 +130,11 @@ int main(void) {
     uintptr_t live_a = (uintptr_t)work->a[0], live_b = (uintptr_t)work->b[0];
     uintptr_t live_c = (uintptr_t)work->first[0];
     for (unsigned slot = 0; slot < PILOT_STEPS; ++slot) {
+#if PILOT_FAST_GOLD
+        int32_t selector = pilot_first_gold[0];
+#else
         int32_t selector = gold(work->a[0], work->b[0], 0, 0);
+#endif
         unsigned choice = 1 + (selector & 1);
         choices |= 1u << (choice - 1);
         printf("P1_EXPECT slot=%u selector=%d first_a=%x first_b=%x first_c=%x next_a=%x next_b=%x next_c=%x\n",
@@ -138,8 +146,13 @@ int main(void) {
 #endif
         for (unsigned row = 0; row < 8; ++row)
             for (unsigned col = 0; col < 8; ++col) {
+#if PILOT_FAST_GOLD
+                errors += work->first[slot][row * 8 + col] != pilot_first_gold[row * 8 + col];
+                errors += work->second[slot][row * 8 + col] != pilot_second_gold[row * 8 + col];
+#else
                 errors += work->first[slot][row * 8 + col] != gold(work->a[0], work->b[0], row, col);
                 errors += work->second[slot][row * 8 + col] != gold(work->a[1], work->b[choice], row, col);
+#endif
             }
         live_a = (uintptr_t)work->a[1];
         live_b = (uintptr_t)work->b[choice];
