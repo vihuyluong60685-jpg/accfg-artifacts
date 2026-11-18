@@ -1,0 +1,90 @@
+Family,Run_ID,Process,Exit,Disposition,Local_Log,Exit_Evidence
+original,checked_16_A,Verilator via timeout,0,complete,original/checked_16_A/commands.log,original/checked_16_A/sim_exit
+original,checked_16_B,Verilator via timeout,0,complete,original/checked_16_B/commands.log,original/checked_16_B/sim_exit
+original,checked_16_C,Verilator via timeout,0,complete,original/checked_16_C/commands.log,original/checked_16_C/sim_exit
+original,checked_16_D,Verilator via timeout,0,complete,original/checked_16_D/commands.log,original/checked_16_D/sim_exit
+original,checked_16_E,Verilator via timeout,0,complete,original/checked_16_E/commands.log,original/checked_16_E/sim_exit
+original,checked_16_F,Verilator via timeout,0,complete,original/checked_16_F/commands.log,original/checked_16_F/sim_exit
+original,checked_32_A,Verilator via timeout,0,complete,original/checked_32_A/commands.log,original/checked_32_A/sim_exit
+original,checked_32_B,Verilator via timeout,0,complete,original/checked_32_B/commands.log,original/checked_32_B/sim_exit
+original,checked_32_C,Verilator via timeout,0,complete,original/checked_32_C/commands.log,original/checked_32_C/sim_exit
+original,checked_32_D,Verilator via timeout,0,complete,original/checked_32_D/commands.log,original/checked_32_D/sim_exit
+original,checked_64_A,Verilator via timeout,0,complete,original/checked_64_A/commands.log,original/checked_64_A/sim_exit
+original,checked_64_B,Verilator via timeout,0,complete,original/checked_64_B/commands.log,original/checked_64_B/sim_exit
+original,checked_64_C,Verilator via timeout,0,complete,original/checked_64_C/commands.log,original/checked_64_C/sim_exit
+original,checked_64_D,Verilator via timeout,0,complete,original/checked_64_D/commands.log,original/checked_64_D/sim_exit
+original,no_copy_16_A,Verilator via timeout,0,complete,original/no_copy_16_A/commands.log,original/no_copy_16_A/sim_exit
+original,no_copy_16_B,Verilator via timeout,0,complete,original/no_copy_16_B/commands.log,original/no_copy_16_B/sim_exit
+original,no_copy_16_C,Verilator via timeout,0,complete,original/no_copy_16_C/commands.log,original/no_copy_16_C/sim_exit
+original,no_copy_16_D,Verilator via timeout,0,complete,original/no_copy_16_D/commands.log,original/no_copy_16_D/sim_exit
+original,no_copy_16_E,Verilator via timeout,0,complete,original/no_copy_16_E/commands.log,original/no_copy_16_E/sim_exit
+original,no_copy_16_F,Verilator via timeout,0,complete,original/no_copy_16_F/commands.log,original/no_copy_16_F/sim_exit
+original,no_copy_32_A,Verilator via timeout,0,complete,original/no_copy_32_A/commands.log,original/no_copy_32_A/sim_exit
+original,no_copy_32_B,Verilator via timeout,0,complete,original/no_copy_32_B/commands.log,original/no_copy_32_B/sim_exit
+original,no_copy_32_C,Verilator via timeout,0,complete,original/no_copy_32_C/commands.log,original/no_copy_32_C/sim_exit
+original,no_copy_32_D,Verilator via timeout,0,complete,original/no_copy_32_D/commands.log,original/no_copy_32_D/sim_exit
+original,no_copy_64_A,Verilator via timeout,0,complete,original/no_copy_64_A/commands.log,original/no_copy_64_A/sim_exit
+original,no_copy_64_B,Verilator via timeout,0,complete,original/no_copy_64_B/commands.log,original/no_copy_64_B/sim_exit
+original,no_copy_64_C,Verilator via timeout,0,complete,original/no_copy_64_C/commands.log,original/no_copy_64_C/sim_exit
+original,no_copy_64_D,Verilator via timeout,0,complete,original/no_copy_64_D/commands.log,original/no_copy_64_D/sim_exit
+partial,G_k16_t0_d0_s11_r1,Verilator via timeout,0,complete,partial/G_k16_t0_d0_s11_r1/commands.log,partial/G_k16_t0_d0_s11_r1/sim_exit
+partial,G_k16_t0_d1_s11_r1,Verilator via timeout,0,complete,partial/G_k16_t0_d1_s11_r1/commands.log,partial/G_k16_t0_d1_s11_r1/sim_exit
+partial,G_k16_t1_d0_s11_r1,Verilator via timeout,0,complete,partial/G_k16_t1_d0_s11_r1/commands.log,partial/G_k16_t1_d0_s11_r1/sim_exit
+partial,G_k16_t1_d0_s1_r1,Verilator via timeout,0,complete,partial/G_k16_t1_d0_s1_r1/commands.log,partial/G_k16_t1_d0_s1_r1/sim_exit
+partial,G_k16_t1_d0_s3_r1,Verilator via timeout,0,complete,partial/G_k16_t1_d0_s3_r1/commands.log,partial/G_k16_t1_d0_s3_r1/sim_exit
+partial,G_k16_t1_d1_s11_r1,Verilator via timeout,0,complete,partial/G_k16_t1_d1_s11_r1/commands.log,partial/G_k16_t1_d1_s11_r1/sim_exit
+partial,G_k16_t1_d1_s1_r1,Verilator via timeout,0,complete,partial/G_k16_t1_d1_s1_r1/commands.log,partial/G_k16_t1_d1_s1_r1/sim_exit
+partial,G_k16_t1_d1_s3_r1,Verilator via timeout,0,complete,partial/G_k16_t1_d1_s3_r1/commands.log,partial/G_k16_t1_d1_s3_r1/sim_exit
+partial,G_k16_t3_d0_s11_r1,Verilator via timeout,0,complete,partial/G_k16_t3_d0_s11_r1/commands.log,partial/G_k16_t3_d0_s11_r1/sim_exit
+partial,G_k16_t3_d0_s11_r2,Verilator via timeout,0,complete,partial/G_k16_t3_d0_s11_r2/commands.log,partial/G_k16_t3_d0_s11_r2/sim_exit
+partial,G_k16_t3_d1_s11_r1,Verilator via timeout,0,complete,partial/G_k16_t3_d1_s11_r1/commands.log,partial/G_k16_t3_d1_s11_r1/sim_exit
+partial,G_k16_t3_d1_s11_r2,Verilator via timeout,0,complete,partial/G_k16_t3_d1_s11_r2/commands.log,partial/G_k16_t3_d1_s11_r2/sim_exit
+partial,G_k32_t3_d0_s11_r1,Verilator via timeout,0,complete,partial/G_k32_t3_d0_s11_r1/commands.log,partial/G_k32_t3_d0_s11_r1/sim_exit
+partial,G_k32_t3_d1_s11_r1,Verilator via timeout,0,complete,partial/G_k32_t3_d1_s11_r1/commands.log,partial/G_k32_t3_d1_s11_r1/sim_exit
+partial,G_k64_t3_d0_s11_r1,Verilator via timeout,0,complete,partial/G_k64_t3_d0_s11_r1/commands.log,partial/G_k64_t3_d0_s11_r1/sim_exit
+partial,G_k64_t3_d1_s11_r1,Verilator via timeout,0,complete,partial/G_k64_t3_d1_s11_r1/commands.log,partial/G_k64_t3_d1_s11_r1/sim_exit
+partial,S_k16_t0_d0_s11_r1,Verilator via timeout,0,complete,partial/S_k16_t0_d0_s11_r1/commands.log,partial/S_k16_t0_d0_s11_r1/sim_exit
+partial,S_k16_t0_d1_s11_r1,Verilator via timeout,0,complete,partial/S_k16_t0_d1_s11_r1/commands.log,partial/S_k16_t0_d1_s11_r1/sim_exit
+partial,S_k16_t1_d0_s11_r1,Verilator via timeout,0,complete,partial/S_k16_t1_d0_s11_r1/commands.log,partial/S_k16_t1_d0_s11_r1/sim_exit
+partial,S_k16_t1_d0_s1_r1,Verilator via timeout,0,complete,partial/S_k16_t1_d0_s1_r1/commands.log,partial/S_k16_t1_d0_s1_r1/sim_exit
+partial,S_k16_t1_d0_s3_r1,Verilator via timeout,0,complete,partial/S_k16_t1_d0_s3_r1/commands.log,partial/S_k16_t1_d0_s3_r1/sim_exit
+partial,S_k16_t1_d1_s11_r1,Verilator via timeout,0,complete,partial/S_k16_t1_d1_s11_r1/commands.log,partial/S_k16_t1_d1_s11_r1/sim_exit
+partial,S_k16_t1_d1_s1_r1,Verilator via timeout,0,complete,partial/S_k16_t1_d1_s1_r1/commands.log,partial/S_k16_t1_d1_s1_r1/sim_exit
+partial,S_k16_t1_d1_s3_r1,Verilator via timeout,0,complete,partial/S_k16_t1_d1_s3_r1/commands.log,partial/S_k16_t1_d1_s3_r1/sim_exit
+partial,S_k16_t3_d0_s11_r1,Verilator via timeout,0,complete,partial/S_k16_t3_d0_s11_r1/commands.log,partial/S_k16_t3_d0_s11_r1/sim_exit
+partial,S_k16_t3_d0_s11_r2,Verilator via timeout,0,complete,partial/S_k16_t3_d0_s11_r2/commands.log,partial/S_k16_t3_d0_s11_r2/sim_exit
+partial,S_k16_t3_d1_s11_r1,Verilator via timeout,0,complete,partial/S_k16_t3_d1_s11_r1/commands.log,partial/S_k16_t3_d1_s11_r1/sim_exit
+partial,S_k16_t3_d1_s11_r2,Verilator via timeout,0,complete,partial/S_k16_t3_d1_s11_r2/commands.log,partial/S_k16_t3_d1_s11_r2/sim_exit
+partial,S_k32_t3_d0_s11_r1,Verilator via timeout,0,complete,partial/S_k32_t3_d0_s11_r1/commands.log,partial/S_k32_t3_d0_s11_r1/sim_exit
+partial,S_k32_t3_d1_s11_r1,Verilator via timeout,0,complete,partial/S_k32_t3_d1_s11_r1/commands.log,partial/S_k32_t3_d1_s11_r1/sim_exit
+partial,S_k64_t3_d0_s11_r1,Verilator via timeout,0,complete,partial/S_k64_t3_d0_s11_r1/commands.log,partial/S_k64_t3_d0_s11_r1/sim_exit
+partial,S_k64_t3_d1_s11_r1,Verilator via timeout,0,complete,partial/S_k64_t3_d1_s11_r1/commands.log,partial/S_k64_t3_d1_s11_r1/sim_exit
+partial,W_k16_t0_d0_s11_r1,Verilator via timeout,0,complete,partial/W_k16_t0_d0_s11_r1/commands.log,partial/W_k16_t0_d0_s11_r1/sim_exit
+partial,W_k16_t0_d1_s11_r1,Verilator via timeout,0,complete,partial/W_k16_t0_d1_s11_r1/commands.log,partial/W_k16_t0_d1_s11_r1/sim_exit
+partial,W_k16_t1_d0_s11_r1,Verilator via timeout,0,complete,partial/W_k16_t1_d0_s11_r1/commands.log,partial/W_k16_t1_d0_s11_r1/sim_exit
+partial,W_k16_t1_d1_s11_r1,Verilator via timeout,0,complete,partial/W_k16_t1_d1_s11_r1/commands.log,partial/W_k16_t1_d1_s11_r1/sim_exit
+partial,W_k16_t3_d0_s11_r1,Verilator via timeout,0,complete,partial/W_k16_t3_d0_s11_r1/commands.log,partial/W_k16_t3_d0_s11_r1/sim_exit
+partial,W_k16_t3_d0_s11_r2,Verilator via timeout,0,complete,partial/W_k16_t3_d0_s11_r2/commands.log,partial/W_k16_t3_d0_s11_r2/sim_exit
+partial,W_k16_t3_d1_s11_r1,Verilator via timeout,0,complete,partial/W_k16_t3_d1_s11_r1/commands.log,partial/W_k16_t3_d1_s11_r1/sim_exit
+partial,W_k16_t3_d1_s11_r2,Verilator via timeout,0,complete,partial/W_k16_t3_d1_s11_r2/commands.log,partial/W_k16_t3_d1_s11_r2/sim_exit
+partial,W_k32_t3_d0_s11_r1,Verilator via timeout,0,complete,partial/W_k32_t3_d0_s11_r1/commands.log,partial/W_k32_t3_d0_s11_r1/sim_exit
+partial,W_k32_t3_d1_s11_r1,Verilator via timeout,0,complete,partial/W_k32_t3_d1_s11_r1/commands.log,partial/W_k32_t3_d1_s11_r1/sim_exit
+partial,W_k64_t3_d0_s11_r1,Verilator via timeout,0,complete,partial/W_k64_t3_d0_s11_r1/commands.log,partial/W_k64_t3_d0_s11_r1/sim_exit
+partial,W_k64_t3_d1_s11_r1,Verilator via timeout,0,complete,partial/W_k64_t3_d1_s11_r1/commands.log,partial/W_k64_t3_d1_s11_r1/sim_exit
+wave_controls,checked_16_D,Verilator via timeout,0,complete,wave_controls/checked_16_D/commands.log,wave_controls/checked_16_D/sim_exit
+wave_controls,checked_16_E,Verilator via timeout,0,complete,wave_controls/checked_16_E/commands.log,wave_controls/checked_16_E/sim_exit
+wave_controls,checked_16_F,Verilator via timeout,0,complete,wave_controls/checked_16_F/commands.log,wave_controls/checked_16_F/sim_exit
+wave,checked_16_D,Verilator --vcd via timeout,0,complete,wave_checked_16_D/simulation.txt,wave_checked_16_D/simulator.exit
+wave,checked_16_D,FIFO VCD decoder,0,complete,wave_checked_16_D/filter.stderr,wave_checked_16_D/filter.exit
+wave,checked_16_E,Verilator --vcd via timeout,0,complete,wave_checked_16_E/simulation.txt,wave_checked_16_E/simulator.exit
+wave,checked_16_E,FIFO VCD decoder,0,complete,wave_checked_16_E/filter.stderr,wave_checked_16_E/filter.exit
+wave,checked_16_F,Verilator --vcd via timeout,0,complete,wave_checked_16_F/simulation.txt,wave_checked_16_F/simulator.exit
+wave,checked_16_F,FIFO VCD decoder,0,complete,wave_checked_16_F/filter.stderr,wave_checked_16_F/filter.exit
+wave,G_k16_t1_d1_s3_r1,Verilator --vcd via timeout,0,complete,wave_G_k16_t1_d1_s3_r1/simulation.txt,wave_G_k16_t1_d1_s3_r1/simulator.exit
+wave,G_k16_t1_d1_s3_r1,FIFO VCD decoder,0,complete,wave_G_k16_t1_d1_s3_r1/filter.stderr,wave_G_k16_t1_d1_s3_r1/filter.exit
+wave_probe,checked_16_D,bounded Verilator VCD probe,153,stopped by 64 MiB file limit; replaced by FIFO,waveform_probe/probe.stdout,waveform_probe/probe.exit
+partial_attempt,S_k64_t3_d0_s11_r1,Verilator via timeout,124,timed kernel ended; on-target golden checker timed out; rerun with independent arrays,attempts/k64_slow_checker/S_k64_t3_d0_s11_r1/simulation.txt,attempts/k64_slow_checker/S_k64_t3_d0_s11_r1/sim_exit
+partial_attempt,W_k64_t3_d0_s11_r1,Verilator via timeout,124,timed kernel ended; on-target golden checker timed out; rerun with independent arrays,attempts/k64_slow_checker/W_k64_t3_d0_s11_r1/simulation.txt,attempts/k64_slow_checker/W_k64_t3_d0_s11_r1/sim_exit
+partial_attempt,K64 first batch G direct,batch interrupted,N/A,no numeric exit or completed run saved; replaced with fast golden,attempts/holdout_first.log,N/A
+partial_attempt,initial link,ld.lld through Clang,1,undefined C interface symbol; wrapper corrected,partial_first_link_error.log,partial_first_link_error.log
+lowering_attempt,initial G policy IR,snax-opt,N/A,parse error after path collision; successful replay kept; first numeric status absent,attempts/verify_policy_ir_first.log,N/A
