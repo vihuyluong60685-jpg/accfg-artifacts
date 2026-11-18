@@ -31,12 +31,12 @@ def location(image, pc, size):
     raise ValueError(f"Function 0x{pc:x} is not in an executable segment")
 
 
-def functions(disassembly):
+def functions(disassembly, names=(*STEP_NAMES, HELPER)):
     labels = list(re.finditer(r"^([0-9a-f]+) <([^>]+)>:\s*$", disassembly, re.M))
     selected = {}
     for index, label in enumerate(labels):
         name = label[2]
-        if name not in (*STEP_NAMES, HELPER):
+        if name not in names:
             continue
         end = labels[index+1].start() if index+1 < len(labels) else len(disassembly)
         body = disassembly[label.end():end]
@@ -46,7 +46,7 @@ def functions(disassembly):
         words = [int.from_bytes(bytes.fromhex(code), "little") for _, code, _ in instructions]
         assert all(int(addr,16) == pc+4*i for i,(addr,_,_) in enumerate(instructions))
         selected[name] = (pc, words, body)
-    assert set(selected) == {*STEP_NAMES, HELPER}
+    assert set(selected) == set(names)
     return selected
 
 

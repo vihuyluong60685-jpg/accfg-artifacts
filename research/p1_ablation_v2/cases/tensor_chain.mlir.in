@@ -1,0 +1,15 @@
+builtin.module {
+  func.func private @materialize(i32) -> i32
+  func.func @chain_step(%a0: i32, %b0: i32, %c0: i32, %a_alt: i32,
+                        %b1: i32, %b_alt: i32, %c1: i32, %c_alt: i32) {
+    %one = arith.constant 1 : i5
+    %before = accfg.setup "snax_gemm" to ("a_ptr" = %a0 : i32, "b_ptr" = %b0 : i32, "c_ptr" = %c0 : i32) : !accfg.state<"snax_gemm">
+    %run0 = "accfg.launch"(%one, %one, %before) <{accelerator = "snax_gemm", param_names = ["launch_streamer", "launch_gemm"]}> : (i5, i5, !accfg.state<"snax_gemm">) -> !accfg.token<"snax_gemm">
+@EARLY@
+    "accfg.await"(%run0) : (!accfg.token<"snax_gemm">) -> ()
+@LATE@
+    %run1 = "accfg.launch"(%one, %one, %after) <{accelerator = "snax_gemm", param_names = ["launch_streamer", "launch_gemm"]}> : (i5, i5, !accfg.state<"snax_gemm">) -> !accfg.token<"snax_gemm">
+    "accfg.await"(%run1) : (!accfg.token<"snax_gemm">) -> ()
+    func.return
+  }
+}
